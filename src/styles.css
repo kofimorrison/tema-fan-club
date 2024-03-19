@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* @import 'vendor/aos/aos.css'; */
+@import 'vendor/bootstrap/css/bootstrap.min.css';
+@import 'vendor/bootstrap-icons/bootstrap-icons.css';
+/* @import 'vendor/glightbox/css/glightbox.min.css'; */
+@import 'vendor/remixicon/remixicon.css';
+/* @import 'vendor/swiper/swiper-bundle.min.css'; */
+@import 'scss/style.scss';
