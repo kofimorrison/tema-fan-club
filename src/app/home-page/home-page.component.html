@@ -12,94 +12,71 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li class="dropdown"><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li class="dropdown"><a class="nav-link scrollto" href="#about">Verkauf</a>
+        <li class="dropdown"><a class="nav-link scrollto active" id="nav-hero"
+            (click)="scrollToElement('hero', 0)">Home</a></li>
+            <li class="dropdown"><a class="nav-link scrollto" (click)="scrollToElement('angebote', 60)">Angebote</a>
+              <!-- <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul> -->
+            </li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-values">Verkauf</a>
           <ul>
-            <li><a href="#">Haus</a></li>
-            <li><a href="#">Wohnung</a></li>
-            <li><a href="#">Gewerbe</a></li>
-            <li><a href="#">Grundstück</a></li>
-            <li><a href="#">Mehrfamilienhaus</a></li>
-            <li><a href="#">Exklusiver Suchauftrag</a></li>
+            <li><a (click)="scrollToElement('hausverkaufen', 60)">Haus</a></li>
+            <li><a (click)="scrollToElement('wohnungverkaufen', 60)">Wohnung</a></li>
+            <li><a (click)="scrollToElement('gewerbe', 60)">Gewerbe</a></li>
+            <li><a (click)="scrollToElement('grundstuck', 60)">Grundstück</a></li>
+            <li><a (click)="scrollToElement('mehrfamilienhaus', 60)">Mehrfamilienhaus</a></li>
+            <li><a (click)="scrollToElement('suchauftrag', 60)">Exklusiver Suchauftrag</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" href="#services">Vermietung</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-services">Vermietung</a>
           <ul>
-            <li><a href="#">Haus</a></li>
-            <li><a href="#">Wohnung</a></li>
-            <li><a href="#">Gewerbe</a></li>
-            <li><a href="#">Grundstück</a></li>
-            <li><a href="#">Industrie</a></li>
-            <li><a href="#">Exklusiver Suchauftrag</a></li>
+            <li><a (click)="scrollToElement('hausvermieten', 60)">Haus</a></li>
+            <li><a (click)="scrollToElement('wohnungvermieten', 60)">Wohnung</a></li>
+            <li><a (click)="scrollToElement('gewerbe', 60)">Gewerbe</a></li>
+            <li><a (click)="scrollToElement('grundstuck', 60)">Grundstück</a></li>
+            <li><a (click)="scrollToElement('industrie', 60)">Industrie</a></li>
+            <li><a (click)="scrollToElement('suchauftrag', 60)">Exklusiver Suchauftrag</a></li>
           </ul>
         </li>
-        <!-- <li class="dropdown"><a class="nav-link scrollto" href="#portfolio">Angebote</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-team">Leistungen</a>
           <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-          </ul>
-        </li> -->
-        <li class="dropdown"><a class="nav-link scrollto" href="#team">Leistungen</a>
-          <ul>
-            <li><a href="#">Rückrufservice</a></li>
-            <li><a href="#">Immobilienbewertung</a></li>
-            <li><a href="#">Kontaktformular</a></li>
-            <li><a href="#">Finanzierungsrechner</a></li>
-            <li><a href="#">Professionelle Exposés</a></li>
-            <li><a href="#">Bilder vom Profi</a></li>
-            <li><a href="#">Drohnenaufnahmen</a></li>
+            <li><a (click)="scrollToElement('services', 60)">Rückrufservice</a></li>
+            <li><a (click)="scrollToElement('services', 60)">Immobilienbewertung</a></li>
+            <li><a (click)="scrollToElement('contact', 60)">Kontaktformular</a></li>
+            <li><a (click)="scrollToElement('services', 60)">Finanzierungsrechner</a></li>
+            <li><a (click)="scrollToElement('angebote', 60)">Professionelle Exposés</a></li>
+            <li><a (click)="scrollToElement('profibilder', 60)">Bilder vom Profi</a></li>
+            <li><a (click)="scrollToElement('drohnenaufnahmen', 60)">Drohnenaufnahmen</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="blog.html">Beratung</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts"
+            (click)="scrollToElement('recent-blog-posts', 60)">Beratung</a>
           <ul>
-            <li><a href="#">Energieausweis</a></li>
-            <li><a href="#">Gutachten</a></li>
-            <li><a href="#">Architekten-Service</a></li>
-            <li><a href="#">Erstellung von Grundrissen</a></li>
-            <li><a href="#">Bausachverständige</a></li>
-            <li><a href="#">Grundsteuer</a></li>
+            <li><a (click)="scrollToElement('energieausweis', 60)">Energieausweis</a></li>
+            <li><a (click)="scrollToElement('gutachten', 60)">Gutachten</a></li>
+            <li><a (click)="scrollToElement('architekten-Service', 60)">Architekten-Service</a></li>
+            <li><a (click)="scrollToElement('grundrisserstellung', 60)">Erstellung von Grundrissen</a></li>
+            <li><a (click)="scrollToElement('bausachverstandige', 60)">Bausachverständige</a></li>
+            <li><a (click)="scrollToElement('grundsteuer', 60)">Grundsteuer</a></li>
           </ul>
         </li>
-        <li class="dropdown"><a href="#"><span>Zusammenarbeit</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a><span>Zusammenarbeit</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="#">Tippgeber</a></li>
-            <li class="dropdown"><a href="#"><span>Bewerbung</span> <i class="bi bi-chevron-right"></i></a>
+            <li><a (click)="scrollToElement('tippGeber', 60)">Tippgeber</a></li>
+            <li class="dropdown"><a><span>Bewerbung</span> <i class="bi bi-chevron-right"></i></a>
               <ul>
-                <li><a href="#">Immobilienmakler</a></li>
-                <li><a href="#">Ausbildung</a></li>
+                <li><a (click)="scrollToElement('bewerbung', 60)">Immobilienmakler</a></li>
+                <li><a (click)="scrollToElement('bewerbung', 60)">Ausbildung</a></li>
               </ul>
             </li>
           </ul>
         </li>
 
-        <!-- <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li>
-              <a href="#">Column 1 link 1</a>
-              <a href="#">Column 1 link 2</a>
-              <a href="#">Column 1 link 3</a>
-            </li>
-            <li>
-              <a href="#">Column 2 link 1</a>
-              <a href="#">Column 2 link 2</a>
-              <a href="#">Column 3 link 3</a>
-            </li>
-            <li>
-              <a href="#">Column 3 link 1</a>
-              <a href="#">Column 3 link 2</a>
-              <a href="#">Column 3 link 3</a>
-            </li>
-            <li>
-              <a href="#">Column 4 link 1</a>
-              <a href="#">Column 4 link 2</a>
-              <a href="#">Column 4 link 3</a>
-            </li>
-          </ul>
-        </li> -->
-
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li><a class="nav-link scrollto" id="nav-contact" (click)="scrollToElement('contact', 60)">Kontakt</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -119,7 +96,8 @@
         <h2 data-aos="fade-up" data-aos-delay="400">…seien Sie Stolz auf Ihren Verkauf</h2>
         <div data-aos="fade-up" data-aos-delay="600">
           <div class="text-center text-lg-start">
-            <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+            <a href="#about"
+              class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
               <span>Mehr erfahren</span>
               <i class="bi bi-arrow-right"></i>
             </a>
@@ -145,11 +123,13 @@
             <h3>Was wir machen.</h3>
 
             <h2>Ihrem verlässlichen Partner</h2>
-            <p>Ob es um den Kauf, Verkauf oder die Beratung geht, bei uns erhalten Sie nicht nur eine realistische Einschätzung, sondern auch persönliche Betreuung und Unterstützung. Ihre Träume sind unsere Priorität.<br/><br/>
-
-Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft mit Rosenstolz Immobilien!</p>
+            <p>Ob es um den Kauf, Verkauf oder die Beratung geht, bei uns erhalten Sie nicht nur eine realistische
+              Einschätzung, sondern auch persönliche Betreuung und Unterstützung. Ihre Träume sind unsere
+              Priorität.<br /><br />Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft mit
+              Rosenstolz Immobilien!</p>
             <div class="text-center text-lg-start">
-              <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+              <a href="#"
+                class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Mehr lesen</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
@@ -165,13 +145,96 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
 
   </section><!-- End About Section -->
 
-  <!-- ======= Values Section ======= -->
-  <section id="values" class="values">
+  <!-- ======= Hausverkaufen Section ======= -->
+  <section id="hausverkaufen" class="values">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>Verkaufen</h2>
+        <h2>Hausverkauf</h2>
+        <p>Vermeiden Sie Verkaufsfehler mit unseren Ratgebern.</p>
+      </header>
+
+      <div class="row">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="box">
+            <img src="assets/img/ph5.jpg" class="img-fluid" alt="">
+            <h3>Verkauf bei Scheidung</h3>
+            <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+          <div class="box">
+            <img src="assets/img/ph4.jpg" class="img-fluid" alt="">
+            <h3>Veräußerung wegen des Alters</h3>
+            <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+          <div class="box">
+            <img src="assets/img/ph2.jpg" class="img-fluid" alt="">
+            <h3>Erbschaftsverkauf</h3>
+            <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- End Values Section -->
+
+  <section id="mehrfamilienhaus" class="values">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Mehrfamilienhausverkauf</h2>
+        <p>Vermeiden Sie Verkaufsfehler mit unseren Ratgebern.</p>
+      </header>
+
+      <div class="row">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="box">
+            <img src="assets/img/ph5.jpg" class="img-fluid" alt="">
+            <h3>Verkauf bei Scheidung</h3>
+            <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+          <div class="box">
+            <img src="assets/img/ph4.jpg" class="img-fluid" alt="">
+            <h3>Veräußerung wegen des Alters</h3>
+            <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+          <div class="box">
+            <img src="assets/img/ph2.jpg" class="img-fluid" alt="">
+            <h3>Erbschaftsverkauf</h3>
+            <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======= Wohnungverkaufen Section ======= -->
+  <section id="wohnungverkaufen" class="values">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Wohnungsverkauf</h2>
         <p>Vermeiden Sie Verkaufsfehler mit unseren Ratgebern.</p>
       </header>
 
@@ -208,7 +271,7 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
   </section><!-- End Values Section -->
 
   <!-- ======= Counts Section ======= -->
-  <!-- <section id="counts" class="counts">
+  <section id="counts" class="counts">
     <div class="container" data-aos="fade-up">
 
       <div class="row gy-4">
@@ -217,8 +280,9 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="count-box">
             <i class="bi bi-emoji-smile"></i>
             <div>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
+              <span data-purecounter-start="0" data-purecounter-end="112" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Zufriedene Kunden</p>
             </div>
           </div>
         </div>
@@ -227,8 +291,9 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="count-box">
             <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
             <div>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <span data-purecounter-start="0" data-purecounter-end="121" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Immobilien verkauf</p>
             </div>
           </div>
         </div>
@@ -237,18 +302,20 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="count-box">
             <i class="bi bi-headset" style="color: #15be56;"></i>
             <div>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+              <span data-purecounter-start="0" data-purecounter-end="463" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Unterstützungsstunden</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
           <div class="count-box">
-            <i class="bi bi-people" style="color: #bb0852;"></i>
+            <i class="bi bi-currency-euro" style="color: #bb0852;"></i>
             <div>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
+              <span data-purecounter-start="0" data-purecounter-end="450000" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Durchschnittlicher Verkaufspreis</p>
             </div>
           </div>
         </div>
@@ -256,16 +323,100 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
       </div>
 
     </div>
-  </section>-->
+  </section>
   <!-- End Counts Section -->
 
-  <!-- ======= Features Section ======= -->
-  <section id="features" class="features">
+  <!-- ======= Hausverkaufen Section ======= -->
+  <section id="hausvermieten" class="values">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>Vermietung</h2>
+        <h2>Hausvermieten</h2>
+        <p>Vermeiden Sie Verkaufsfehler mit unseren Ratgebern.</p>
+      </header>
+
+      <div class="row">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="box">
+            <img src="assets/img/ph5.jpg" class="img-fluid" alt="">
+            <h3>Verkauf bei Scheidung</h3>
+            <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+          <div class="box">
+            <img src="assets/img/ph4.jpg" class="img-fluid" alt="">
+            <h3>Veräußerung wegen des Alters</h3>
+            <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+          <div class="box">
+            <img src="assets/img/ph2.jpg" class="img-fluid" alt="">
+            <h3>Erbschaftsverkauf</h3>
+            <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- End Values Section -->
+
+  <!-- ======= Wohnungverkaufen Section ======= -->
+  <section id="wohnungvermieten" class="values">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Wohnungvermieten</h2>
+        <p>Vermeiden Sie Verkaufsfehler mit unseren Ratgebern.</p>
+      </header>
+
+      <div class="row">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="box">
+            <img src="assets/img/ph5.jpg" class="img-fluid" alt="">
+            <h3>Verkauf bei Scheidung</h3>
+            <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+          <div class="box">
+            <img src="assets/img/ph4.jpg" class="img-fluid" alt="">
+            <h3>Veräußerung wegen des Alters</h3>
+            <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+          <div class="box">
+            <img src="assets/img/ph2.jpg" class="img-fluid" alt="">
+            <h3>Erbschaftsverkauf</h3>
+            <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- End Values Section -->
+
+  <!-- ======= Features Section ======= -->
+  <section id="architekten-Service" class="features">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Architekten-Service</h2>
         <p>Guam rem vitae est autem molestias explicabo debitis.</p>
       </header>
 
@@ -325,69 +476,187 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
 
       </div> <!-- / row -->
 
-      <!-- Feature Tabs -->
+      <!-- Feature Icons -->
+
+    </div>
+
+  </section><!-- End Features Section -->
+
+  <section class="suchauftrag features" id="suchauftrag">
+
+    <div class="container" data-aos="fade-up">
+  <div class="row feature-icons" data-aos="fade-up">
+    <h3>Exklusiver Suchauftrag</h3>
+
+    <div class="row">
+
+      <div class="col-xl-6 d-flex content">
+        <div class="row align-self-center gy-4">
+
+          <div class="col-md-6 icon-box" data-aos="fade-up">
+            <i class="ri-line-chart-line"></i>
+            <div>
+              <h4>Corporis voluptates sit</h4>
+              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <i class="ri-stack-line"></i>
+            <div>
+              <h4>Ullamco laboris nisi</h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <i class="ri-brush-4-line"></i>
+            <div>
+              <h4>Labore consequatur</h4>
+              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <i class="ri-magic-line"></i>
+            <div>
+              <h4>Beatae veritatis</h4>
+              <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <i class="ri-command-line"></i>
+            <div>
+              <h4>Molestiae dolor</h4>
+              <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <i class="ri-radar-line"></i>
+            <div>
+              <h4>Explicabo consectetur</h4>
+              <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-xl-6 text-center search-task-img round-borders" data-aos="fade-right" data-aos-delay="100">
+        <img src="assets/img/ph6.jpg" class="img-fluid p-4" alt="">
+      </div>
+    </div>
+
+  </div></div></section>
+
+
+  <section id="gewerbe" class="gewerbe features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row feture-tabs" data-aos="fade-up">
+
+        <div class="col-lg-6 gewerbe-img round-borders">
+          <img src="assets/img/ph7.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6">
+          <h3>Gewerbe</h3>
+
+
+          <ul class="nav nav-pills mb-3">
+            <li>
+              <a class="nav-link active" data-bs-toggle="pill" href="#gewerbetab1">Verkauf</a>
+            </li>
+            <li>
+              <a class="nav-link" data-bs-toggle="pill" href="#gewerbetab2">Vermietung</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active" id="gewerbetab1">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias culpa dolorem? Error
+                commodi modi laborum ipsum! Fugiat obcaecati ullam facere laboriosam delectus, culpa odit impedit
+                nesciunt cumque, harum aperiam!
+                Iure, iste nesciunt atque rem provident suscipit, dignissimos laudantium sit voluptatem tenetur veniam
+                asperiores adipisci, ipsa hic ullam libero odio fuga? Labore enim unde, dignissimos molestias
+                exercitationem aperiam voluptatem nostrum!
+                Minima earum voluptatem porro reprehenderit corporis delectus quia ad facere. Adipisci, provident
+                molestias assumenda sint, perspiciatis laudantium, commodi dolorum cumque praesentium voluptatibus
+                suscipit dolorem corrupti! Laborum sed error mollitia nobis!</p>
+            </div>
+
+            <div class="tab-pane fade show" id="gewerbetab2">
+              <p>Quaerat, tenetur? Dolorum ipsum facere, magni vel ratione eaque unde qui voluptates labore iusto vero
+                quidem neque non! Quam cumque ex aliquid doloremque aut aliquam minus nam nihil vel voluptatum!
+                Dignissimos adipisci ipsa alias expedita ullam consectetur dolorum aliquid. Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!
+                Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grundstuck features" data-aos="fade-up" id="grundstuck">
+    <div class="container" data-aos="fade-up">
+
       <div class="row feture-tabs" data-aos="fade-up">
         <div class="col-lg-6">
           <h3>Grundstück</h3>
 
-          <!-- Tabs -->
+
           <ul class="nav nav-pills mb-3">
             <li>
-              <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Staging-Techniken</a>
+              <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Verkauf</a>
             </li>
             <li>
-              <a class="nav-link" data-bs-toggle="pill" href="#tab2">Verhandlungstaktiken</a>
-            </li>
-            <li>
-              <a class="nav-link" data-bs-toggle="pill" href="#tab3">Marktanalyse</a>
+              <a class="nav-link" data-bs-toggle="pill" href="#tab2">Vermietung</a>
             </li>
           </ul>
-          <!-- End Tabs -->
-
-          <!-- Tab Content -->
           <div class="tab-content">
 
             <div class="tab-pane fade show active" id="tab1">
-              <p>Entdecken Sie Insider-Tipps zur Maximierung des Wertes Ihrer Immobilie. Von effektiven Inszenierungstechniken bis hin zu strategischen Marketingstrategien - heben Sie Ihr Verkaufsspiel mit unserem Expertenrat auf ein neues Niveau.</p>
+              <p>Entdecken Sie Insider-Tipps zur Maximierung des Wertes Ihrer Immobilie. Von effektiven
+                Inszenierungstechniken bis hin zu strategischen Marketingstrategien - heben Sie Ihr Verkaufsspiel mit
+                unserem Expertenrat auf ein neues Niveau.</p>
               <div class="d-flex align-items-center mb-2">
                 <i class="bi bi-check2"></i>
                 <h4>Meistern Sie die Kunst der Inszenierung</h4>
               </div>
-              <p>Erfahren Sie, wie Sie einladende Räume schaffen, die potenzielle Käufer begeistern und das wahre Potenzial Ihrer Immobilie präsentieren.</p>
+              <p>Erfahren Sie, wie Sie einladende Räume schaffen, die potenzielle Käufer begeistern und das wahre
+                Potenzial Ihrer Immobilie präsentieren.</p>
               <div class="d-flex align-items-center mb-2">
                 <i class="bi bi-check2"></i>
                 <h4>Optimieren Sie Ihre Anzeige</h4>
               </div>
-              <p>Entdecken Sie die wichtigsten Elemente einer überzeugenden Immobilienanzeige, die Aufmerksamkeit erregt und das Interesse potenzieller Käufer weckt.</p>
-            </div><!-- End Tab 1 Content -->
+              <p>Entdecken Sie die wichtigsten Elemente einer überzeugenden Immobilienanzeige, die Aufmerksamkeit erregt
+                und das Interesse potenzieller Käufer weckt.</p>
+            </div>
 
             <div class="tab-pane fade show" id="tab2">
-              <p>Erkunden Sie Strategien, um die Komplexität von Verhandlungen zu meistern und Deals erfolgreich abzuschließen. Von der Bearbeitung von Angeboten bis hin zum Verständnis rechtlicher Aspekte - statten Sie sich mit essentiellem Wissen aus.</p>
+              <p>Erkunden Sie Strategien, um die Komplexität von Verhandlungen zu meistern und Deals erfolgreich
+                abzuschließen. Von der Bearbeitung von Angeboten bis hin zum Verständnis rechtlicher Aspekte - statten
+                Sie sich mit essentiellem Wissen aus.</p>
               <div class="d-flex align-items-center mb-2">
                 <i class="bi bi-check2"></i>
                 <h4>Verhandlungstaktiken</h4>
               </div>
-              <p>Erfahren Sie effektive Verhandlungstechniken, um die besten Konditionen für den Verkauf Ihrer Immobilie zu sichern.</p>
+              <p>Erfahren Sie effektive Verhandlungstechniken, um die besten Konditionen für den Verkauf Ihrer Immobilie
+                zu sichern.</p>
               <div class="d-flex align-items-center mb-2">
                 <i class="bi bi-check2"></i>
                 <h4>Rechtliche Einblicke</h4>
               </div>
-              <p>Gewinnen Sie wertvolle Einblicke in rechtliche Aspekte von Immobilientransaktionen, um einen reibungslosen und rechtlich konformen Verkaufsprozess sicherzustellen.</p>
-            </div><!-- End Tab 2 Content -->
-
-            <div class="tab-pane fade show" id="tab3">
-              <p>Bleiben Sie mit den neuesten Trends und Markteinblicken immer einen Schritt voraus. Von aufkommenden Technologien bis hin zu sich ändernden Käuferpräferenzen - rüsten Sie sich mit Wissen aus, um fundierte Entscheidungen zu treffen.</p>
-              <div class="d-flex align-items-center mb-2">
-                <i class="bi bi-check2"></i>
-                <h4>Technologietrends</h4>
-              </div>
-              <p>Erkunden Sie, wie innovative Technologien die Immobilienlandschaft verändern und entdecken Sie Möglichkeiten, sie für Ihre Immobilienverkäufe zu nutzen.</p>
-              <div class="d-flex align-items-center mb-2">
-                <i class="bi bi-check2"></i>
-                <h4>Marktanalyse</h4>
-              </div>
-              <p>Gewinnen Sie wertvolle Einblicke in Marktdynamiken und Trends, um Ihre Immobilie effektiv zu positionieren und ihr Potenzial maximal auszuschöpfen.</p>
-            </div><!-- End Tab 3 Content -->
+              <p>Gewinnen Sie wertvolle Einblicke in rechtliche Aspekte von Immobilientransaktionen, um einen
+                reibungslosen und rechtlich konformen Verkaufsprozess sicherzustellen.</p>
+            </div>
 
           </div>
 
@@ -397,80 +666,10 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
         <div class="col-lg-6 grund-stuck-img round-borders">
           <img src="assets/img/ph7.jpg" class="img-fluid" alt="">
         </div>
-
-      </div><!-- End Feature Tabs -->
-
-      <!-- Feature Icons -->
-      <div class="row feature-icons" data-aos="fade-up">
-        <h3>Exklusiver Suchauftrag</h3>
-
-        <div class="row">
-
-          <div class="col-xl-6 text-center search-task-img round-borders" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/ph6.jpg" class="img-fluid p-4" alt="">
-          </div>
-
-          <div class="col-xl-6 d-flex content">
-            <div class="row align-self-center gy-4">
-
-              <div class="col-md-6 icon-box" data-aos="fade-up">
-                <i class="ri-line-chart-line"></i>
-                <div>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <i class="ri-stack-line"></i>
-                <div>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                <i class="ri-brush-4-line"></i>
-                <div>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                <i class="ri-magic-line"></i>
-                <div>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                <i class="ri-command-line"></i>
-                <div>
-                  <h4>Molestiae dolor</h4>
-                  <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                <i class="ri-radar-line"></i>
-                <div>
-                  <h4>Explicabo consectetur</h4>
-                  <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div><!-- End Feature Icons -->
-
+      </div>
     </div>
 
-  </section><!-- End Features Section -->
+  </section>
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services">
@@ -487,8 +686,9 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="service-box blue">
             <i class="ri-discuss-line icon"></i>
             <h3>Rückrufservice</h3>
-            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-            <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a>
+            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis
+              tempore et consequatur.</p>
+            <!-- <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a> -->
           </div>
         </div>
 
@@ -496,8 +696,9 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="service-box orange">
             <i class="ri-discuss-line icon"></i>
             <h3>Immobilienbewertung</h3>
-            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-            <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a>
+            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
+              nesciunt dolorem.</p>
+            <!-- <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a> -->
           </div>
         </div>
 
@@ -505,8 +706,9 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="service-box green">
             <i class="ri-discuss-line icon"></i>
             <h3>Kontaktformular</h3>
-            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-            <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a>
+            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos
+              earum corrupti.</p>
+            <!-- <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a> -->
           </div>
         </div>
 
@@ -514,8 +716,9 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="service-box red">
             <i class="ri-discuss-line icon"></i>
             <h3>Finanzierungsrechner</h3>
-            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-            <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a>
+            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident
+              adipisci neque.</p>
+            <!-- <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a> -->
           </div>
         </div>
 
@@ -523,8 +726,9 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="service-box purple">
             <i class="ri-discuss-line icon"></i>
             <h3>Professionelle Exposés</h3>
-            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-            <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a>
+            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem
+              alias eius labore.</p>
+            <!-- <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a> -->
           </div>
         </div>
 
@@ -532,8 +736,9 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="service-box pink">
             <i class="ri-discuss-line icon"></i>
             <h3>Bilder vom Profi</h3>
-            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-            <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a>
+            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae
+              ducimus enim.</p>
+            <!-- <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a> -->
           </div>
         </div>
       </div>
@@ -543,7 +748,7 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
   </section><!-- End Services Section -->
 
   <!-- ======= Pricing Section ======= -->
-  <!-- <section id="pricing" class="pricing">
+  <section id="angebote" class="pricing">
 
     <div class="container" data-aos="fade-up">
 
@@ -556,66 +761,59 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
 
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
           <div class="box">
-            <h3 style="color: #07d5c0;">Free Plan</h3>
-            <div class="price"><sup>$</sup>0<span> / mo</span></div>
             <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
+            <h3 >FacettenReich! Zweifamilienhaus in Ludwigsburg-Hoheneck</h3>
+            <div class="price">420.000 €</div>
             <ul>
               <li>Aida dere</li>
               <li>Nec feugiat nisl</li>
               <li>Nulla at volutpat dola</li>
-              <li class="na">Pharetra massa</li>
-              <li class="na">Massa ultricies mi</li>
             </ul>
-            <a href="#" class="btn-buy">Buy Now</a>
+            <a href="#" class="btn-buy">Exposé ansehen</a>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="box">
-            <span class="featured">Featured</span>
-            <h3 style="color: #65c600;">Starter Plan</h3>
-            <div class="price"><sup>$</sup>19<span> / mo</span></div>
+            <span class="featured">Tipp</span>
             <img src="assets/img/pricing-starter.png" class="img-fluid" alt="">
+            <h3>Quadratisch, praktisch, Bungalow!
+              Bungalow in Stuttgart-Zuffenhausen</h3>
+            <div class="price">300.000 €</div>
             <ul>
               <li>Aida dere</li>
               <li>Nec feugiat nisl</li>
               <li>Nulla at volutpat dola</li>
-              <li>Pharetra massa</li>
-              <li class="na">Massa ultricies mi</li>
             </ul>
-            <a href="#" class="btn-buy">Buy Now</a>
+            <a href="#" class="btn-buy">Exposé ansehen</a>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
           <div class="box">
-            <h3 style="color: #ff901c;">Business Plan</h3>
-            <div class="price"><sup>$</sup>29<span> / mo</span></div>
             <img src="assets/img/pricing-business.png" class="img-fluid" alt="">
+            <h3>Eine gute Wahl! 2-Zimmer-Wohnung in Asperg</h3>
+            <div class="price">450.000 €</div>
             <ul>
               <li>Aida dere</li>
               <li>Nec feugiat nisl</li>
               <li>Nulla at volutpat dola</li>
-              <li>Pharetra massa</li>
-              <li>Massa ultricies mi</li>
             </ul>
-            <a href="#" class="btn-buy">Buy Now</a>
+            <a href="#" class="btn-buy">Exposé ansehen</a>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
           <div class="box">
-            <h3 style="color: #ff0071;">Ultimate Plan</h3>
-            <div class="price"><sup>$</sup>49<span> / mo</span></div>
             <img src="assets/img/pricing-ultimate.png" class="img-fluid" alt="">
+            <h3>Anno 1935! Doppelhaushälfte mit viel Charme in Ludwigsburg-Schlößlesfeld</h3>
+            <div class="price">490.000 €</div>
             <ul>
               <li>Aida dere</li>
               <li>Nec feugiat nisl</li>
               <li>Nulla at volutpat dola</li>
-              <li>Pharetra massa</li>
-              <li>Massa ultricies mi</li>
             </ul>
-            <a href="#" class="btn-buy">Buy Now</a>
+            <a href="#" class="btn-buy">Exposé ansehen</a>
           </div>
         </div>
 
@@ -623,8 +821,248 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
 
     </div>
 
-  </section> -->
-  <!-- End Pricing Section -->
+  </section>
+
+  <section id="energieausweis" class="energieausweis features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row feture-tabs" data-aos="fade-up">
+
+        <div class="col-lg-6 energieausweis-img pink-border fit-height-content round-borders">
+          <img src="assets/img/ph7.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6">
+          <h3>Energieausweis</h3>
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias culpa dolorem? Error
+                commodi modi laborum ipsum! Fugiat obcaecati ullam facere laboriosam delectus, culpa odit impedit
+                nesciunt cumque, harum aperiam!
+                Iure, iste nesciunt atque rem provident suscipit, dignissimos laudantium sit voluptatem tenetur veniam
+                asperiores adipisci, ipsa hic ullam libero odio fuga? Labore enim unde, dignissimos molestias
+                exercitationem aperiam voluptatem nostrum!
+                Minima earum voluptatem porro reprehenderit corporis delectus quia ad facere. Adipisci, provident
+                molestias assumenda sint, perspiciatis laudantium, commodi dolorum cumque praesentium voluptatibus
+                suscipit dolorem corrupti! Laborum sed error mollitia nobis!</p><br/>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gutachten" class="gutachten features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row feture-tabs" data-aos="fade-up">
+        <div class="col-lg-6">
+          <h3>Gutachten</h3>
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active">
+              <p>Quaerat, tenetur? Dolorum ipsum facere, magni vel ratione eaque unde qui voluptates labore iusto vero
+                quidem neque non! Quam cumque ex aliquid doloremque aut aliquam minus nam nihil vel voluptatum!
+                Dignissimos adipisci ipsa alias expedita ullam consectetur dolorum aliquid. Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!
+                Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br/>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6 gutachten-img fit-height-content green-border round-borders">
+          <img src="assets/img/ph7.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="grundrisserstellung" class="grundrisserstellung features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row feture-tabs" data-aos="fade-up">
+
+        <div class="col-lg-6 grundrisserstellung-img pink-border fit-height-content round-borders">
+          <img src="assets/img/ph7.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6">
+          <h3>Erstellung von Grundrissen</h3>
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias culpa dolorem? Error
+                commodi modi laborum ipsum! Fugiat obcaecati ullam facere laboriosam delectus, culpa odit impedit
+                nesciunt cumque, harum aperiam!
+                Iure, iste nesciunt atque rem provident suscipit, dignissimos laudantium sit voluptatem tenetur veniam
+                asperiores adipisci, ipsa hic ullam libero odio fuga? Labore enim unde, dignissimos molestias
+                exercitationem aperiam voluptatem nostrum!
+                Minima earum voluptatem porro reprehenderit corporis delectus quia ad facere. Adipisci, provident
+                molestias assumenda sint, perspiciatis laudantium, commodi dolorum cumque praesentium voluptatibus
+                suscipit dolorem corrupti! Laborum sed error mollitia nobis!</p><br/>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bausachverstandige" class="bausachverstandige features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row feture-tabs" data-aos="fade-up">
+        <div class="col-lg-6">
+          <h3>Bausachverständige</h3>
+          <div class="tab-content">
+            <div class="tab-pane fade show active">
+              <p>Quaerat, tenetur? Dolorum ipsum facere, magni vel ratione eaque unde qui voluptates labore iusto vero
+                quidem neque non! Quam cumque ex aliquid doloremque aut aliquam minus nam nihil vel voluptatum!
+                Dignissimos adipisci ipsa alias expedita ullam consectetur dolorum aliquid. Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!
+                Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br/>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6 bausachverstandige-img green-border fit-height-content round-borders">
+          <img src="assets/img/ph7.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="grundsteuer" class="grundsteuer features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row feture-tabs" data-aos="fade-up">
+
+        <div class="col-lg-6 grundsteuer-img pink-border fit-height-content round-borders">
+          <img src="assets/img/ph7.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6">
+          <h3>Grundsteuer</h3>
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active">
+              <p>Quaerat, tenetur? Dolorum ipsum facere, magni vel ratione eaque unde qui voluptates labore iusto vero
+                quidem neque non! Quam cumque ex aliquid doloremque aut aliquam minus nam nihil vel voluptatum!
+                Dignissimos adipisci ipsa alias expedita ullam consectetur dolorum aliquid. Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!
+                Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br/>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tippGeber" class="tippGeber features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row feture-tabs" data-aos="fade-up">
+        <div class="col-lg-6">
+          <h3>Tippgeber</h3>
+
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active">
+              <p>Quaerat, tenetur? Dolorum ipsum facere, magni vel ratione eaque unde qui voluptates labore iusto vero
+                quidem neque non! Quam cumque ex aliquid doloremque aut aliquam minus nam nihil vel voluptatum!
+                Dignissimos adipisci ipsa alias expedita ullam consectetur dolorum aliquid. Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!
+                Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br/>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 tippGeber-img green-border fit-height-content round-borders">
+          <img src="assets/img/ph7.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bewerbung" class="bewerbung features">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row feture-tabs" data-aos="fade-up">
+
+        <div class="col-lg-6 bewerbung-img pink-border fit-height-content round-borders">
+          <img src="assets/img/ph7.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6">
+          <h3>Bewerbung</h3>
+
+
+          <ul class="nav nav-pills mb-3">
+            <li>
+              <a class="nav-link active" data-bs-toggle="pill" href="#bewerbungtab1">Immobilienmakler</a>
+            </li>
+            <li>
+              <a class="nav-link" data-bs-toggle="pill" href="#bewerbungtab2">Ausbildung</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+
+            <div class="tab-pane fade show active" id="bewerbungtab1">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias culpa dolorem? Error
+                commodi modi laborum ipsum! Fugiat obcaecati ullam facere laboriosam delectus, culpa odit impedit
+                nesciunt cumque, harum aperiam!
+                Iure, iste nesciunt atque rem provident suscipit, dignissimos laudantium sit voluptatem tenetur veniam
+                asperiores adipisci, ipsa hic ullam libero odio fuga? Labore enim unde, dignissimos molestias
+                exercitationem aperiam voluptatem nostrum!
+                Minima earum voluptatem porro reprehenderit corporis delectus quia ad facere. Adipisci, provident
+                molestias assumenda sint, perspiciatis laudantium, commodi dolorum cumque praesentium voluptatibus
+                suscipit dolorem corrupti! Laborum sed error mollitia nobis!</p>
+            </div>
+
+            <div class="tab-pane fade show" id="bewerbungtab2">
+              <p>Quaerat, tenetur? Dolorum ipsum facere, magni vel ratione eaque unde qui voluptates labore iusto vero
+                quidem neque non! Quam cumque ex aliquid doloremque aut aliquam minus nam nihil vel voluptatum!
+                Dignissimos adipisci ipsa alias expedita ullam consectetur dolorum aliquid. Unde ratione est quis odio
+                facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
+                dolorum beatae impedit!
+                Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ======= F.A.Q Section ======= -->
   <section id="faq" class="faq">
@@ -642,39 +1080,48 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="accordion accordion-flush" id="faqlist1">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-1">
                   Non consectetur a erat nam at lectus urna duis?
                 </button>
               </h2>
               <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                 <div class="accordion-body">
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
+                  gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-2">
                   Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
                 </button>
               </h2>
               <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                 <div class="accordion-body">
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-3">
                   Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
                 </button>
               </h2>
               <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                 <div class="accordion-body">
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
+                  integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
+                  Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi
+                  quis
                 </div>
               </div>
             </div>
@@ -689,39 +1136,49 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2-content-1">
                   Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
                 </button>
               </h2>
               <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                 <div class="accordion-body">
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2-content-2">
                   Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
                 </button>
               </h2>
               <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                 <div class="accordion-body">
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
+                  vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
+                  gravida quis blandit turpis cursus in
                 </div>
               </div>
             </div>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2-content-3">
                   Varius vel pharetra vel turpis nunc eget lorem dolor?
                 </button>
               </h2>
               <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                 <div class="accordion-body">
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
+                  nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
+                  tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas
+                  fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
                 </div>
               </div>
             </div>
@@ -736,7 +1193,7 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
   </section><!-- End F.A.Q Section -->
 
   <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio">
+  <section id="profibilder" class="portfolio">
 
     <div class="container" data-aos="fade-up">
 
@@ -748,15 +1205,15 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">Part1</li>
-            <li data-filter=".filter-app">Part2</li>
-            <li data-filter=".filter-card">Part3</li>
-            <li data-filter=".filter-web">Part4</li>
+            <li data-filter="*" (click)="handlePortfolioFilter($event)" class="filter-active">Part1</li>
+            <li data-filter=".filter-app" (click)="handlePortfolioFilter($event)">Part2</li>
+            <li data-filter=".filter-card" (click)="handlePortfolioFilter($event)">Part3</li>
+            <li data-filter=".filter-web" (click)="handlePortfolioFilter($event)">Part4</li>
           </ul>
         </div>
       </div>
 
-      <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200" #portfolioContainer>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="portfolio-wrap">
@@ -765,7 +1222,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
               <h4>App 1</h4>
               <p>App</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
+                  class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -779,7 +1237,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
               <h4>Web 3</h4>
               <p>Web</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
+                  class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -793,7 +1252,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
               <h4>App 2</h4>
               <p>App</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+                  class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -807,7 +1267,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
               <h4>Card 2</h4>
               <p>Card</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+                  class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -821,7 +1282,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
               <h4>Web 2</h4>
               <p>Web</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                  class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -835,7 +1297,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
               <h4>App 3</h4>
               <p>App</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+                  class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -849,7 +1312,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
               <h4>Card 1</h4>
               <p>Card</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                  class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -863,7 +1327,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
               <h4>Card 3</h4>
               <p>Card</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+                  class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -877,7 +1342,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
               <h4>Web 3</h4>
               <p>Web</p>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+                  class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
@@ -900,16 +1366,18 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
         <p>What they are saying about us</p>
       </header>
 
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider>
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
               </p>
               <div class="profile mt-auto">
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
@@ -922,10 +1390,12 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
               </p>
               <div class="profile mt-auto">
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -938,10 +1408,12 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor
+                labore quem eram duis noster aute amet eram fore quis sint minim.
               </p>
               <div class="profile mt-auto">
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -954,10 +1426,12 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim
+                dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
               </p>
               <div class="profile mt-auto">
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -970,10 +1444,12 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+                labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
               </p>
               <div class="profile mt-auto">
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
@@ -1017,7 +1493,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
             <div class="member-info">
               <h4>Walter White</h4>
               <span>Chief Executive Officer</span>
-              <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+              <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
+                exercitationem iure minima enim corporis et voluptate.</p>
             </div>
           </div>
         </div>
@@ -1036,7 +1513,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
             <div class="member-info">
               <h4>Sarah Jhonson</h4>
               <span>Product Manager</span>
-              <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+              <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis.
+                Voluptate sed quas reiciendis animi neque sapiente.</p>
             </div>
           </div>
         </div>
@@ -1055,7 +1533,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
             <div class="member-info">
               <h4>William Anderson</h4>
               <span>CTO</span>
-              <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+              <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut
+                architecto porro aspernatur molestiae modi.</p>
             </div>
           </div>
         </div>
@@ -1074,7 +1553,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
             <div class="member-info">
               <h4>Amanda Jepson</h4>
               <span>Accountant</span>
-              <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque ut possimus ipsum officia.</p>
+              <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque ut
+                possimus ipsum officia.</p>
             </div>
           </div>
         </div>
@@ -1086,12 +1566,12 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
   </section><!-- End Team Section -->
 
   <!-- ======= Clients Section ======= -->
-  <!-- <section id="clients" class="clients">
+  <section id="industrie" class="clients">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>Our Clients</h2>
+        <h2>Industrie</h2>
         <p>Temporibus omnis officia</p>
       </header>
 
@@ -1110,17 +1590,17 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
       </div>
     </div>
 
-  </section> -->
+  </section>
   <!-- End Clients Section -->
 
   <!-- ======= Recent Blog Posts Section ======= -->
-  <section id="recent-blog-posts" class="recent-blog-posts">
+  <section id="drohnenaufnahmen" class="recent-blog-posts">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>Blog</h2>
-        <p>Recent posts form our Blog</p>
+        <h2>Drohnenaufnahmen</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
       </header>
 
       <div class="row">
@@ -1130,7 +1610,7 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
             <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
             <span class="post-date">Tue, September 15</span>
             <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
-            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Mehr lesen</span><i class="bi bi-arrow-right"></i></a>
+            <!-- <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Mehr lesen</span><i class="bi bi-arrow-right"></i></a> -->
           </div>
         </div>
 
@@ -1139,7 +1619,7 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
             <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
             <span class="post-date">Fri, August 28</span>
             <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Mehr lesen</span><i class="bi bi-arrow-right"></i></a>
+            <!-- <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Mehr lesen</span><i class="bi bi-arrow-right"></i></a> -->
           </div>
         </div>
 
@@ -1148,7 +1628,7 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
             <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
             <span class="post-date">Mon, July 11</span>
             <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Mehr lesen</span><i class="bi bi-arrow-right"></i></a>
+            <!-- <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Mehr lesen</span><i class="bi bi-arrow-right"></i></a> -->
           </div>
         </div>
 
@@ -1192,7 +1672,7 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
                 <i class="bi bi-envelope"></i>
                 <h3>E-Mail</h3>
                 <p>info&#64;rosenstolz-immo.de</p>
-                <br/>
+                <br />
               </div>
             </div>
             <div class="col-md-6">
@@ -1274,7 +1754,8 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
             <img src="assets/img/rosenstolzLogo.jpg" alt="">
             <span>Rosenstolz Immobilien</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta
+            donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links mt-3">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -1331,4 +1812,5 @@ Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft
   </div>
 </footer><!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
