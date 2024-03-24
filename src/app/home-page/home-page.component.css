@@ -9,8 +9,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 :root {
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
 }
 
 body {
@@ -532,6 +533,10 @@ section {
   display: block;
 }
 
+.navbar-mobile .dropdown>.dropdown-close {
+  display: none !important;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -567,6 +572,7 @@ background-color: #a9a652;
 
 #main {
   /* background-color: #e1d8d3 */
+  padding-top: 5rem;
 }
 
 .hero h2 {
@@ -652,6 +658,28 @@ background-color: #a9a652;
   .hero .hero-img img {
     width: 100%;
   }
+
+  .pro-tipps-img, .gewerbe-img, .pink-border, .search-task-img,.grund-stuck-img, .green-border {
+    border: none;
+  }
+
+  .mobile-green-line {
+    width: 80%;
+    height: 3px;
+    background-color: #a9a652;
+    margin: 0 auto;
+    }
+
+    .mobile-pink-line {
+      width: 80%;
+      height: 3px;
+      background-color: #e83e8c;
+      margin: 0 auto;
+      }
+
+      .footer-logo-text {
+        line-height: 1;
+      }
 }
 
 /*--------------------------------------------------------------
@@ -2481,6 +2509,7 @@ background-color: #a9a652;
 }
 
 .footer .footer-top .footer-links ul li {
+  cursor: pointer;
   padding: 10px 0;
   display: flex;
   align-items: center;

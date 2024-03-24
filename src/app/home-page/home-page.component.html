@@ -12,38 +12,37 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li class="dropdown"><a class="nav-link scrollto active" id="nav-hero"
-            (click)="scrollToElement('hero', 0)">Home</a></li>
-            <li class="dropdown"><a class="nav-link scrollto" (click)="scrollToElement('angebote', 60)">Angebote</a>
-              <!-- <ul>
-                <li><a href="#">Drop Down 1</a></li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-              </ul> -->
-            </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-values">Verkauf</a>
-          <ul>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-home" (click)="navToOption('Home')">Home</a></li>
+        <li class="dropdown"><a class="nav-link scrollto"  (click)="navToOption('Angebote')">Angebote</a>
+          <!-- <ul>
+            <li><a href="#">Drop Down 1</a></li>
+            <li><a href="#">Drop Down 2</a></li>
+            <li><a href="#">Drop Down 3</a></li>
+            <li><a href="#">Drop Down 4</a></li>
+          </ul> -->
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-values" (click)="navToOption('Verkauf')">Verkauf</a>
+          <!-- <ul>
             <li><a (click)="scrollToElement('hausverkaufen', 60)">Haus</a></li>
             <li><a (click)="scrollToElement('wohnungverkaufen', 60)">Wohnung</a></li>
             <li><a (click)="scrollToElement('gewerbe', 60)">Gewerbe</a></li>
             <li><a (click)="scrollToElement('grundstuck', 60)">Grundstück</a></li>
             <li><a (click)="scrollToElement('mehrfamilienhaus', 60)">Mehrfamilienhaus</a></li>
             <li><a (click)="scrollToElement('suchauftrag', 60)">Exklusiver Suchauftrag</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-services">Vermietung</a>
-          <ul>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-services"  (click)="navToOption('Vermietung')">Vermietung</a>
+          <!-- <ul>
             <li><a (click)="scrollToElement('hausvermieten', 60)">Haus</a></li>
             <li><a (click)="scrollToElement('wohnungvermieten', 60)">Wohnung</a></li>
             <li><a (click)="scrollToElement('gewerbe', 60)">Gewerbe</a></li>
             <li><a (click)="scrollToElement('grundstuck', 60)">Grundstück</a></li>
             <li><a (click)="scrollToElement('industrie', 60)">Industrie</a></li>
             <li><a (click)="scrollToElement('suchauftrag', 60)">Exklusiver Suchauftrag</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-team">Leistungen</a>
-          <ul>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-team" (click)="navToOption('Leistungen')">Leistungen</a>
+          <!-- <ul>
             <li><a (click)="scrollToElement('services', 60)">Rückrufservice</a></li>
             <li><a (click)="scrollToElement('services', 60)">Immobilienbewertung</a></li>
             <li><a (click)="scrollToElement('contact', 60)">Kontaktformular</a></li>
@@ -51,21 +50,20 @@
             <li><a (click)="scrollToElement('angebote', 60)">Professionelle Exposés</a></li>
             <li><a (click)="scrollToElement('profibilder', 60)">Bilder vom Profi</a></li>
             <li><a (click)="scrollToElement('drohnenaufnahmen', 60)">Drohnenaufnahmen</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts"
-            (click)="scrollToElement('recent-blog-posts', 60)">Beratung</a>
-          <ul>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts" (click)="navToOption('Beratung')">Beratung</a>
+          <!-- <ul>
             <li><a (click)="scrollToElement('energieausweis', 60)">Energieausweis</a></li>
             <li><a (click)="scrollToElement('gutachten', 60)">Gutachten</a></li>
             <li><a (click)="scrollToElement('architekten-Service', 60)">Architekten-Service</a></li>
             <li><a (click)="scrollToElement('grundrisserstellung', 60)">Erstellung von Grundrissen</a></li>
             <li><a (click)="scrollToElement('bausachverstandige', 60)">Bausachverständige</a></li>
             <li><a (click)="scrollToElement('grundsteuer', 60)">Grundsteuer</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li class="dropdown"><a><span>Zusammenarbeit</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
+        <li class="dropdown" (click)="navToOption('Zusammenarbeit')"><a><span>Zusammenarbeit</span></a>
+          <!-- <ul>
             <li><a (click)="scrollToElement('tippGeber', 60)">Tippgeber</a></li>
             <li class="dropdown"><a><span>Bewerbung</span> <i class="bi bi-chevron-right"></i></a>
               <ul>
@@ -73,10 +71,10 @@
                 <li><a (click)="scrollToElement('bewerbung', 60)">Ausbildung</a></li>
               </ul>
             </li>
-          </ul>
+          </ul> -->
         </li>
 
-        <li><a class="nav-link scrollto" id="nav-contact" (click)="scrollToElement('contact', 60)">Kontakt</a></li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-contact" (click)="navToOption('Kontakt')">Kontakt</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -85,7 +83,7 @@
 </header><!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="hero d-flex align-items-center">
+<section id="hero" class="hero d-flex align-items-center" *ngIf="visibilityFlags.isHomeVisible">
 
   <div class="container">
     <div class="row">
@@ -114,7 +112,7 @@
 
 <main id="main">
   <!-- ======= About Section ======= -->
-  <section id="about" class="about">
+  <section id="about" class="about" *ngIf="visibilityFlags.isHomeVisible">
 
     <div class="container" data-aos="fade-up">
       <div class="row gx-0">
@@ -146,7 +144,7 @@
   </section><!-- End About Section -->
 
   <!-- ======= Hausverkaufen Section ======= -->
-  <section id="hausverkaufen" class="values">
+  <section id="hausverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -187,7 +185,7 @@
 
   </section><!-- End Values Section -->
 
-  <section id="mehrfamilienhaus" class="values">
+  <section id="mehrfamilienhaus" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -229,7 +227,7 @@
   </section>
 
   <!-- ======= Wohnungverkaufen Section ======= -->
-  <section id="wohnungverkaufen" class="values">
+  <section id="wohnungverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -271,7 +269,7 @@
   </section><!-- End Values Section -->
 
   <!-- ======= Counts Section ======= -->
-  <section id="counts" class="counts">
+  <section id="counts" class="counts" *ngIf="visibilityFlags.isHomeVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row gy-4">
@@ -326,8 +324,8 @@
   </section>
   <!-- End Counts Section -->
 
-  <!-- ======= Hausverkaufen Section ======= -->
-  <section id="hausvermieten" class="values">
+
+  <section id="hausvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -369,7 +367,7 @@
   </section><!-- End Values Section -->
 
   <!-- ======= Wohnungverkaufen Section ======= -->
-  <section id="wohnungvermieten" class="values">
+  <section id="wohnungvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -411,7 +409,7 @@
   </section><!-- End Values Section -->
 
   <!-- ======= Features Section ======= -->
-  <section id="architekten-Service" class="features">
+  <section id="architekten-Service" class="features" *ngIf="visibilityFlags.isBeratungVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -421,10 +419,6 @@
       </header>
 
       <div class="row">
-
-        <div class="col-lg-6 pro-tipps-img round-borders">
-          <img src="assets/img/ph6.jpg" class="img-fluid" alt="">
-        </div>
 
         <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
           <div class="row align-self-center gy-4">
@@ -474,6 +468,10 @@
           </div>
         </div>
 
+        <div class="col-lg-6 pro-tipps-img green-border round-borders">
+          <img src="assets/img/ph6.jpg" class="img-fluid" alt="">
+        </div>
+
       </div> <!-- / row -->
 
       <!-- Feature Icons -->
@@ -482,7 +480,7 @@
 
   </section><!-- End Features Section -->
 
-  <section class="suchauftrag features" id="suchauftrag">
+  <section class="suchauftrag features" id="suchauftrag" *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible">
 
     <div class="container" data-aos="fade-up">
   <div class="row feature-icons" data-aos="fade-up">
@@ -551,8 +549,9 @@
 
   </div></div></section>
 
+  <div class="mobile-pink-line" *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible"></div>
 
-  <section id="gewerbe" class="gewerbe features">
+  <section id="gewerbe" class="gewerbe features"  *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -603,8 +602,8 @@
       </div>
     </div>
   </section>
-
-  <section class="grundstuck features" data-aos="fade-up" id="grundstuck">
+  <div class="mobile-green-line" *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible"></div>
+  <section class="grundstuck features" data-aos="fade-up" id="grundstuck" *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -672,7 +671,7 @@
   </section>
 
   <!-- ======= Services Section ======= -->
-  <section id="services" class="services">
+  <section id="services" class="services"  *ngIf="visibilityFlags.isLeistungenVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -702,15 +701,15 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
           <div class="service-box green">
             <i class="ri-discuss-line icon"></i>
             <h3>Kontaktformular</h3>
             <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos
               earum corrupti.</p>
-            <!-- <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a> -->
+            <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a>
           </div>
-        </div>
+        </div> -->
 
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
           <div class="service-box red">
@@ -722,39 +721,45 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-          <div class="service-box purple">
-            <i class="ri-discuss-line icon"></i>
-            <h3>Professionelle Exposés</h3>
-            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem
-              alias eius labore.</p>
-            <!-- <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a> -->
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+        <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
           <div class="service-box pink">
             <i class="ri-discuss-line icon"></i>
             <h3>Bilder vom Profi</h3>
             <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae
               ducimus enim.</p>
-            <!-- <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a> -->
+            <a href="#" class="read-more"><span>Mehr lesen</span> <i class="bi bi-arrow-right"></i></a>
           </div>
-        </div>
+        </div> -->
       </div>
 
     </div>
 
   </section><!-- End Services Section -->
 
+  <section id="exposes" class="pricing" *ngIf="visibilityFlags.isLeistungenVisible">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Professionelle Exposés</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </header>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia itaque voluptatibus, autem quasi, quibusdam tenetur natus minima commodi assumenda esse perspiciatis voluptates. Praesentium vel repellendus, doloremque explicabo neque voluptates quas.
+      Quam illum ipsam inventore necessitatibus optio illo laborum rerum incidunt neque provident hic repudiandae dicta, quibusdam modi quaerat, quod alias. Ad dolor impedit fuga nostrum molestiae. Vero, voluptas? Doloribus, corrupti.
+      Sit optio at sunt eum suscipit perferendis ea voluptas provident recusandae veniam asperiores ut assumenda praesentium dicta neque qui iure aut fugit labore veritatis ab, aspernatur consectetur nulla! Deserunt, officiis.</p>
+
+    </div>
+
+  </section>
+
   <!-- ======= Pricing Section ======= -->
-  <section id="angebote" class="pricing">
+  <section id="angebote" class="pricing" *ngIf="visibilityFlags.isAngeboteVisible">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
         <h2>Angebote</h2>
-        <p>Check our Pricing</p>
+        <p>Schauen Sie sich unsere aktuellen Angebote an.</p>
       </header>
 
       <div class="row gy-4" data-aos="fade-left">
@@ -822,8 +827,8 @@
     </div>
 
   </section>
-
-  <section id="energieausweis" class="energieausweis features">
+<div class="mobile-pink-line"  *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <section id="energieausweis" class="energieausweis features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -856,7 +861,9 @@
     </div>
   </section>
 
-  <section id="gutachten" class="gutachten features">
+  <div class="mobile-green-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
+
+  <section id="gutachten" class="gutachten features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -887,7 +894,8 @@
     </div>
   </section>
 
-  <section id="grundrisserstellung" class="grundrisserstellung features">
+  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <section id="grundrisserstellung" class="grundrisserstellung features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -920,7 +928,8 @@
     </div>
   </section>
 
-  <section id="bausachverstandige" class="bausachverstandige features">
+  <div class="mobile-green-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <section id="bausachverstandige" class="bausachverstandige features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -950,7 +959,8 @@
     </div>
   </section>
 
-  <section id="grundsteuer" class="grundsteuer features">
+  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <section id="grundsteuer" class="grundsteuer features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -981,7 +991,7 @@
     </div>
   </section>
 
-  <section id="tippGeber" class="tippGeber features">
+  <section id="tippGeber" class="tippGeber features" *ngIf="visibilityFlags.isZusammenarbeitVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1012,7 +1022,9 @@
     </div>
   </section>
 
-  <section id="bewerbung" class="bewerbung features">
+  <div class="mobile-pink-line" *ngIf="visibilityFlags.isZusammenarbeitVisible"></div>
+
+  <section id="bewerbung" class="bewerbung features" *ngIf="visibilityFlags.isZusammenarbeitVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1065,7 +1077,7 @@
   </section>
 
   <!-- ======= F.A.Q Section ======= -->
-  <section id="faq" class="faq">
+  <section id="faq" class="faq" *ngIf="visibilityFlags.isHomeVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1193,7 +1205,7 @@
   </section><!-- End F.A.Q Section -->
 
   <!-- ======= Portfolio Section ======= -->
-  <section id="profibilder" class="portfolio">
+  <section id="profibilder" class="portfolio" *ngIf="visibilityFlags.isLeistungenVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1354,16 +1366,17 @@
 
     </div>
 
-  </section><!-- End Portfolio Section -->
+  </section>
+  <!-- End Portfolio Section -->
 
   <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="testimonials">
+  <section id="testimonials" class="testimonials" *ngIf="visibilityFlags.isHomeVisible">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
         <h2>Testimonials</h2>
-        <p>What they are saying about us</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </header>
 
       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider>
@@ -1468,13 +1481,13 @@
   </section><!-- End Testimonials Section -->
 
   <!-- ======= Team Section ======= -->
-  <section id="team" class="team">
+  <section id="team" class="team"  *ngIf="visibilityFlags.isHomeVisible">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
         <h2>Team</h2>
-        <p>Our hard working team</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </header>
 
       <div class="row gy-4">
@@ -1566,7 +1579,7 @@
   </section><!-- End Team Section -->
 
   <!-- ======= Clients Section ======= -->
-  <section id="industrie" class="clients">
+  <section id="industrie" class="clients" *ngIf="visibilityFlags.isVermietungVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1575,26 +1588,28 @@
         <p>Temporibus omnis officia</p>
       </header>
 
-      <div class="clients-slider swiper">
-        <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+      <!-- <swiper [config]="config"> -->
+        <div class="clients-slider swiper" #clientsSwipper>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
+    <!-- </swiper> -->
     </div>
 
   </section>
   <!-- End Clients Section -->
 
   <!-- ======= Recent Blog Posts Section ======= -->
-  <section id="drohnenaufnahmen" class="recent-blog-posts">
+  <section id="drohnenaufnahmen" class="recent-blog-posts" *ngIf="visibilityFlags.isLeistungenVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1636,10 +1651,11 @@
 
     </div>
 
-  </section><!-- End Recent Blog Posts Section -->
+  </section>
+  <!-- End Recent Blog Posts Section -->
 
   <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact"  *ngIf="visibilityFlags.isLeistungenVisible || visibilityFlags.isHomeVisible || visibilityFlags.isKontaktVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1752,39 +1768,37 @@
         <div class="col-lg-5 col-md-12 footer-info">
           <a href="index.html" class="logo d-flex align-items-center">
             <img src="assets/img/rosenstolzLogo.jpg" alt="">
-            <span>Rosenstolz Immobilien</span>
+            <span class="footer-logo-text">Rosenstolz Immobilien</span>
           </a>
           <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta
             donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links mt-3">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a class="twitter"><i class="bi bi-twitter"></i></a>
+            <a class="facebook"><i class="bi bi-facebook"></i></a>
+            <a class="instagram"><i class="bi bi-instagram"></i></a>
+            <a class="linkedin"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a>Impressum</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a>Datenschutz</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a>Widerrufsbelehrung</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Rückrufservice</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Immobilienbewertung</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Kontaktformular</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Finanzierungsrechner</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Professionelle Exposés</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Bilder vom Profi</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Drohnenaufnahmen</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Rückrufservice</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Immobilienbewertung</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Kontakt')">Kontaktformular</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Finanzierungsrechner</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Professionelle Exposés</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Bilder vom Profi</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Drohnenaufnahmen</a></li>
           </ul>
         </div>
 
@@ -1812,5 +1826,5 @@
   </div>
 </footer><!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i
     class="bi bi-arrow-up-short"></i></a>

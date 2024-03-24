@@ -1,10 +1,8 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Swiper from 'swiper';
-import Isotope from 'isotope-layout';
 import GLightbox from 'glightbox';
 import PureCounter from '@srexi/purecounterjs';
 
@@ -14,9 +12,14 @@ import PureCounter from '@srexi/purecounterjs';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   imports: [RouterOutlet, HomePageComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {
   title = 'rosen-stolz-app';
+  @HostListener('window:beforeunload', ['$event'])
+onBeforeUnload(event: Event): void {
+  // window.scrollTo(0, 0);
+}
 
   scrollRef = 0;
 
@@ -29,7 +32,7 @@ export class AppComponent {
         duration: 700,
         easing: 'ease-in-out',
         once: false,
-        mirror: false,
+        mirror: true,
       });
     // });
 
@@ -37,12 +40,12 @@ export class AppComponent {
      * Scroll with ofset on page load with hash links in the url
      */
     // window.addEventListener('load', () => {
-      if (window.history.state.top) {
-        window.scrollTo({
-          top: window.history.state.top,
-          behavior: 'smooth',
-        });
-      }
+      // if (window.history.state.top) {
+        // window.scrollTo({
+        //   top: 0,
+        //   behavior: 'smooth',
+        // });
+      // }
     // });
 
     /**
@@ -158,8 +161,8 @@ export class AppComponent {
        */
       on('click', '.mobile-nav-toggle', function (e) {
         select('#navbar').classList.toggle('navbar-mobile');
-        e.classList.toggle('bi-list');
-        e.classList.toggle('bi-x');
+        e.target.classList.toggle('bi-list');
+        e.target.classList.toggle('bi-x');
       });
 
       /**
@@ -171,7 +174,11 @@ export class AppComponent {
         function (e) {
           if (select('#navbar').classList.contains('navbar-mobile')) {
             e.preventDefault();
-            e.nextElementSibling.classList.toggle('dropdown-active');
+            // select('#navbar').classList.toggle('bi-list');
+            select('#navbar').classList.toggle('navbar-mobile');
+        select('#navbar').classList.toggle('bi-list');
+            // e.target.nextElementSibling.classList.toggle('dropdown-active');
+            window.location.reload()
           }
         },
         true
@@ -184,7 +191,6 @@ export class AppComponent {
         'click',
         '.scrollto',
         function (e) {
-          console.log(1111)
           if (select(e.hash)) {
             e.preventDefault();
 
@@ -240,58 +246,19 @@ export class AppComponent {
       // /**
       //  * Initiate portfolio lightbox
       //  */
-      // const portfolioLightbox = GLightbox({
-      //   selector: '.portfokio-lightbox',
-      // });
-
-      // /**
-      //  * Portfolio details slider
-      //  */
-      // new Swiper('.portfolio-details-slider', {
-      //   speed: 400,
-      //   autoplay: {
-      //     delay: 5000,
-      //     disableOnInteraction: false,
-      //   },
-      //   pagination: {
-      //     el: '.swiper-pagination',
-      //     type: 'bullets',
-      //     clickable: true,
-      //   },
-      // });
-
-      // /**
-      //  * Testimonials slider
-      //  */
-      // new Swiper('.testimonials-slider', {
-      //   speed: 600,
-      //   loop: true,
-      //   autoplay: {
-      //     delay: 5000,
-      //     disableOnInteraction: false,
-      //   },
-      //   slidesPerView: 'auto',
-      //   pagination: {
-      //     el: '.swiper-pagination',
-      //     type: 'bullets',
-      //     clickable: true,
-      //   },
-      //   breakpoints: {
-      //     320: {
-      //       slidesPerView: 1,
-      //       spaceBetween: 40,
-      //     },
-
-      //     1200: {
-      //       slidesPerView: 3,
-      //     },
-      //   },
-      // });
+      const portfolioLightbox = GLightbox({
+        selector: '.portfokio-lightbox',
+      });
 
       /**
        * Initiate Pure Counter
        */
-      // new PureCounter();
     })();
+    new PureCounter();
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
   }
 }
