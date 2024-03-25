@@ -11,6 +11,7 @@ import Isotope from 'isotope-layout';
 import Swiper from 'swiper';
 import PureCounter from '@srexi/purecounterjs';
 import { CommonModule } from '@angular/common';
+import AOS from 'aos';
 
 type SectionVisibilityFlags = {
   [K in
@@ -72,6 +73,12 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   };
 
   ngAfterViewInit() {
+    AOS.init({
+      duration: 700,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+    });
     /**
      * Testimonials slider
      */
@@ -179,6 +186,13 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }, 0);
 
     new PureCounter();
+
+    AOS.init({
+      duration: 700,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+    });
   }
 
   ngOnInit(): void {
@@ -187,6 +201,13 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
 
     new PureCounter();
+
+    AOS.init({
+      duration: 700,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+    });
   }
 
   scrollToElement(elementId: string, offset: number = 60) {
