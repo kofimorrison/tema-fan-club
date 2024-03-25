@@ -13,7 +13,61 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li class="dropdown"><a class="nav-link scrollto" id="nav-home" (click)="navToOption('Home')">Home</a></li>
-        <li class="dropdown"><a class="nav-link scrollto"  (click)="navToOption('Angebote')">Angebote</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-values" (click)="navToOption('Verkauf')">Verkauf</a>
+          <ul>
+            <li><a (click)="navToOption('Verkauf', 'hausverkaufen')">Haus</a></li>
+            <li><a (click)="navToOption('Verkauf', 'wohnungverkaufen')">Wohnung</a></li>
+            <li><a (click)="navToOption('Verkauf', 'gewerbe')">Gewerbe</a></li>
+            <li><a (click)="navToOption('Verkauf', 'grundstuck')">Grundstück</a></li>
+            <li><a (click)="navToOption('Verkauf', 'mehrfamilienhaus')">Mehrfamilienhaus</a></li>
+            <li><a (click)="navToOption('Verkauf', 'suchauftrag')">Exklusiver Suchauftrag</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-services"
+            (click)="navToOption('Vermietung')">Vermietung</a>
+          <ul>
+            <li><a (click)="navToOption('Vermietung', 'hausvermieten')">Haus</a></li>
+            <li><a (click)="navToOption('Vermietung', 'wohnungvermieten')">Wohnung</a></li>
+            <li><a (click)="navToOption('Vermietung', 'gewerbe')">Gewerbe</a></li>
+            <li><a (click)="navToOption('Vermietung', 'grundstuck')">Grundstück</a></li>
+            <li><a (click)="navToOption('Vermietung', 'industrie')">Industrie</a></li>
+            <li><a (click)="navToOption('Vermietung', 'suchauftrag')">Exklusiver Suchauftrag</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-team"
+            (click)="navToOption('Leistungen')">Leistungen</a>
+          <ul>
+            <li><a (click)="navToOption('Leistungen', 'services')">Rückrufservice</a></li>
+            <li><a (click)="navToOption('Leistungen', 'services')">Immobilienbewertung</a></li>
+            <li><a (click)="navToOption('Leistungen', 'contact')">Kontaktformular</a></li>
+            <li><a (click)="navToOption('Leistungen', 'services')">Finanzierungsrechner</a></li>
+            <li><a (click)="navToOption('Leistungen', 'exposes')">Professionelle Exposés</a></li>
+            <li><a (click)="navToOption('Leistungen', 'profibilder')">Bilder vom Profi</a></li>
+            <li><a (click)="navToOption('Leistungen', 'drohnenaufnahmen')">Drohnenaufnahmen</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts" (click)="navToOption('Beratung')">Beratung</a>
+          <ul>
+            <li><a (click)="navToOption('Beratung', 'energieausweis')">Energieausweis</a></li>
+            <li><a (click)="navToOption('Beratung', 'gutachten')">Gutachten</a></li>
+            <li><a (click)="navToOption('Beratung', 'architekten-Service')">Architekten-Service</a></li>
+            <li><a (click)="navToOption('Beratung', 'grundrisserstellung')">Erstellung von Grundrissen</a></li>
+            <li><a (click)="navToOption('Beratung', 'bausachverstandige')">Bausachverständige</a></li>
+            <li><a (click)="navToOption('Beratung', 'grundsteuer')">Grundsteuer</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navToOption('Zusammenarbeit')">Zusammenarbeit</a>
+          <ul>
+            <li><a (click)="navToOption('Zusammenarbeit', 'tippGeber')">Tippgeber</a></li>
+            <li class="dropdown"><a><span>Bewerbung</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a (click)="navToOption('Zusammenarbeit', 'bewerbung')">Immobilienmakler</a></li>
+                <li><a (click)="navToOption('Zusammenarbeit', 'bewerbung')">Ausbildung</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navToOption('Angebote')">Angebote</a>
           <!-- <ul>
             <li><a href="#">Drop Down 1</a></li>
             <li><a href="#">Drop Down 2</a></li>
@@ -21,60 +75,9 @@
             <li><a href="#">Drop Down 4</a></li>
           </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-values" (click)="navToOption('Verkauf')">Verkauf</a>
-          <!-- <ul>
-            <li><a (click)="scrollToElement('hausverkaufen', 60)">Haus</a></li>
-            <li><a (click)="scrollToElement('wohnungverkaufen', 60)">Wohnung</a></li>
-            <li><a (click)="scrollToElement('gewerbe', 60)">Gewerbe</a></li>
-            <li><a (click)="scrollToElement('grundstuck', 60)">Grundstück</a></li>
-            <li><a (click)="scrollToElement('mehrfamilienhaus', 60)">Mehrfamilienhaus</a></li>
-            <li><a (click)="scrollToElement('suchauftrag', 60)">Exklusiver Suchauftrag</a></li>
-          </ul> -->
-        </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-services"  (click)="navToOption('Vermietung')">Vermietung</a>
-          <!-- <ul>
-            <li><a (click)="scrollToElement('hausvermieten', 60)">Haus</a></li>
-            <li><a (click)="scrollToElement('wohnungvermieten', 60)">Wohnung</a></li>
-            <li><a (click)="scrollToElement('gewerbe', 60)">Gewerbe</a></li>
-            <li><a (click)="scrollToElement('grundstuck', 60)">Grundstück</a></li>
-            <li><a (click)="scrollToElement('industrie', 60)">Industrie</a></li>
-            <li><a (click)="scrollToElement('suchauftrag', 60)">Exklusiver Suchauftrag</a></li>
-          </ul> -->
-        </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-team" (click)="navToOption('Leistungen')">Leistungen</a>
-          <!-- <ul>
-            <li><a (click)="scrollToElement('services', 60)">Rückrufservice</a></li>
-            <li><a (click)="scrollToElement('services', 60)">Immobilienbewertung</a></li>
-            <li><a (click)="scrollToElement('contact', 60)">Kontaktformular</a></li>
-            <li><a (click)="scrollToElement('services', 60)">Finanzierungsrechner</a></li>
-            <li><a (click)="scrollToElement('angebote', 60)">Professionelle Exposés</a></li>
-            <li><a (click)="scrollToElement('profibilder', 60)">Bilder vom Profi</a></li>
-            <li><a (click)="scrollToElement('drohnenaufnahmen', 60)">Drohnenaufnahmen</a></li>
-          </ul> -->
-        </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts" (click)="navToOption('Beratung')">Beratung</a>
-          <!-- <ul>
-            <li><a (click)="scrollToElement('energieausweis', 60)">Energieausweis</a></li>
-            <li><a (click)="scrollToElement('gutachten', 60)">Gutachten</a></li>
-            <li><a (click)="scrollToElement('architekten-Service', 60)">Architekten-Service</a></li>
-            <li><a (click)="scrollToElement('grundrisserstellung', 60)">Erstellung von Grundrissen</a></li>
-            <li><a (click)="scrollToElement('bausachverstandige', 60)">Bausachverständige</a></li>
-            <li><a (click)="scrollToElement('grundsteuer', 60)">Grundsteuer</a></li>
-          </ul> -->
-        </li>
-        <li class="dropdown" (click)="navToOption('Zusammenarbeit')"><a><span>Zusammenarbeit</span></a>
-          <!-- <ul>
-            <li><a (click)="scrollToElement('tippGeber', 60)">Tippgeber</a></li>
-            <li class="dropdown"><a><span>Bewerbung</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a (click)="scrollToElement('bewerbung', 60)">Immobilienmakler</a></li>
-                <li><a (click)="scrollToElement('bewerbung', 60)">Ausbildung</a></li>
-              </ul>
-            </li>
-          </ul> -->
-        </li>
 
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-contact" (click)="navToOption('Kontakt')">Kontakt</a></li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-contact" (click)="navToOption('Kontakt')">Kontakt</a>
+        </li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -480,78 +483,84 @@
 
   </section><!-- End Features Section -->
 
-  <section class="suchauftrag features" id="suchauftrag" *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible">
+  <section class="suchauftrag features" id="suchauftrag"
+    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible">
 
     <div class="container" data-aos="fade-up">
-  <div class="row feature-icons" data-aos="fade-up">
-    <h3>Exklusiver Suchauftrag</h3>
+      <div class="row feature-icons" data-aos="fade-up">
+        <h3>Exklusiver Suchauftrag</h3>
 
-    <div class="row">
+        <div class="row">
 
-      <div class="col-xl-6 d-flex content">
-        <div class="row align-self-center gy-4">
+          <div class="col-xl-6 d-flex content">
+            <div class="row align-self-center gy-4">
 
-          <div class="col-md-6 icon-box" data-aos="fade-up">
-            <i class="ri-line-chart-line"></i>
-            <div>
-              <h4>Corporis voluptates sit</h4>
-              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              <div class="col-md-6 icon-box" data-aos="fade-up">
+                <i class="ri-line-chart-line"></i>
+                <div>
+                  <h4>Corporis voluptates sit</h4>
+                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <i class="ri-stack-line"></i>
+                <div>
+                  <h4>Ullamco laboris nisi</h4>
+                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                <i class="ri-brush-4-line"></i>
+                <div>
+                  <h4>Labore consequatur</h4>
+                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                <i class="ri-magic-line"></i>
+                <div>
+                  <h4>Beatae veritatis</h4>
+                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                <i class="ri-command-line"></i>
+                <div>
+                  <h4>Molestiae dolor</h4>
+                  <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                <i class="ri-radar-line"></i>
+                <div>
+                  <h4>Explicabo consectetur</h4>
+                  <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <i class="ri-stack-line"></i>
-            <div>
-              <h4>Ullamco laboris nisi</h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-            </div>
+          <div class="col-xl-6 text-center search-task-img round-borders" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/ph6.jpg" class="img-fluid p-4" alt="">
           </div>
-
-          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <i class="ri-brush-4-line"></i>
-            <div>
-              <h4>Labore consequatur</h4>
-              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <i class="ri-magic-line"></i>
-            <div>
-              <h4>Beatae veritatis</h4>
-              <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <i class="ri-command-line"></i>
-            <div>
-              <h4>Molestiae dolor</h4>
-              <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <i class="ri-radar-line"></i>
-            <div>
-              <h4>Explicabo consectetur</h4>
-              <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-      <div class="col-xl-6 text-center search-task-img round-borders" data-aos="fade-right" data-aos-delay="100">
-        <img src="assets/img/ph6.jpg" class="img-fluid p-4" alt="">
       </div>
     </div>
+  </section>
 
-  </div></div></section>
+  <div class="mobile-pink-line"
+    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible">
+  </div>
 
-  <div class="mobile-pink-line" *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible"></div>
-
-  <section id="gewerbe" class="gewerbe features"  *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
+  <section id="gewerbe" class="gewerbe features"
+    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -602,8 +611,11 @@
       </div>
     </div>
   </section>
-  <div class="mobile-green-line" *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible"></div>
-  <section class="grundstuck features" data-aos="fade-up" id="grundstuck" *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
+  <div class="mobile-green-line"
+    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible">
+  </div>
+  <section class="grundstuck features" data-aos="fade-up" id="grundstuck"
+    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -671,7 +683,7 @@
   </section>
 
   <!-- ======= Services Section ======= -->
-  <section id="services" class="services"  *ngIf="visibilityFlags.isLeistungenVisible">
+  <section id="services" class="services" *ngIf="visibilityFlags.isLeistungenVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -744,9 +756,15 @@
         <h2>Professionelle Exposés</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
       </header>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia itaque voluptatibus, autem quasi, quibusdam tenetur natus minima commodi assumenda esse perspiciatis voluptates. Praesentium vel repellendus, doloremque explicabo neque voluptates quas.
-      Quam illum ipsam inventore necessitatibus optio illo laborum rerum incidunt neque provident hic repudiandae dicta, quibusdam modi quaerat, quod alias. Ad dolor impedit fuga nostrum molestiae. Vero, voluptas? Doloribus, corrupti.
-      Sit optio at sunt eum suscipit perferendis ea voluptas provident recusandae veniam asperiores ut assumenda praesentium dicta neque qui iure aut fugit labore veritatis ab, aspernatur consectetur nulla! Deserunt, officiis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia itaque voluptatibus, autem quasi, quibusdam
+        tenetur natus minima commodi assumenda esse perspiciatis voluptates. Praesentium vel repellendus, doloremque
+        explicabo neque voluptates quas.
+        Quam illum ipsam inventore necessitatibus optio illo laborum rerum incidunt neque provident hic repudiandae
+        dicta, quibusdam modi quaerat, quod alias. Ad dolor impedit fuga nostrum molestiae. Vero, voluptas? Doloribus,
+        corrupti.
+        Sit optio at sunt eum suscipit perferendis ea voluptas provident recusandae veniam asperiores ut assumenda
+        praesentium dicta neque qui iure aut fugit labore veritatis ab, aspernatur consectetur nulla! Deserunt,
+        officiis.</p>
 
     </div>
 
@@ -767,7 +785,7 @@
         <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
           <div class="box">
             <img src="assets/img/pricing-free.png" class="img-fluid" alt="">
-            <h3 >FacettenReich! Zweifamilienhaus in Ludwigsburg-Hoheneck</h3>
+            <h3>FacettenReich! Zweifamilienhaus in Ludwigsburg-Hoheneck</h3>
             <div class="price">420.000 €</div>
             <ul>
               <li>Aida dere</li>
@@ -827,7 +845,7 @@
     </div>
 
   </section>
-<div class="mobile-pink-line"  *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
   <section id="energieausweis" class="energieausweis features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
@@ -849,8 +867,10 @@
                 exercitationem aperiam voluptatem nostrum!
                 Minima earum voluptatem porro reprehenderit corporis delectus quia ad facere. Adipisci, provident
                 molestias assumenda sint, perspiciatis laudantium, commodi dolorum cumque praesentium voluptatibus
-                suscipit dolorem corrupti! Laborum sed error mollitia nobis!</p><br/>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                suscipit dolorem corrupti! Laborum sed error mollitia nobis!</p><br />
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima
+                soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde
+                ratione est quis odio
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!</p>
             </div>
@@ -878,8 +898,10 @@
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!
                 Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
-                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br/>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br />
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima
+                soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde
+                ratione est quis odio
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!</p>
             </div>
@@ -916,8 +938,10 @@
                 exercitationem aperiam voluptatem nostrum!
                 Minima earum voluptatem porro reprehenderit corporis delectus quia ad facere. Adipisci, provident
                 molestias assumenda sint, perspiciatis laudantium, commodi dolorum cumque praesentium voluptatibus
-                suscipit dolorem corrupti! Laborum sed error mollitia nobis!</p><br/>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                suscipit dolorem corrupti! Laborum sed error mollitia nobis!</p><br />
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima
+                soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde
+                ratione est quis odio
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!</p>
             </div>
@@ -943,8 +967,10 @@
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!
                 Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
-                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br/>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br />
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima
+                soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde
+                ratione est quis odio
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!</p>
             </div>
@@ -979,8 +1005,10 @@
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!
                 Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
-                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br/>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br />
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima
+                soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde
+                ratione est quis odio
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!</p>
 
@@ -1007,8 +1035,10 @@
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!
                 Consectetur ratione debitis ab nihil illum natus, laborum dicta suscipit aliquid omnis animi accusantium
-                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br/>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde ratione est quis odio
+                quidem, veritatis iusto ad consequatur rerum similique voluptatibus.</p><br />
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci nulla suscipit odio numquam minima
+                soluta iure laboriosam, et quos ratione est odit, maxime qui ea quasi. Vel iste modi dolore! Unde
+                ratione est quis odio
                 facilis quisquam commodi temporibus sed enim, velit inventore maxime repellendus ab pariatur, sapiente
                 dolorum beatae impedit!</p>
             </div>
@@ -1481,7 +1511,7 @@
   </section><!-- End Testimonials Section -->
 
   <!-- ======= Team Section ======= -->
-  <section id="team" class="team"  *ngIf="visibilityFlags.isHomeVisible">
+  <section id="team" class="team" *ngIf="visibilityFlags.isHomeVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1579,7 +1609,7 @@
   </section><!-- End Team Section -->
 
   <!-- ======= Clients Section ======= -->
-  <section id="industrie" class="clients" *ngIf="visibilityFlags.isVermietungVisible">
+  <section id="industrie" class="clients {{ visibilityFlags.isVermietungVisible ? '' : 'hide' }}">
 
     <div class="container" data-aos="fade-up">
 
@@ -1589,20 +1619,20 @@
       </header>
 
       <!-- <swiper [config]="config"> -->
-        <div class="clients-slider swiper" #clientsSwipper>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
+      <div class="clients-slider swiper" #clientsSwipper>
+        <div class="swiper-wrapper align-items-center">
+          <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
         </div>
-    <!-- </swiper> -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- </swiper> -->
     </div>
 
   </section>
@@ -1654,8 +1684,165 @@
   </section>
   <!-- End Recent Blog Posts Section -->
 
+  <section id="impressum" class="impressum" *ngIf="visibilityFlags.isImpressumVisible">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Impressum</h2>
+        <p>Impressum</p>
+      </header>
+
+      <div class="row">
+
+        <div class="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus totam voluptatem amet, autem quae,
+            impedit minus error hic excepturi, eius quas? Quo ad accusamus doloribus aliquid aut ipsa delectus impedit!
+            Itaque alias vitae error provident in eveniet ab exercitationem, impedit dolor. Atque quisquam aliquam quod
+            rerum doloribus, amet commodi debitis ullam dolore consequuntur. Beatae, maxime aut nisi dolor tempora
+            dolorem!
+            Exercitationem itaque quasi dolorum culpa recusandae. Laudantium quos expedita soluta deserunt recusandae
+            ex, cupiditate explicabo itaque rerum voluptatibus quo iste incidunt blanditiis, aperiam consequuntur
+            perspiciatis dignissimos rem, placeat ratione mollitia?
+            <br /><br />
+            Magni provident similique aspernatur, reprehenderit ad labore? Cum laborum ad illo voluptatum, provident
+            recusandae ab est voluptatibus. Debitis nam ad magnam, modi reprehenderit sequi tempore. Eius minima atque
+            nisi expedita?
+            Qui ducimus commodi ex. Ullam perspiciatis porro earum quis expedita repellat voluptatum quo id, nesciunt
+            eligendi, vel rem eveniet aspernatur, harum dolor maiores eaque dolores molestiae odit aliquid! Aliquam,
+            magni?
+            Aperiam quisquam omnis explicabo corporis, temporibus eligendi perspiciatis blanditiis magni amet fugiat
+            nulla odio quia officia quas eveniet animi. Animi iure in hic atque, quaerat culpa enim blanditiis ea
+            voluptas?
+            Nemo exercitationem doloribus saepe vero repudiandae quam, accusantium quas facilis excepturi fugiat
+            inventore ad fuga iure. Maiores ipsum facere consequuntur adipisci! Accusantium aut praesentium molestiae
+            dolores, necessitatibus blanditiis in veniam.
+            <br /><br />
+            Aspernatur culpa praesentium, corrupti ratione voluptas porro libero, necessitatibus provident, aliquam esse
+            inventore! Quam, ipsam laudantium dolores omnis voluptates tenetur tempora dolor sequi, ea eligendi magni
+            quod blanditiis numquam repellendus.
+            Assumenda, molestias. Ipsam alias libero sequi quaerat labore sapiente assumenda, quae enim laborum optio a
+            minus! Delectus magnam reprehenderit dolor. At asperiores consectetur quasi adipisci repellat id cum quo
+            illo.
+            Earum quos, architecto velit recusandae doloremque hic possimus perspiciatis asperiores, sunt amet maiores
+            laudantium eos? Non cumque natus placeat harum nostrum aliquid quae assumenda, tempora a modi, beatae
+            numquam dicta.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="datenschutz" class="datenSchutz" *ngIf="visibilityFlags.isDatenSchutzVisible">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Datenschutz</h2>
+        <p>Datenschutz</p>
+      </header>
+
+      <div class="row">
+
+        <div class="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus totam voluptatem amet, autem quae,
+            impedit minus error hic excepturi, eius quas? Quo ad accusamus doloribus aliquid aut ipsa delectus impedit!
+            Itaque alias vitae error provident in eveniet ab exercitationem, impedit dolor. Atque quisquam aliquam quod
+            rerum doloribus, amet commodi debitis ullam dolore consequuntur. Beatae, maxime aut nisi dolor tempora
+            dolorem!
+            Exercitationem itaque quasi dolorum culpa recusandae. Laudantium quos expedita soluta deserunt recusandae
+            ex, cupiditate explicabo itaque rerum voluptatibus quo iste incidunt blanditiis, aperiam consequuntur
+            perspiciatis dignissimos rem, placeat ratione mollitia?
+            <br /><br />
+            Magni provident similique aspernatur, reprehenderit ad labore? Cum laborum ad illo voluptatum, provident
+            recusandae ab est voluptatibus. Debitis nam ad magnam, modi reprehenderit sequi tempore. Eius minima atque
+            nisi expedita?
+            Qui ducimus commodi ex. Ullam perspiciatis porro earum quis expedita repellat voluptatum quo id, nesciunt
+            eligendi, vel rem eveniet aspernatur, harum dolor maiores eaque dolores molestiae odit aliquid! Aliquam,
+            magni?
+            Aperiam quisquam omnis explicabo corporis, temporibus eligendi perspiciatis blanditiis magni amet fugiat
+            nulla odio quia officia quas eveniet animi. Animi iure in hic atque, quaerat culpa enim blanditiis ea
+            voluptas?
+            Nemo exercitationem doloribus saepe vero repudiandae quam, accusantium quas facilis excepturi fugiat
+            inventore ad fuga iure. Maiores ipsum facere consequuntur adipisci! Accusantium aut praesentium molestiae
+            dolores, necessitatibus blanditiis in veniam.
+            <br /><br />
+            Aspernatur culpa praesentium, corrupti ratione voluptas porro libero, necessitatibus provident, aliquam esse
+            inventore! Quam, ipsam laudantium dolores omnis voluptates tenetur tempora dolor sequi, ea eligendi magni
+            quod blanditiis numquam repellendus.
+            Assumenda, molestias. Ipsam alias libero sequi quaerat labore sapiente assumenda, quae enim laborum optio a
+            minus! Delectus magnam reprehenderit dolor. At asperiores consectetur quasi adipisci repellat id cum quo
+            illo.
+            Earum quos, architecto velit recusandae doloremque hic possimus perspiciatis asperiores, sunt amet maiores
+            laudantium eos? Non cumque natus placeat harum nostrum aliquid quae assumenda, tempora a modi, beatae
+            numquam dicta.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="widerrufsbelehrung" class="widerrufsbelehrung" *ngIf="visibilityFlags.isWiderrufsbelehrungVisible">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Widerrufsbelehrung</h2>
+        <p>Widerrufsbelehrung</p>
+      </header>
+
+      <div class="row">
+
+        <div class="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus totam voluptatem amet, autem quae,
+            impedit minus error hic excepturi, eius quas? Quo ad accusamus doloribus aliquid aut ipsa delectus impedit!
+            Itaque alias vitae error provident in eveniet ab exercitationem, impedit dolor. Atque quisquam aliquam quod
+            rerum doloribus, amet commodi debitis ullam dolore consequuntur. Beatae, maxime aut nisi dolor tempora
+            dolorem!
+            Exercitationem itaque quasi dolorum culpa recusandae. Laudantium quos expedita soluta deserunt recusandae
+            ex, cupiditate explicabo itaque rerum voluptatibus quo iste incidunt blanditiis, aperiam consequuntur
+            perspiciatis dignissimos rem, placeat ratione mollitia?
+            <br /><br />
+            Magni provident similique aspernatur, reprehenderit ad labore? Cum laborum ad illo voluptatum, provident
+            recusandae ab est voluptatibus. Debitis nam ad magnam, modi reprehenderit sequi tempore. Eius minima atque
+            nisi expedita?
+            Qui ducimus commodi ex. Ullam perspiciatis porro earum quis expedita repellat voluptatum quo id, nesciunt
+            eligendi, vel rem eveniet aspernatur, harum dolor maiores eaque dolores molestiae odit aliquid! Aliquam,
+            magni?
+            Aperiam quisquam omnis explicabo corporis, temporibus eligendi perspiciatis blanditiis magni amet fugiat
+            nulla odio quia officia quas eveniet animi. Animi iure in hic atque, quaerat culpa enim blanditiis ea
+            voluptas?
+            Nemo exercitationem doloribus saepe vero repudiandae quam, accusantium quas facilis excepturi fugiat
+            inventore ad fuga iure. Maiores ipsum facere consequuntur adipisci! Accusantium aut praesentium molestiae
+            dolores, necessitatibus blanditiis in veniam.
+            <br /><br />
+            Aspernatur culpa praesentium, corrupti ratione voluptas porro libero, necessitatibus provident, aliquam esse
+            inventore! Quam, ipsam laudantium dolores omnis voluptates tenetur tempora dolor sequi, ea eligendi magni
+            quod blanditiis numquam repellendus.
+            Assumenda, molestias. Ipsam alias libero sequi quaerat labore sapiente assumenda, quae enim laborum optio a
+            minus! Delectus magnam reprehenderit dolor. At asperiores consectetur quasi adipisci repellat id cum quo
+            illo.
+            Earum quos, architecto velit recusandae doloremque hic possimus perspiciatis asperiores, sunt amet maiores
+            laudantium eos? Non cumque natus placeat harum nostrum aliquid quae assumenda, tempora a modi, beatae
+            numquam dicta.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
   <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact"  *ngIf="visibilityFlags.isLeistungenVisible || visibilityFlags.isHomeVisible || visibilityFlags.isKontaktVisible">
+  <section id="contact" class="contact"
+    *ngIf="visibilityFlags.isLeistungenVisible || visibilityFlags.isHomeVisible || visibilityFlags.isKontaktVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1781,35 +1968,37 @@
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+          <!-- <h4>Useful Links</h4> -->
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a>Impressum</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a>Datenschutz</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a>Widerrufsbelehrung</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Impressum')">Impressum</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('DatenSchutz')">Datenschutz</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a
+                (click)="navToOption('Widerrufsbelehrung')">Widerrufsbelehrung</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
+          <h4>UNSERE LEISTUNGEN</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Rückrufservice</a></li>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Immobilienbewertung</a></li>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Kontakt')">Kontaktformular</a></li>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Finanzierungsrechner</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Professionelle Exposés</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Professionelle Exposés</a>
+            </li>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Bilder vom Profi</a></li>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Drohnenaufnahmen</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
+          <h4>Kontakt</h4>
           <p>
             Oskar-Schlemmer-Str. 14, <br>
             71679 Asperg<br>
             Deutschland <br><br>
-            <strong>Phone:</strong>+49 (0) 163 7300182<br>
-            <strong>Email:</strong> info&#64;rosenstolz-immo.de<br>
+            <strong>Tel:</strong>+49 (0) 163 7300182<br>
+            <strong>E-Mail:</strong> info&#64;rosenstolz-immo.de<br>
           </p>
 
         </div>

@@ -1,22 +1,31 @@
-import { Component, AfterViewInit, OnInit, HostListener, ViewChild, ElementRef, Inject, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Inject,
+  CUSTOM_ELEMENTS_SCHEMA,
+} from '@angular/core';
 import Isotope from 'isotope-layout';
-import AOS from 'aos';
 import Swiper from 'swiper';
-import GLightbox from 'glightbox';
 import PureCounter from '@srexi/purecounterjs';
 import { CommonModule } from '@angular/common';
-// import { SwiperModule } from 'ngx-swiper-wrapper';
-// import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-// import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 type SectionVisibilityFlags = {
-  [K in 'isHomeVisible' | 'isVerkaufVisible' | 'isVermietungVisible' | 'isLeistungenVisible' | 'isBeratungVisible' | 'isZusammenarbeitVisible' | 'isAngeboteVisible' | 'isKontaktVisible']: boolean;
+  [K in
+    | 'isHomeVisible'
+    | 'isVerkaufVisible'
+    | 'isVermietungVisible'
+    | 'isLeistungenVisible'
+    | 'isBeratungVisible'
+    | 'isZusammenarbeitVisible'
+    | 'isAngeboteVisible'
+    | 'isKontaktVisible'
+    | 'isImpressumVisible'
+    | 'isDatenSchutzVisible'
+    | 'isWiderrufsbelehrungVisible']: boolean;
 };
-
-// const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-//   direction: 'horizontal',
-//   slidesPerView: 'auto'
-// };
 
 @Component({
   selector: 'app-home-page',
@@ -24,12 +33,7 @@ type SectionVisibilityFlags = {
   imports: [CommonModule],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css',
-  providers: [
-    // {
-    //   provide: SWIPER_CONFIG,
-    //   useValue: DEFAULT_SWIPER_CONFIG
-    // }
-  ],
+  providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
@@ -44,32 +48,10 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     isLeistungenVisible: false,
     isBeratungVisible: false,
     isZusammenarbeitVisible: false,
-    isKontaktVisible: false
-  };
-  // isHomeVisible: boolean = true;
-  // isVerkaufVisible: boolean = false;
-  // isVermietungVisible: boolean = false;
-  // isLeistungenVisible: boolean = false;
-  // isBeratungVisible: boolean = false;
-  // isZusammenarbeitVisible: boolean = false;
-  swiper: any;
-  image: string | undefined;
-  // Can bind 4th img tag
-  // image: string = 'https://source.unsplash.com/random/512x512?portrait';
-
-  public swipeOptions = {
-    spaceBetween: 0,
-    loop: true,
-    speed: 1000,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    }
+    isKontaktVisible: false,
+    isImpressumVisible: false,
+    isDatenSchutzVisible: false,
+    isWiderrufsbelehrungVisible: false,
   };
 
   constructor(@Inject(ElementRef) private elementRef: ElementRef) {}
@@ -85,10 +67,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       return document.getElementById(el);
     }
   };
-  onscroll = (
-    el: Document,
-    listener: { (): void; (): void; (): void }
-  ) => {
+  onscroll = (el: Document, listener: { (): void; (): void; (): void }) => {
     el.addEventListener('scroll', listener);
   };
 
@@ -119,7 +98,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
           slidesPerView: 3,
         },
       },
-      observer: true, observeParents: true
+      observer: true,
+      observeParents: true,
     });
 
     new Swiper(this.clientsSwipper?.nativeElement, {
@@ -153,9 +133,9 @@ export class HomePageComponent implements OnInit, AfterViewInit {
           spaceBetween: 120,
         },
       },
-      observer: true, observeParents: true
+      observer: true,
+      observeParents: true,
     });
-
 
     let backtotop = this.select('back-to-top');
     if (backtotop) {
@@ -198,12 +178,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       window.dispatchEvent(new Event('resize'));
     }, 0);
 
-
     new PureCounter();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
   }
 
   ngOnInit(): void {
@@ -211,95 +186,42 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.navToOption(window.history.state.page);
     }
 
-    /**
-     * Easy on scroll event listener
-     */
-    // const onscroll = (el: Document, listener: { (): void; (): void; (): void }) => {
-    //   el.addEventListener('scroll', listener);
-    // };
-
-    /**
-     * Navbar links active state on scroll
-     */
-    // let navbarlinks = this.select('#navbar .scrollto', true);
-
-    // const navbarlinksActive = () => {
-    //   let position = window.scrollY + 100;
-    //   navbarlinks.forEach(
-    //     (navbarlink: {
-    //       id: string;
-    //       classList: {
-    //         add: (arg0: string) => void;
-    //         remove: (arg0: string) => void;
-    //       };
-    //     }) => {
-    //       if (!navbarlink.id) return;
-    //       let section = this.select(navbarlink.id.split('nav-')[1]);
-    //       if (!section) return;
-    //       if (
-    //         position >= section.offsetTop &&
-    //         position <= section.offsetTop + section.offsetHeight
-    //       ) {
-    //         navbarlink.classList.add('active');
-    //       } else {
-    //         navbarlink.classList.remove('active');
-    //       }
-    //     }
-    //   );
-    // };
-
     new PureCounter();
-
-    // window.addEventListener('load', navbarlinksActive);
-    // onscroll(document, navbarlinksActive);
-
-    // window.scrollTo({
-    //       top: 0,
-    //       behavior: 'smooth',
-    //     });
   }
 
-  scrollToElement(elementId: string, offset: number = 0, hasparent?: boolean) {
-    // const element = document.getElementById(elementId);
-    // if (element) {
-    //   let elementTop = 0;
-    //   if (hasparent) {
-    //     elementTop = (element.getBoundingClientRect().top + window.scrollY);
-    //     console.log(elementTop)
-    //   } else {
-    //     elementTop = element.offsetTop;
-    //   }
-    //     const scrollToPosition = elementTop - offset;
-    //     // console.log(element.offsetTop)
-
-    //     window.scrollTo({
-    //         top: scrollToPosition,
-    //         behavior: 'smooth'
-    //     });
-
-    //     window.history.pushState({
-    //       top: scrollToPosition
-    //   }, elementId)
-    // }
+  scrollToElement(elementId: string, offset: number = 60) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      let elementTop = 0;
+      elementTop = element.offsetTop;
+      const scrollToPosition = elementTop - offset;
+      window.scrollTo({
+        top: scrollToPosition,
+        behavior: 'smooth',
+      });
+    }
   }
 
   hideAllSections() {
-    Object.keys(this.visibilityFlags).forEach(key => {
+    Object.keys(this.visibilityFlags).forEach((key) => {
       this.visibilityFlags[key as keyof SectionVisibilityFlags] = false;
     });
   }
 
-  navToOption(section: string) {
-
-    if ((section === 'Home' && window.history.state?.page !== 'Home') || (section === 'Vermietung' && window.history.state?.page !== 'Vermietung')) {
+  navToOption(page: string, section?: string) {
+    if (page === 'Home' && window.history.state?.page !== 'Home') {
       window.location.reload();
     }
     this.hideAllSections();
-    this.visibilityFlags[`is${section}Visible` as keyof SectionVisibilityFlags] = true;
+    this.visibilityFlags[`is${page}Visible` as keyof SectionVisibilityFlags] =
+      true;
 
-    window.history.pushState({
-      page: section,
-    }, section);
+    window.history.pushState(
+      {
+        page: page,
+      },
+      page
+    );
 
     let navbarlinks = this.select('#navbar .scrollto', true);
 
@@ -310,39 +232,46 @@ export class HomePageComponent implements OnInit, AfterViewInit {
           add: (arg0: string) => void;
           remove: (arg0: string) => void;
         };
-        innerHTML: string
+        innerHTML: string;
       }) => {
-        console.log(section)
-        if (navbarlink.innerHTML == section) {
+        if (navbarlink.innerHTML == page) {
           navbarlink.classList.add('active');
         } else {
           navbarlink.classList.remove('active');
         }
       }
-    )
+    );
 
     new PureCounter();
 
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    setTimeout(() => {
+      if (section) this.scrollToElement(section);
+    }, 500);
+
+    if (!section) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
   }
 
   /**
-       * Porfolio isotope and filter
-       */
+   * Porfolio isotope and filter
+   */
   handlePortfolioFilter(e: any) {
     e.preventDefault();
 
-    let portfolioIsotope = new Isotope(this.portfolioContainerRef.nativeElement, {
-      itemSelector: '.portfolio-item',
-      layoutMode: 'fitRows',
-      transitionDuration: 0
-    });
+    let portfolioIsotope = new Isotope(
+      this.portfolioContainerRef.nativeElement,
+      {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows',
+        transitionDuration: 0,
+      }
+    );
 
     portfolioIsotope.destroy();
-
 
     let portfolioFilters = this.select('#portfolio-flters li', true);
 
@@ -357,12 +286,5 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     portfolioIsotope.arrange({
       filter: e.target.getAttribute('data-filter'),
     });
-
-    // AOS.init({
-    //   duration: 700,
-    //   easing: 'ease-in-out',
-    //   once: false,
-    //   mirror: false,
-    // });
   }
 }

@@ -1,4 +1,4 @@
-import { Component, HostListener, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import AOS from 'aos';
@@ -16,37 +16,18 @@ import PureCounter from '@srexi/purecounterjs';
 })
 export class AppComponent {
   title = 'rosen-stolz-app';
-  @HostListener('window:beforeunload', ['$event'])
-onBeforeUnload(event: Event): void {
-  // window.scrollTo(0, 0);
-}
 
   scrollRef = 0;
 
   constructor() {}
 
   ngOnInit(): void {
-    // window.addEventListener('load', () => {
-
-      AOS.init({
-        duration: 700,
-        easing: 'ease-in-out',
-        once: false,
-        mirror: true,
-      });
-    // });
-
-    /**
-     * Scroll with ofset on page load with hash links in the url
-     */
-    // window.addEventListener('load', () => {
-      // if (window.history.state.top) {
-        // window.scrollTo({
-        //   top: 0,
-        //   behavior: 'smooth',
-        // });
-      // }
-    // });
+    AOS.init({
+      duration: 700,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+    });
 
     /**
      * Easy selector helper function
@@ -86,7 +67,6 @@ onBeforeUnload(event: Event): void {
         behavior: 'smooth',
       });
     };
-
 
     (function () {
       /**
@@ -176,9 +156,9 @@ onBeforeUnload(event: Event): void {
             e.preventDefault();
             // select('#navbar').classList.toggle('bi-list');
             select('#navbar').classList.toggle('navbar-mobile');
-        select('#navbar').classList.toggle('bi-list');
+            select('#navbar').classList.toggle('bi-list');
             // e.target.nextElementSibling.classList.toggle('dropdown-active');
-            window.location.reload()
+            window.location.reload();
           }
         },
         true
@@ -207,42 +187,6 @@ onBeforeUnload(event: Event): void {
         true
       );
 
-      /**
-       * Clients Slider
-       */
-      // new Swiper('.clients-slider', {
-      //   speed: 400,
-      //   loop: true,
-      //   autoplay: {
-      //     delay: 5000,
-      //     disableOnInteraction: false,
-      //   },
-      //   slidesPerView: 'auto',
-      //   pagination: {
-      //     el: '.swiper-pagination',
-      //     type: 'bullets',
-      //     clickable: true,
-      //   },
-      //   breakpoints: {
-      //     320: {
-      //       slidesPerView: 2,
-      //       spaceBetween: 40,
-      //     },
-      //     480: {
-      //       slidesPerView: 3,
-      //       spaceBetween: 60,
-      //     },
-      //     640: {
-      //       slidesPerView: 4,
-      //       spaceBetween: 80,
-      //     },
-      //     992: {
-      //       slidesPerView: 6,
-      //       spaceBetween: 120,
-      //     },
-      //   },
-      // });
-
       // /**
       //  * Initiate portfolio lightbox
       //  */
@@ -256,9 +200,9 @@ onBeforeUnload(event: Event): void {
     })();
     new PureCounter();
 
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 }
