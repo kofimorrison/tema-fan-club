@@ -77,7 +77,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       duration: 700,
       easing: 'ease-in-out',
       once: false,
-      mirror: true,
+      mirror: false,
     });
     /**
      * Testimonials slider
@@ -182,7 +182,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     //   observeParents: true
     // });
     setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
+      // window.dispatchEvent(new Event('resize'));
     }, 0);
 
     new PureCounter();
@@ -191,7 +191,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       duration: 700,
       easing: 'ease-in-out',
       once: false,
-      mirror: true,
+      mirror: false,
     });
   }
 
@@ -206,7 +206,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       duration: 700,
       easing: 'ease-in-out',
       once: false,
-      mirror: true,
+      mirror: false,
     });
   }
 
