@@ -8,10 +8,12 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
 } from '@angular/core';
 import Isotope from 'isotope-layout';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Swiper from 'swiper';
+import GLightbox from 'glightbox';
 import PureCounter from '@srexi/purecounterjs';
 import { CommonModule } from '@angular/common';
-import AOS from 'aos';
 
 type SectionVisibilityFlags = {
   [K in
