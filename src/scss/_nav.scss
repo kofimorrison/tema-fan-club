@@ -48,9 +48,9 @@
     padding: 8px 20px;
     margin-left: 30px;
     border-radius: 4px;
-    color: #fff;
+    color: floralwhite;
     &:hover {
-      color: #fff;
+      color: floralwhite;
       background: lighten($primary, 5);
     }
   }
@@ -67,7 +67,7 @@
       z-index: 99;
       opacity: 0;
       visibility: hidden;
-      background: #fff;
+      background: floralwhite;
       box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
       transition: 0.3s;
       border-radius: 4px;
@@ -159,7 +159,7 @@
   line-height: 0;
   transition: 0.5s;
   &.bi-x {
-    color: #fff;
+    color: floralwhite;
   }
 }
 
@@ -201,7 +201,7 @@
     left: 15px;
     padding: 10px 0;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: floralwhite;
     overflow-y: auto;
     transition: 0.3s;
   }
@@ -230,7 +230,7 @@
       z-index: 99;
       opacity: 1;
       visibility: visible;
-      background: #fff;
+      background: floralwhite;
       box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
       
       li {

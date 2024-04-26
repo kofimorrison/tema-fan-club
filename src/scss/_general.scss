@@ -70,7 +70,7 @@ section {
   background: $secondary;
   min-height: 40px;
   margin-top: 82px;
-  color: #fff;
+  color: floralwhite;
 
   @media (max-width: 992px) {
     margin-top: 57px;
@@ -90,7 +90,7 @@ section {
     font-size: 14px;
 
     a {
-      color: #fff;
+      color: floralwhite;
       transition: 0.3s;
       &:hover {
         text-decoration: underline;
@@ -128,13 +128,13 @@ section {
 
   i {
     font-size: 24px;
-    color: #fff;
+    color: floralwhite;
     line-height: 0;
   }
 
   &:hover  {
     background: lighten($primary, 8);
-    color: #fff;
+    color: floralwhite;
   }
 
   &.active {

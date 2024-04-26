@@ -28,7 +28,7 @@ nav.navbar-default {
   height: 55%;
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: floralwhite;
 }
 
 @media only screen and (max-width: 768px) {
@@ -84,7 +84,7 @@ nav.navbar-default {
 
 #contact h3 {
   font-size: 3rem;
-  color: #fff;
+  color: floralwhite;
 }
 
 .phone,
