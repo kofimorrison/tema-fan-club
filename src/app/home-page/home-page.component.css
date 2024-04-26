@@ -170,8 +170,8 @@ section {
 .header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 20px 0 0 0;
-  background-color: white;
+  /* padding: 20px 0 0 0; */
+  background-color: floralwhite;
 }
 /* .hero-text h1 {
  /* color: #e83e8c; 
@@ -193,7 +193,7 @@ section {
 
 .header .logo {
   line-height: 0.9;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .round-borders {
@@ -228,8 +228,8 @@ section {
 }
 
 .header .logo img {
-  max-height: 80px;
-    margin-left: 20px;
+  max-height: 130px;
+    margin-left: 80px;
 }
 
 .header .logo span {
@@ -288,7 +288,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px 20px 30px;
+  padding: 0px 30px 0px 30px;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -547,9 +547,10 @@ section {
 .hero {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(floralwhite, rgb(255, 255, 255));
+  background-image: linear-gradient(floralwhite, floralwhite);
   /* background: url(../../assets/img/hero-bg.png) top center no-repeat; */
-  background-size: cover;
+  background-size: cover;   
+  border-bottom: 1px solid rgb(228, 225, 225);
 }
 
 .hero h1 {
@@ -645,6 +646,10 @@ background-color: darkseagreen;
     height: auto;
     padding: 180px 0 60px 0;
   }
+  
+  .header .logo img {
+    margin-left: 20px;
+}
 
   .hero .hero-img {
     text-align: center;
@@ -2427,7 +2432,7 @@ background-color: darkseagreen;
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  background: #f6f9ff;
+  background: floralwhite;
   padding: 0 0 30px 0;
   font-size: 14px;
 }
@@ -2485,7 +2490,7 @@ background-color: darkseagreen;
 }
 
 .footer .footer-top {
-  background: white url(../../assets/img/footer-bg.png) no-repeat right top;
+  background: floralwhite url(../../assets/img/footer-bg.png) no-repeat right top;
   background-size: contain;
   border-top: 1px solid #e1ecff;
   border-bottom: 1px solid #e1ecff;
@@ -2500,15 +2505,17 @@ background-color: darkseagreen;
 
 .footer .footer-top .footer-info {
   margin-bottom: 30px;
+  
+  margin-top: -10px;
 }
 
 .footer .footer-top .footer-info .logo {
   line-height: 0;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .footer .footer-top .footer-info .logo img {
-  max-height: 100px;
+  max-height: 130px;
     margin-left: -10px;
 }
 
