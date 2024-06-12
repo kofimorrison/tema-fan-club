@@ -14,6 +14,8 @@ import Swiper from 'swiper';
 import GLightbox from 'glightbox';
 import PureCounter from '@srexi/purecounterjs';
 import { CommonModule } from '@angular/common';
+import { VideoComponent } from '../video/video.component';
+import { MapComponent } from '../map/map.component';
 
 type SectionVisibilityFlags = {
   [K in
@@ -33,7 +35,7 @@ type SectionVisibilityFlags = {
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, VideoComponent, MapComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css',
   providers: [],
@@ -89,9 +91,10 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       loop: true,
       autoplay: {
         delay: 2000,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       },
       slidesPerView: 'auto',
+      // centeredSlides: true,
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
@@ -99,12 +102,14 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       },
       breakpoints: {
         320: {
-          slidesPerView: 1,
-          spaceBetween: 40,
+          slidesPerView: 5,
+          spaceBetween: 10,
         },
 
         1200: {
-          slidesPerView: 3,
+          slidesOffsetBefore: 240,
+          slidesPerView: 5,
+          spaceBetween: 10,
         },
       },
       observer: true,
@@ -231,51 +236,54 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     });
   }
 
-  navToOption(page: string, section?: string) {
-    if (page === 'Home' && window.history.state?.page !== 'Home') {
-      window.location.reload();
-    }
-    this.hideAllSections();
-    this.visibilityFlags[`is${page}Visible` as keyof SectionVisibilityFlags] =
-      true;
-
-    window.history.pushState(
-      {
-        page: page,
-      },
-      page
-    );
-
-    let navbarlinks = this.select('#navbar .scrollto', true);
-
-    navbarlinks.forEach(
-      (navbarlink: {
-        id: string;
-        classList: {
-          add: (arg0: string) => void;
-          remove: (arg0: string) => void;
-        };
-        innerHTML: string;
-      }) => {
-        if (navbarlink.innerHTML == page) {
-          navbarlink.classList.add('active');
-        } else {
-          navbarlink.classList.remove('active');
-        }
+  navToOption(page: string, enableNav: boolean = true, section?: string) {
+    if (enableNav) {
+      console.log(page)
+      if (page === 'Home' && window.history.state?.page !== 'Home') {
+        window.location.reload();
       }
-    );
+      this.hideAllSections();
+      this.visibilityFlags[`is${page}Visible` as keyof SectionVisibilityFlags] =
+        true;
 
-    new PureCounter();
+      window.history.pushState(
+        {
+          page: page,
+        },
+        page
+      );
 
-    setTimeout(() => {
-      if (section) this.scrollToElement(section);
-    }, 500);
+      let navbarlinks = this.select('#navbar .scrollto', true);
 
-    if (!section) {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
+      navbarlinks.forEach(
+        (navbarlink: {
+          id: string;
+          classList: {
+            add: (arg0: string) => void;
+            remove: (arg0: string) => void;
+          };
+          innerHTML: string;
+        }) => {
+          if (navbarlink.innerHTML == page) {
+            navbarlink.classList.add('active');
+          } else {
+            navbarlink.classList.remove('active');
+          }
+        }
+      );
+
+      new PureCounter();
+
+      setTimeout(() => {
+        if (section) this.scrollToElement(section);
+      }, 500);
+
+      if (!section) {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }
     }
   }
 

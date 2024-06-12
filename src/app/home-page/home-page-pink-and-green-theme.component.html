@@ -3,476 +3,151 @@
   <div class="header-container container-fluid d-flex align-items-center justify-content-between">
 
     <a href="index.html" class="logo d-flex align-items-center">
-      <div class="header-name">
+      <img src="assets/img/newtestlogo2.png" alt="" class="header-logo">
+      <!-- <div class="header-name">
         <span>ROSENSTOLZ</span>
         <span class="sub-header-text">IMMOBILIEN</span>
-      </div>
+      </div> -->
     </a>
-
-    <img src="assets/img/tempRose-transparent.png" class="img-fluid rose rose-transparent" alt="">
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-home" (click)="navToOption('Home')">
-            Home
-          </a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-home" (click)="navToOption('Home')">Home</a></li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-values" (click)="navToOption('Verkauf')">Verkauf</a>
+          <ul>
+            <li><a (click)="navToOption('Verkauf', 'hausverkaufen')">Haus</a></li>
+            <li><a (click)="navToOption('Verkauf', 'wohnungverkaufen')">Wohnung</a></li>
+            <li><a (click)="navToOption('Verkauf', 'gewerbe')">Gewerbe</a></li>
+            <li><a (click)="navToOption('Verkauf', 'grundstuck')">Grundstück</a></li>
+            <li><a (click)="navToOption('Verkauf', 'mehrfamilienhaus')">Mehrfamilienhaus</a></li>
+            <li><a (click)="navToOption('Verkauf', 'suchauftrag')">Exklusiver Suchauftrag</a></li>
+          </ul>
         </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-values"
-            (click)="navToOption('Home')">
-            Verkauf
-          </a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-services"
+            (click)="navToOption('Vermietung')">Vermietung</a>
+          <ul>
+            <li><a (click)="navToOption('Vermietung', 'hausvermieten')">Haus</a></li>
+            <li><a (click)="navToOption('Vermietung', 'wohnungvermieten')">Wohnung</a></li>
+            <li><a (click)="navToOption('Vermietung', 'gewerbe')">Gewerbe</a></li>
+            <li><a (click)="navToOption('Vermietung', 'grundstuck')">Grundstück</a></li>
+            <li><a (click)="navToOption('Vermietung', 'industrie')">Industrie</a></li>
+            <li><a (click)="navToOption('Vermietung', 'suchauftrag')">Exklusiver Suchauftrag</a></li>
+          </ul>
         </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-services"
-            (click)="navToOption('Home')">
-            Vermietung
-          </a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-team"
+            (click)="navToOption('Leistungen')">Leistungen</a>
+          <ul>
+            <li><a (click)="navToOption('Leistungen', 'services')">Rückrufservice</a></li>
+            <li><a (click)="navToOption('Leistungen', 'services')">Immobilienbewertung</a></li>
+            <li><a (click)="navToOption('Leistungen', 'contact')">Kontaktformular</a></li>
+            <li><a (click)="navToOption('Leistungen', 'services')">Finanzierungsrechner</a></li>
+            <li><a (click)="navToOption('Leistungen', 'exposes')">Professionelle Exposés</a></li>
+            <li><a (click)="navToOption('Leistungen', 'profibilder')">Bilder vom Profi</a></li>
+            <li><a (click)="navToOption('Leistungen', 'drohnenaufnahmen')">Drohnenaufnahmen</a></li>
+          </ul>
         </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-team"
-            (click)="navToOption('Home')">
-            Leistungen
-          </a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts" (click)="navToOption('Beratung')">Beratung</a>
+          <ul>
+            <li><a (click)="navToOption('Beratung', 'energieausweis')">Energieausweis</a></li>
+            <li><a (click)="navToOption('Beratung', 'gutachten')">Gutachten</a></li>
+            <li><a (click)="navToOption('Beratung', 'architekten-Service')">Architekten-Service</a></li>
+            <li><a (click)="navToOption('Beratung', 'grundrisserstellung')">Erstellung von Grundrissen</a></li>
+            <li><a (click)="navToOption('Beratung', 'bausachverstandige')">Bausachverständige</a></li>
+            <li><a (click)="navToOption('Beratung', 'grundsteuer')">Grundsteuer</a></li>
+          </ul>
         </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy"
-            id="nav-recent-blog-posts" (click)="navToOption('Home')">
-            Beratung
-          </a>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navToOption('Zusammenarbeit')">Zusammenarbeit</a>
+          <ul>
+            <li><a (click)="navToOption('Zusammenarbeit', 'tippGeber')">Tippgeber</a></li>
+            <li class="dropdown"><a><span>Bewerbung</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a (click)="navToOption('Zusammenarbeit', 'bewerbung')">Immobilienmakler</a></li>
+                <li><a (click)="navToOption('Zusammenarbeit', 'bewerbung')">Ausbildung</a></li>
+              </ul>
+            </li>
+          </ul>
         </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy"
-            (click)="navToOption('Home')">
-            Zusammenarbeit
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy"
-            (click)="navToOption('Home')">
-            Angebote
-          </a>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navToOption('Angebote')">Angebote</a>
+          <!-- <ul>
+            <li><a href="#">Drop Down 1</a></li>
+            <li><a href="#">Drop Down 2</a></li>
+            <li><a href="#">Drop Down 3</a></li>
+            <li><a href="#">Drop Down 4</a></li>
+          </ul> -->
         </li>
 
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-contact"
-            (click)="navToOption('Kontakt')">
-            Kontakt
-          </a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-contact" (click)="navToOption('Kontakt')">Kontakt</a>
         </li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
   </div>
+  <div class="green-line"></div>
 </header><!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="video-section" class="hero d-flex align-items-center" *ngIf="visibilityFlags.isHomeVisible">
+<section id="hero" class="hero d-flex align-items-center" *ngIf="visibilityFlags.isHomeVisible">
 
-  <!-- <div class="container">
+  <div class="container">
     <div class="row">
-      <div class="col-lg-12 d-flex flex-column justify-content-center"> -->
-  <!-- <video src="assets/img/heroVideo.mp4" loop autoplay muted ></video> -->
-  <app-video></app-video>
-  <!-- </div>
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <h1 data-aos="fade-up">Herzlich willkommen bei Rosenstolz Immobilien</h1>
+        <h2 data-aos="fade-up" data-aos-delay="400">…mit Stolz zum Eigenheim</h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">…mit Stolz verkaufen</h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">…seien Sie Stolz auf Ihren Verkauf</h2>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <div class="text-center text-lg-start">
+            <a href="#"
+              class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>Mehr erfahren</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <img src="assets/img/hero-img2.png" class="img-fluid" alt="">
+      </div>
     </div>
-  </div> -->
+  </div>
 
 </section>
 
 <main id="main">
-
-
-  <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="testimonials" *ngIf="visibilityFlags.isHomeVisible">
-
-    <div class="container" data-aos="fade-up">
-
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider>
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <div class="profile mt-sm-0 mb-sm-0">
-                <img
-                  src="https://le-cdn.website-editor.net/s/85e62a93d20c463ba7bba55772fdec2d/dms3rep/multi/opt/immobilien-ludwigsburg-20978b91-c5657643-1920w.png?Expires=1720699591&Signature=KOhJmoi0eKabKlHeus4~avgI-Jxliv3AzZkBjSQaEwexYWz260dQj7Xdj6GHVIQnsB8zDnGBOngPCfC0om4Gg1odTpXJp~5Jpf-xhKfo5r5PWUgtZg1aY~owzikXhf~seFcVcTZNtgPkxGR~M6RAopUDLrY0RUig4LeCC7tPPd2g7iMYUOVOmuoUBm7keWXdVMJa1eqZ57wjzSaq9BFXi6xMVmdSRyXaLf4t78XUxWLtQ2H~T1wRAXTYfvPe3NP8sikbMOKjdzD4suDomdvCvSxYbGE7FTk4BR3oM-~9uR4C8-TSrcXQEJYO5516~37FKqWx3W4mHBxbRPwYDIpGKA__&Key-Pair-Id=K2NXBXLF010TJW"
-                  class="testimonial-img" alt="">
-
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <div class="profile mt-sm-0 mb-sm-0">
-                <img
-                  src="https://le-cdn.website-editor.net/s/85e62a93d20c463ba7bba55772fdec2d/dms3rep/multi/opt/immobilienmakler-ludwigsburg-zetrtifizierung-din-en-15733-a82f5476-1920w.png?Expires=1720699591&Signature=PeSPMsawL4ZB1KTUwKE4oVVJhlRNs0VA0Fh0yA2X9fOwNCmitNmtVNaG3Ry5EV16IP0aDZEoSdh6Av-stdp-WyuCyniozym~Q-X3lHVKz8vxPPDf6vLK5~9d2huTmQARKsRsEo7egwr3OxqolZMgkJXqkQZX3hXtwGT3HaApJnfBwcbJa3-II5YVAGXANaWFXnSAQ3bSDSmZYKf-vlNC8QAcLkmvjZa1B~B6rEL8v8HUjX8DnSq7422Ikx7hLdWw-oaxM0u0BCL4dqu5LmDqxc5fsVDh5JdmALA51llpfkl8r2UlrWmbIAP8N1tkZU~wXdHsfFyj1t6DzUDH0CFkjw__&Key-Pair-Id=K2NXBXLF010TJW"
-                  class="testimonial-img" alt="">
-
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <div class="profile mt-sm-0 mb-sm-0">
-                <img
-                  src="https://le-cdn.website-editor.net/s/85e62a93d20c463ba7bba55772fdec2d/dms3rep/multi/opt/immobilienmakler-ludwigsburg-immowelt-partner-icon-1920w.png?Expires=1720699591&Signature=jA07ZbXfF3MSd1UzST5iApv-CUSbXtTnk2M~E5xpoY7rBC5xb~VaRuoJ8hT4-3QuGB2jYHne~LCdVRIYFdd7DVKYRDglyfha8ipHiCPTHdXds8k08jYXeQFhyrlnvKsN445ic7dVVskww3dE~PaeJZidX7EcpOhtk-~uFo1msBc1ft9Fk5mthqrYUTMypKXxSWkfNweQZTsDAys7bBYnrP~aFmnyqX~JWICoJ6izh~-FZE-GiuzcJQnZ-D5801VMmzw1duY8aW501-~byinof~r2poVzzMRyfp5-0qQ~~wo5nUsw10CG3QMODEZRDs0d1RYb~itvA7txvewTDjZYhQ__&Key-Pair-Id=K2NXBXLF010TJW"
-                  class="testimonial-img" alt="">
-
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <div class="profile mt-sm-0 mb-sm-0">
-                <img
-                  src="https://le-cdn.website-editor.net/s/85e62a93d20c463ba7bba55772fdec2d/dms3rep/multi/opt/immobilienmakler-ludwigsburg-IVD_Weiterbildungssiegel_2023_sw_web_klein-1920w.png?Expires=1720699591&Signature=k0kTERqNG6UeH0V-epFMwnF1445hzXi3CjwNczRKOuixwT6gtiVEKc04Cevcnie8LIg6uV8RKP57QWh9cGxh~z5Jqo3W1SMy4tt5ThvTus7ZzOaylb8Sf8ba5C1e28bw1RzCNjJn0uyqEXZ4vE7mVgHIS-~Sn5ed~~jYOZ4MAuTXO1MHcQapeQgoj8sjgvVK-ZI3m9H9aCoqkFamzsvrWfgDGmyirA8qh44BslDVt7DhLF0~F6rIz6w1cPnhm6~1mwz~iLvCJFiBJOFogXqmS5QjLfFa9NiUf41a5638TKNPNnAtArE~kj2Fbcfv4840fQ0UxzoF0nA7oUhj9LXfog__&Key-Pair-Id=K2NXBXLF010TJW"
-                  class="testimonial-img" alt="">
-
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <div class="profile mt-sm-0 mb-sm-0">
-                <img
-                  src="https://le-cdn.website-editor.net/s/85e62a93d20c463ba7bba55772fdec2d/dms3rep/multi/opt/immobilienmakler-ludwigsburg-immobilienscout24-experte-auszeichnung-1920w.png?Expires=1720699591&Signature=Ox-cdOjY1QoiauLOuXQp01RGkqT53ucWzPc6PPtK-wJgofKE~WCdpdQEbLKikbWeH6tFOWhJ9XBpvPiKfa~w71PK9esflBLbt28CyRClS~Y7jhfRlVz89FQ8vzDN7F~yWaCxqrRI5jgXHHiAFNdEg2q-HOOXZPAvigW-AO~R7uqkr91nSRPlfgH2I~-fhnoggevAGJeWLjBGjleUQyvzlEgQbQ46-TFwN6pyJ1zL8FuuyruXjnM9Ke-4FfsHPQPQo4I2D2RtEvUyMdoJIAIPqkdMQDQAvb77Urt2MQ5NBaO~g4-f4TD9V7343gzHnM5FTy3A3a14zc7KcZMVUOOafQ__&Key-Pair-Id=K2NXBXLF010TJW"
-                  class="testimonial-img" alt="">
-
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <div class="profile mt-sm-0 mb-sm-0">
-                <img
-                  src="https://le-cdn.website-editor.net/s/85e62a93d20c463ba7bba55772fdec2d/dms3rep/multi/opt/immobilienmakler-ludwigsburg-immobilie1-eigentuemer-partner-1920w.png?Expires=1720699591&Signature=fbKEYVfnM6rfr82SNNrDS5Z-a5cEOrjyATAz8Y51Bmhk6~8fifzYXI41itnPGrvFGcUioIdLtuWRUJQWOvNs-UmSSxQpILj4RW6Kjlx3CB0zgdjcs859nBg9KXQaV4DcnIZ22z4RfK0XyKyJZbb37ku4mmBPxAZ-LtgfklA2TVQqG0zCjRzNZ9E0mXd75QdPz9nhXCbeRKM9KYwwRwNip077paeTs7nUlY6QWEFXQ9KQOpfwGzu4wJzBRH5P~AwK3F1ZtIvqdUDpP3yYDLKx1~ssN2KmHEiGRa00-umf82gmAdxjHEnLsTpfmx16~r~QxaqSLZZ-QJjni2pjjy4IIA__&Key-Pair-Id=K2NXBXLF010TJW"
-                  class="testimonial-img" alt="">
-
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-
-    </div>
-
-  </section><!-- End Testimonials Section -->
-
-
-  <!-- ======= F.A.Q Section ======= -->
-  <section id="faq" class="faq" *ngIf="visibilityFlags.isHomeVisible">
-
-    <div class="container" data-aos="fade-up">
-
-      <header class="section-header">
-        <h1 class="fw-bold">IHREM VERLÄSSLICHEN PARTNER</h1>
-      </header>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-0"></div>
-        <h4 class="col-lg-6 col-md-12 text-center">
-          Ob es um den Kauf, Verkauf oder die Beratung geht, bei uns erhalten Sie nicht nur eine realistische
-          Einschätzung, sondern auch persönliche Betreuung und Unterstützung. Ihre Träume sind unsere Priorität.
-
-          Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft mit Rosenstolz Immobilien!
-        </h4>
-        <div class="col-lg-3 col-md-0"></div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section id="about" class="about" *ngIf="visibilityFlags.isHomeVisible">
-
-    <div class="container" data-aos="fade-up">
-      <div class="row gy-3 gx-3">
-
-        <div class="col-lg-6 d-flex align-items-center what-we-do custom-card" data-aos="zoom-out" data-aos-delay="200">
-          <div class="img-fluid card-img round-borders">
-            <div class="xxx">
-              <img src="assets/img/ph6.jpg" class="" alt="">
-              <div class="card-img-overlay-x d-flex justify-content-center align-items-center">
-                IMMOBILIE KAUFEN
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 d-flex align-items-center what-we-do custom-card" data-aos="zoom-out" data-aos-delay="200">
-          <div class="img-fluid card-img round-borders">
-            <div class="xxx">
-              <img src="assets/img/ph1.jpg" class="" alt="">
-              <div class="card-img-overlay-x d-flex justify-content-center align-items-center">
-                IMMOBILIE VERKAUFEN
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ======= Features Section ======= -->
-  <section id="architekten-Service" class="features" *ngIf="visibilityFlags.isHomeVisible">
-
-    <div class="container" data-aos="fade-up">
-
-      <header class="section-header">
-        <h1 class="fw-bold text-white">EXKLUSIVE HIGHLIGHTS FÜR IHRE IMMOBILIE</h1>
-      </header>
-
-      <div class="row pb-lg-5 mb-lg-5">
-
-        <div class="col-lg-3 mt-lg-0 d-flex max-z-index">
-          <div class="row align-self-start gy-4">
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center">
-                <h2 class="fw-bold ms-5 mt-5 font-heavy">DROHNENFLUG</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 black-and-white">
-          <video src="assets/img/droneVideo1.mp4" autoplay muted loop class="drone-video"></video>
-        </div>
-
-        <div class="col-lg-3 mt-5 mt-lg-0 d-flex">
-          <div class="row align-self-end gy-4">
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Eos aspernatur rem</h3>
-              </div>
-            </div>
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="300">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Facilis neque ipsa</h3>
-              </div>
-            </div>
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="400">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Volup amet voluptas</h3>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row mt-lg-5 pt-5 pb-lg-5 mb-lg-5">
-
-        <div class="col-lg-3 mt-5 mt-lg-0 d-flex desktop-view">
-          <div class="row align-self-end gy-4">
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Eos aspernatur rem</h3>
-              </div>
-            </div>
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="300">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Facilis neque ipsa</h3>
-              </div>
-            </div>
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="400">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Volup amet voluptas</h3>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-lg-3 mt-lg-0 d-flex max-z-index">
-          <div class="row align-self-start gy-4">
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center">
-                <h2 class="fw-bold ms-5 mt-5 font-heavy no-wrap">HEADER TWO</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-6 black-and-white">
-          <img src="assets/img/ph6.jpg" class="img-fluid" alt="">
-        </div>
-
-        <div class="col-lg-3 mt-5 mt-lg-0 d-flex mobile-view">
-          <div class="row align-self-end gy-4">
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Eos aspernatur rem</h3>
-              </div>
-            </div>
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="300">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Facilis neque ipsa</h3>
-              </div>
-            </div>
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="400">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Volup amet voluptas</h3>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row mt-lg-5 pt-lg-5 pb-5 mb-5">
-
-        <div class="col-lg-3 mt-lg-0 d-flex mobile-view">
-          <div class="row align-self-start gy-4">
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center">
-                <h2 class="fw-bold ml-n5 mt-5 font-heavy no-wrap">HEADER THREE</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 black-and-white">
-          <img src="assets/img/doubleHouse.png" class="img-fluid" alt="">
-        </div>
-
-        <div class="col-lg-3 mt-lg-0 d-flex desktop-view max-z-index">
-          <div class="row align-self-start gy-4">
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center">
-                <h2 class="fw-bold ml-n5 mt-5 font-heavy no-wrap">HEADER THREE</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 mt-5 mt-lg-0 d-flex">
-          <div class="row align-self-end gy-4">
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Eos aspernatur rem</h3>
-              </div>
-            </div>
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="300">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Facilis neque ipsa</h3>
-              </div>
-            </div>
-
-            <div class="mt-0" data-aos="zoom-out" data-aos-delay="400">
-              <div class="feature-box d-flex align-items-center pt-0">
-                <i class="bi bi-bullet"></i>
-                <h3>Volup amet voluptas</h3>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="mt-lg-5 pt-lg-5 mb-lg-5 pb-lg-5">
-
-        <header class="section-header white-squared-border">
-          <h1 class="fw-bold text-white mb-0">LOREM HEADER FOUR</h1>
-        </header>
-
-        <div class="row mt-5">
-          <div class="col-lg-3 col-md-0"></div>
-          <h4 class="col-lg-6 col-md-12 text-center text-white">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga velit nisi asperiores voluptatem corrupti molestias veritatis aperiam. Error itaque culpa natus reiciendis eos repudiandae numquam aspernatur vel, minus, tempora possimus!
-          </h4>
-          <div class="col-lg-3 col-md-0"></div>
-
-          <img src="assets/img/tempRose.png" class="img-fluid rose mt-5" alt="">
-
-          <h3 class="fw-bold text-white mt-5 mb-5 pb-5 center-element-on-page">eos repudiandae numquam</h3>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-
-
   <!-- ======= About Section ======= -->
   <section id="about" class="about" *ngIf="visibilityFlags.isHomeVisible">
 
     <div class="container" data-aos="fade-up">
-      <header class="section-header">
-        <h1 class="fw-bold font-heavy text-black">LOREM HEADER SEVEN</h1>
-      </header>
-
       <div class="row gx-0">
         <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
           <div class="content round-borders">
+            <h3>Was wir machen.</h3>
 
-            <h2 class="fw-bold text-black  text-center">Ob es um den Kauf, Verkauf oder die Beratung geht, bei uns erhalten Sie nicht nur eine realistische
-              Einschätzung, sondern auch persönliche Betreuung und Unterstützung.</h2>
-            <div class="text-center mt-5"
-            (click)="navToOption('Kontakt')">
+            <h2>Ihrem verlässlichen Partner</h2>
+            <p>Ob es um den Kauf, Verkauf oder die Beratung geht, bei uns erhalten Sie nicht nur eine realistische
+              Einschätzung, sondern auch persönliche Betreuung und Unterstützung. Ihre Träume sind unsere
+              Priorität.<br /><br />Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft mit
+              Rosenstolz Immobilien!</p>
+            <div class="text-center text-lg-start">
               <a href="#"
                 class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Kontakt</span>
-                <i class="bi bi-envelope"></i>
+                <span>Mehr lesen</span>
+                <i class="bi bi-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-lg-2"></div>
-        <div class="col-lg-4 d-flex what-we-do" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/contactus.png" class="img-fluid round-borders contactus-img" alt="">
+        <div class="col-lg-6 d-flex align-items-center what-we-do" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/ph1.jpg" class="img-fluid round-borders" alt="">
         </div>
 
       </div>
     </div>
 
-  </section>
+  </section><!-- End About Section -->
 
   <!-- ======= Hausverkaufen Section ======= -->
-  <section id="hausverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible  && false">
+  <section id="hausverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -513,7 +188,7 @@
 
   </section><!-- End Values Section -->
 
-  <section id="mehrfamilienhaus" class="values" *ngIf="visibilityFlags.isVerkaufVisible  && false">
+  <section id="mehrfamilienhaus" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -555,7 +230,7 @@
   </section>
 
   <!-- ======= Wohnungverkaufen Section ======= -->
-  <section id="wohnungverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible  && false">
+  <section id="wohnungverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -597,7 +272,7 @@
   </section><!-- End Values Section -->
 
   <!-- ======= Counts Section ======= -->
-  <section id="counts" class="counts" *ngIf="visibilityFlags.isHomeVisible && false">
+  <section id="counts" class="counts" *ngIf="visibilityFlags.isHomeVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row gy-4">
@@ -653,7 +328,7 @@
   <!-- End Counts Section -->
 
 
-  <section id="hausvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible && false">
+  <section id="hausvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -695,7 +370,7 @@
   </section><!-- End Values Section -->
 
   <!-- ======= Wohnungverkaufen Section ======= -->
-  <section id="wohnungvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible && false">
+  <section id="wohnungvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -736,8 +411,80 @@
 
   </section><!-- End Values Section -->
 
-  <section  class="suchauftrag features" id="suchauftrag"
-    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible) && false">
+  <!-- ======= Features Section ======= -->
+  <section id="architekten-Service" class="features" *ngIf="visibilityFlags.isBeratungVisible">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Architekten-Service</h2>
+        <p>Guam rem vitae est autem molestias explicabo debitis.</p>
+      </header>
+
+      <div class="row">
+
+        <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+          <div class="row align-self-center gy-4">
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Eos aspernatur rem</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Facilis neque ipsa</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Volup amet voluptas</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Rerum omnis sint</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Alias possimus</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Repellendus mollitia</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6 pro-tipps-img green-border round-borders">
+          <img src="assets/img/ph6.jpg" class="img-fluid" alt="">
+        </div>
+
+      </div> <!-- / row -->
+
+      <!-- Feature Icons -->
+
+    </div>
+
+  </section><!-- End Features Section -->
+
+  <section class="suchauftrag features" id="suchauftrag"
+    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible">
 
     <div class="container" data-aos="fade-up">
       <div class="row feature-icons" data-aos="fade-up">
@@ -809,11 +556,11 @@
   </section>
 
   <div class="mobile-pink-line"
-    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible) && false">
+    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible">
   </div>
 
   <section id="gewerbe" class="gewerbe features"
-    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible) && false">
+    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -865,10 +612,10 @@
     </div>
   </section>
   <div class="mobile-green-line"
-    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible) && false">
+    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible">
   </div>
   <section class="grundstuck features" data-aos="fade-up" id="grundstuck"
-    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible) && false">
+    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -936,7 +683,7 @@
   </section>
 
   <!-- ======= Services Section ======= -->
-  <section id="services" class="services" *ngIf="visibilityFlags.isLeistungenVisible && false">
+  <section id="services" class="services" *ngIf="visibilityFlags.isLeistungenVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1001,7 +748,7 @@
 
   </section><!-- End Services Section -->
 
-  <section id="exposes" class="pricing" *ngIf="visibilityFlags.isLeistungenVisible && false">
+  <section id="exposes" class="pricing" *ngIf="visibilityFlags.isLeistungenVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1024,7 +771,7 @@
   </section>
 
   <!-- ======= Pricing Section ======= -->
-  <section id="angebote" class="pricing" *ngIf="visibilityFlags.isAngeboteVisible && false">
+  <section id="angebote" class="pricing" *ngIf="visibilityFlags.isAngeboteVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1098,8 +845,8 @@
     </div>
 
   </section>
-  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible && false"></div>
-  <section id="energieausweis" class="energieausweis features" *ngIf="visibilityFlags.isBeratungVisible && false">
+  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <section id="energieausweis" class="energieausweis features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1134,9 +881,9 @@
     </div>
   </section>
 
-  <div class="mobile-green-line" *ngIf="visibilityFlags.isBeratungVisible && false"></div>
+  <div class="mobile-green-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
 
-  <section id="gutachten" class="gutachten features" *ngIf="visibilityFlags.isBeratungVisible && false">
+  <section id="gutachten" class="gutachten features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1169,8 +916,8 @@
     </div>
   </section>
 
-  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible && false"></div>
-  <section id="grundrisserstellung" class="grundrisserstellung features" *ngIf="visibilityFlags.isBeratungVisible && false">
+  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <section id="grundrisserstellung" class="grundrisserstellung features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1205,8 +952,8 @@
     </div>
   </section>
 
-  <div class="mobile-green-line" *ngIf="visibilityFlags.isBeratungVisible && false"></div>
-  <section id="bausachverstandige" class="bausachverstandige features" *ngIf="visibilityFlags.isBeratungVisible && false">
+  <div class="mobile-green-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <section id="bausachverstandige" class="bausachverstandige features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1238,8 +985,8 @@
     </div>
   </section>
 
-  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible && false"></div>
-  <section id="grundsteuer" class="grundsteuer features" *ngIf="visibilityFlags.isBeratungVisible && false">
+  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <section id="grundsteuer" class="grundsteuer features" *ngIf="visibilityFlags.isBeratungVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1272,7 +1019,7 @@
     </div>
   </section>
 
-  <section id="tippGeber" class="tippGeber features" *ngIf="visibilityFlags.isZusammenarbeitVisible && false">
+  <section id="tippGeber" class="tippGeber features" *ngIf="visibilityFlags.isZusammenarbeitVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1305,9 +1052,9 @@
     </div>
   </section>
 
-  <div class="mobile-pink-line" *ngIf="visibilityFlags.isZusammenarbeitVisible && false"></div>
+  <div class="mobile-pink-line" *ngIf="visibilityFlags.isZusammenarbeitVisible"></div>
 
-  <section id="bewerbung" class="bewerbung features" *ngIf="visibilityFlags.isZusammenarbeitVisible && false">
+  <section id="bewerbung" class="bewerbung features" *ngIf="visibilityFlags.isZusammenarbeitVisible">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1359,9 +1106,136 @@
     </div>
   </section>
 
+  <!-- ======= F.A.Q Section ======= -->
+  <section id="faq" class="faq" *ngIf="visibilityFlags.isHomeVisible">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>F.A.Q</h2>
+        <p>Frequently Asked Questions</p>
+      </header>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- F.A.Q List 1-->
+          <div class="accordion accordion-flush" id="faqlist1">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-1">
+                  Non consectetur a erat nam at lectus urna duis?
+                </button>
+              </h2>
+              <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                <div class="accordion-body">
+                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
+                  gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-2">
+                  Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                </button>
+              </h2>
+              <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                <div class="accordion-body">
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-3">
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                </button>
+              </h2>
+              <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                <div class="accordion-body">
+                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
+                  integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
+                  Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi
+                  quis
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+
+          <!-- F.A.Q List 2-->
+          <div class="accordion accordion-flush" id="faqlist2">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2-content-1">
+                  Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                </button>
+              </h2>
+              <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                <div class="accordion-body">
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2-content-2">
+                  Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                </button>
+              </h2>
+              <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                <div class="accordion-body">
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
+                  vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
+                  gravida quis blandit turpis cursus in
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2-content-3">
+                  Varius vel pharetra vel turpis nunc eget lorem dolor?
+                </button>
+              </h2>
+              <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                <div class="accordion-body">
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
+                  nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
+                  tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas
+                  fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- End F.A.Q Section -->
 
   <!-- ======= Portfolio Section ======= -->
-  <section id="profibilder" class="portfolio" *ngIf="visibilityFlags.isLeistungenVisible && false">
+  <section id="profibilder" class="portfolio" *ngIf="visibilityFlags.isLeistungenVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1525,8 +1399,119 @@
   </section>
   <!-- End Portfolio Section -->
 
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials" *ngIf="visibilityFlags.isHomeVisible">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Testimonials</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </header>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+              </p>
+              <div class="profile mt-auto">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+              </p>
+              <div class="profile mt-auto">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor
+                labore quem eram duis noster aute amet eram fore quis sint minim.
+              </p>
+              <div class="profile mt-auto">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim
+                dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+              </p>
+              <div class="profile mt-auto">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+                labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+              </p>
+              <div class="profile mt-auto">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </section><!-- End Testimonials Section -->
+
   <!-- ======= Team Section ======= -->
-  <section id="team" class="team" *ngIf="visibilityFlags.isHomeVisible && false">
+  <section id="team" class="team" *ngIf="visibilityFlags.isHomeVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1624,7 +1609,7 @@
   </section><!-- End Team Section -->
 
   <!-- ======= Clients Section ======= -->
-  <section id="industrie" class="clients {{ visibilityFlags.isVermietungVisible  && false ? '' : 'hide' }}">
+  <section id="industrie" class="clients {{ visibilityFlags.isVermietungVisible ? '' : 'hide' }}">
 
     <div class="container" data-aos="fade-up">
 
@@ -1654,7 +1639,7 @@
   <!-- End Clients Section -->
 
   <!-- ======= Recent Blog Posts Section ======= -->
-  <section id="drohnenaufnahmen" class="recent-blog-posts" *ngIf="visibilityFlags.isLeistungenVisible && false">
+  <section id="drohnenaufnahmen" class="recent-blog-posts" *ngIf="visibilityFlags.isLeistungenVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1699,7 +1684,7 @@
   </section>
   <!-- End Recent Blog Posts Section -->
 
-  <section id="impressum" class="impressum" *ngIf="visibilityFlags.isImpressumVisible && false">
+  <section id="impressum" class="impressum" *ngIf="visibilityFlags.isImpressumVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1751,7 +1736,7 @@
 
   </section>
 
-  <section id="datenschutz" class="datenSchutz" *ngIf="visibilityFlags.isDatenSchutzVisible && false">
+  <section id="datenschutz" class="datenSchutz" *ngIf="visibilityFlags.isDatenSchutzVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1803,7 +1788,7 @@
 
   </section>
 
-  <section id="widerrufsbelehrung" class="widerrufsbelehrung" *ngIf="visibilityFlags.isWiderrufsbelehrungVisible && false">
+  <section id="widerrufsbelehrung" class="widerrufsbelehrung" *ngIf="visibilityFlags.isWiderrufsbelehrungVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1857,12 +1842,13 @@
 
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact"
-    *ngIf="visibilityFlags.isKontaktVisible">
+    *ngIf="visibilityFlags.isLeistungenVisible || visibilityFlags.isHomeVisible || visibilityFlags.isKontaktVisible">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <p class="text-black">Kontaktieren Sie uns</p>
+        <h2>Kontakt</h2>
+        <p>Kontaktieren Sie uns</p>
       </header>
 
       <div class="row gy-4">
@@ -1873,21 +1859,21 @@
             <div class="col-md-6">
               <div class="info-box">
                 <i class="bi bi-geo-alt"></i>
-                <h3 class="text-black">Addresse</h3>
+                <h3>Addresse</h3>
                 <p>Oskar-Schlemmer-Str. 14,<br>71679 Asperg</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info-box">
                 <i class="bi bi-telephone"></i>
-                <h3 class="text-black">Rufen Sie uns an</h3>
+                <h3>Rufen Sie uns an</h3>
                 <p>+49 (0) 163 7300182<br>+49 (0) 7141 4880207</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info-box">
                 <i class="bi bi-envelope"></i>
-                <h3 class="text-black">E-Mail</h3>
+                <h3>E-Mail</h3>
                 <p>info&#64;rosenstolz-immo.de</p>
                 <br />
               </div>
@@ -1895,7 +1881,7 @@
             <div class="col-md-6">
               <div class="info-box">
                 <i class="bi bi-clock"></i>
-                <h3 class="text-black">Öffnungszeiten</h3>
+                <h3>Öffnungszeiten</h3>
                 <p>Montag – Freitag<br>9:00 – 18:00 Uhr</p>
               </div>
             </div>
@@ -1904,7 +1890,7 @@
         </div>
 
         <div class="col-lg-6">
-          <form action="https://rosenstolz-immo.de/forms/contact.php" method="post" class="php-email-form">
+          <form action="forms/contact.php" method="post" class="php-email-form">
             <div class="row gy-4">
 
               <div class="col-md-6">
@@ -1937,10 +1923,6 @@
         </div>
 
       </div>
-      <div class="map mb-5">
-        <app-map></app-map>
-
-      </div>
 
     </div>
 
@@ -1949,7 +1931,7 @@
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer id="footer" class="footer" *ngIf="visibilityFlags.isHomeVisible">
+<footer id="footer" class="footer">
 
   <!-- <div class="footer-newsletter">
     <div class="container">
@@ -1966,18 +1948,17 @@
       </div>
     </div>
   </div> -->
+  <div class="green-line"></div>
   <div class="footer-top">
     <div class="container">
       <div class="row gy-4">
-        <div class="col-lg-4 col-md-12 footer-info">
-          <div class="logo d-flex align-items-center">
-            <div class="header-name">
-              <h3 class="mb-0">ROSENSTOLZ</h3>
-              <h4 class="sub-header-text mb-5">IMMOBILIEN</h4>
-            </div>
-          </div>
-
-          <h4 class="footer-contact text-center text-md-start">FOLLOW US</h4>
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/newtestlogo2.png" alt="">
+            <!-- <span class="footer-logo-text">Rosenstolz Immobilien</span> -->
+          </a>
+          <p class="logo-text">Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta
+            donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links mt-3">
             <a class="twitter"><i class="bi bi-twitter"></i></a>
             <a class="facebook"><i class="bi bi-facebook"></i></a>
@@ -1986,7 +1967,8 @@
           </div>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links text-md-start">
+        <div class="col-lg-2 col-6 footer-links">
+          <!-- <h4>Useful Links</h4> -->
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Impressum')">Impressum</a></li>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('DatenSchutz')">Datenschutz</a></li>
@@ -1995,7 +1977,7 @@
           </ul>
         </div>
 
-        <!-- <div class="col-lg-2 col-6 footer-links">
+        <div class="col-lg-2 col-6 footer-links">
           <h4>UNSERE LEISTUNGEN</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Rückrufservice</a></li>
@@ -2007,9 +1989,9 @@
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Bilder vom Profi</a></li>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Leistungen')">Drohnenaufnahmen</a></li>
           </ul>
-        </div> -->
+        </div>
 
-        <div class="col-lg-6 col-md-12 footer-contact text-center text-md-end">
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Kontakt</h4>
           <p>
             Oskar-Schlemmer-Str. 14, <br>
@@ -2025,12 +2007,12 @@
     </div>
   </div>
 
-  <!-- <div class="container">
+  <div class="container">
     <div class="copyright">
       &copy; Copyright <strong><span>Rosenstolz-Immo</span></strong>. All Rights Reserved
     </div>
 
-  </div> -->
+  </div>
 </footer><!-- End Footer -->
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i

@@ -5,6 +5,7 @@
 @import 'vendor/remixicon/remixicon.css';
 /* @import 'vendor/swiper/swiper-bundle.min.css'; */
 @import 'swiper/swiper-bundle.css';
+@import 'mapbox-gl/dist/mapbox-gl.css';
 /* @import 'scss/style.scss'; */
 
 /**
