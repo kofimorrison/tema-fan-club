@@ -16,6 +16,7 @@ import PureCounter from '@srexi/purecounterjs';
 import { CommonModule } from '@angular/common';
 import { VideoComponent } from '../video/video.component';
 import { MapComponent } from '../map/map.component';
+import { environment } from '../../environments/environment';
 
 type SectionVisibilityFlags = {
   [K in
@@ -42,6 +43,7 @@ type SectionVisibilityFlags = {
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
+  formAction: string = 'http://localhost/contact.php';
   @ViewChild('portfolioContainer') portfolioContainerRef!: ElementRef;
   @ViewChild('testimonialSlider') testimonialSlider: any;
   @ViewChild('clientsSwipper') clientsSwipper: any;
@@ -212,10 +214,11 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     forms.forEach((form) => {
       form.addEventListener('submit', (event) => {
         event.preventDefault();
-
         let thisForm = form as HTMLFormElement;
 
+
         let action = thisForm.getAttribute('action');
+
         let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
 
         if (!action) {
@@ -286,6 +289,10 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
+    if (environment.production) {
+      this.formAction = '/assets/js/vendor/php-email-form/contact.php';
+    }
+
     if (window.history.state?.page) {
       this.navToOption(window.history.state.page);
     }
