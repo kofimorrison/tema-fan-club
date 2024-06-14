@@ -164,7 +164,7 @@ export class AppComponent {
             select('#navbar').classList.toggle('navbar-mobile');
             select('#navbar').classList.toggle('bi-list');
             // e.target.nextElementSibling.classList.toggle('dropdown-active');
-            window.location.reload();
+            // window.location.reload();
           }
         },
         true
