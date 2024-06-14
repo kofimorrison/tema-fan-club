@@ -1,0 +1,103 @@
+<section id="contact" class="contact pt-0">
+
+    <section id="" class="d-flex pt-0 contact-hero-container pb-5">
+      <img src="assets/img/contactHero.png" alt="" class="contact-hero black-and-white">
+
+      <!-- <div class="container">
+        <div class="row">
+          <div class="col-lg-12 d-flex flex-column justify-content-center"> -->
+      <!-- <video src="assets/img/heroVideo.mp4" loop autoplay muted ></video> -->
+      <!-- <app-video></app-video> -->
+      <!-- </div>
+        </div>
+      </div> -->
+
+    </section>
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <p class="text-black">Kontaktieren Sie uns</p>
+      </header>
+
+      <div class="row gy-4">
+
+        <div class="col-lg-6">
+
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-geo-alt"></i>
+                <h3 class="text-black">Addresse</h3>
+                <p>Oskar-Schlemmer-Str. 14,<br>71679 Asperg</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-telephone"></i>
+                <h3 class="text-black">Rufen Sie uns an</h3>
+                <p>+49 (0) 163 7300182<br>+49 (0) 7141 4880207</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-envelope"></i>
+                <h3 class="text-black">E-Mail</h3>
+                <p>info&#64;rosenstolz-immo.de</p>
+                <br />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-clock"></i>
+                <h3 class="text-black">Öffnungszeiten</h3>
+                <p>Montag – Freitag<br>9:00 – 18:00 Uhr</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+          <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="php-email-form">
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <input type="text" name="name" [(ngModel)]="model.name" class="form-control" placeholder="Ihr Name" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="email" name="email" [(ngModel)]="model.email" class="form-control" placeholder="Ihre E-Mail" required>
+              </div>
+
+              <div class="col-md-12">
+                <input type="text" name="subject" [(ngModel)]="model.subject" class="form-control" placeholder="Betreff">
+              </div>
+
+              <div class="col-md-12">
+                <textarea name="message" [(ngModel)]="model.message" class="form-control" rows="6" placeholder="Nachricht" required></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Laden</div>
+                <div class="error-message">Sorry message failed to send</div>
+                <div class="sent-message">Ihre Nachricht wurde gesendet. Wir danken Ihnen!</div>
+
+                <button type="submit" [disabled]="!contactForm.form.valid">Nachricht absenden</button>
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+      <div class="map mb-5">
+        <app-map></app-map>
+
+      </div>
+
+    </div>
+
+  </section><!-- End Contact Section -->

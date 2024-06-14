@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 import { VideoComponent } from '../video/video.component';
 import { MapComponent } from '../map/map.component';
 import { environment } from '../../environments/environment';
+import { NavigationEnd, Router } from '@angular/router';
 
 type SectionVisibilityFlags = {
   [K in
@@ -61,7 +62,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     isWiderrufsbelehrungVisible: false,
   };
 
-  constructor(@Inject(ElementRef) private elementRef: ElementRef) {}
+  constructor(@Inject(ElementRef) private elementRef: ElementRef, private router: Router) {}
 
   /**
    * Easy selector helper function
@@ -75,8 +76,14 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
   };
   onscroll = (el: Document, listener: { (): void; (): void; (): void }) => {
-    el.addEventListener('scroll', listener);
+    // el.addEventListener('scroll', listener);
   };
+
+
+
+  navigateToPage(page: string) {
+    this.router.navigate([`/${page}`]);
+  }
 
   ngAfterViewInit() {
 
@@ -157,15 +164,15 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
     let backtotop = this.select('back-to-top');
     if (backtotop) {
-      const toggleBacktotop = () => {
-        if (window.scrollY > 100) {
-          backtotop.classList.add('active');
-        } else {
-          backtotop.classList.remove('active');
-        }
-      };
-      window.addEventListener('load', toggleBacktotop);
-      this.onscroll(document, toggleBacktotop);
+      // const toggleBacktotop = () => {
+      //   if (window.scrollY > 100) {
+      //     backtotop.classList.add('active');
+      //   } else {
+      //     backtotop.classList.remove('active');
+      //   }
+      // };
+      // window.addEventListener('load', toggleBacktotop);
+      // this.onscroll(document, toggleBacktotop);
     }
 
     /**
@@ -293,10 +300,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.formAction = '/assets/js/vendor/php-email-form/contact.php';
     }
 
-    if (window.history.state?.page) {
-      this.navToOption(window.history.state.page);
-    }
-
     new PureCounter();
 
     AOS.init({
@@ -307,105 +310,55 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     });
   }
 
-  scrollToElement(elementId: string, offset: number = 60) {
-    const element = document.getElementById(elementId);
-    if (element) {
-      let elementTop = 0;
-      elementTop = element.offsetTop;
-      const scrollToPosition = elementTop - offset;
-      window.scrollTo({
-        top: scrollToPosition,
-        behavior: 'smooth',
-      });
-    }
-  }
+  // scrollToElement(elementId: string, offset: number = 60) {
+  //   const element = document.getElementById(elementId);
+  //   if (element) {
+  //     let elementTop = 0;
+  //     elementTop = element.offsetTop;
+  //     const scrollToPosition = elementTop - offset;
+  //     window.scrollTo({
+  //       top: scrollToPosition,
+  //       behavior: 'smooth',
+  //     });
+  //   }
+  // }
 
-  hideAllSections() {
-    Object.keys(this.visibilityFlags).forEach((key) => {
-      this.visibilityFlags[key as keyof SectionVisibilityFlags] = false;
-    });
-  }
+  // hideAllSections() {
+  //   Object.keys(this.visibilityFlags).forEach((key) => {
+  //     this.visibilityFlags[key as keyof SectionVisibilityFlags] = false;
+  //   });
+  // }
 
-  navToOption(page: string, enableNav: boolean = true, section?: string) {
-    if (enableNav) {
-      console.log(page)
-      if (page === 'Home' && window.history.state?.page !== 'Home') {
-        window.location.reload();
-      }
-      this.hideAllSections();
-      this.visibilityFlags[`is${page}Visible` as keyof SectionVisibilityFlags] =
-        true;
-
-      window.history.pushState(
-        {
-          page: page,
-        },
-        page
-      );
-
-      let navbarlinks = this.select('#navbar .scrollto', true);
-
-      navbarlinks.forEach(
-        (navbarlink: {
-          id: string;
-          classList: {
-            add: (arg0: string) => void;
-            remove: (arg0: string) => void;
-          };
-          innerHTML: string;
-        }) => {
-          if (navbarlink.innerHTML == page) {
-            navbarlink.classList.add('active');
-          } else {
-            navbarlink.classList.remove('active');
-          }
-        }
-      );
-
-      new PureCounter();
-
-      setTimeout(() => {
-        if (section) this.scrollToElement(section);
-      }, 500);
-
-      if (!section) {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-      }
-    }
-  }
 
   /**
    * Porfolio isotope and filter
    */
-  handlePortfolioFilter(e: any) {
-    e.preventDefault();
+  // handlePortfolioFilter(e: any) {
+  //   e.preventDefault();
 
-    let portfolioIsotope = new Isotope(
-      this.portfolioContainerRef.nativeElement,
-      {
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows',
-        transitionDuration: 0,
-      }
-    );
+  //   let portfolioIsotope = new Isotope(
+  //     this.portfolioContainerRef.nativeElement,
+  //     {
+  //       itemSelector: '.portfolio-item',
+  //       layoutMode: 'fitRows',
+  //       transitionDuration: 0,
+  //     }
+  //   );
 
-    portfolioIsotope.destroy();
+  //   portfolioIsotope.destroy();
 
-    let portfolioFilters = this.select('#portfolio-flters li', true);
+  //   let portfolioFilters = this.select('#portfolio-flters li', true);
 
-    portfolioFilters.forEach(function (el: {
-      classList: { remove: (arg0: string) => void };
-    }) {
-      el.classList.remove('filter-active');
-    });
+  //   portfolioFilters.forEach(function (el: {
+  //     classList: { remove: (arg0: string) => void };
+  //   }) {
+  //     el.classList.remove('filter-active');
+  //   });
 
-    e.target.classList.add('filter-active');
+  //   e.target.classList.add('filter-active');
 
-    portfolioIsotope.arrange({
-      filter: e.target.getAttribute('data-filter'),
-    });
-  }
+  //   portfolioIsotope.arrange({
+  //     filter: e.target.getAttribute('data-filter'),
+  //   });
+  // }
 }

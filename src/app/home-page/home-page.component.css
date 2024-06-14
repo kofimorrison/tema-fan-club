@@ -661,6 +661,10 @@ background-color: darkseagreen;
   /* border-bottom: 3px solid #a9a652; */
 }
 
+.nav-link:hover {
+  color: #e83e8c !important;
+}
+
 #main {
   background-color: white;
   /* padding-top: 5rem; */
@@ -818,6 +822,10 @@ background-color: darkseagreen;
 .about p {
   margin: 15px 0 30px 0;
   line-height: 24px;
+}
+
+.btn-read-more {
+  cursor: pointer;
 }
 
 .about .btn-read-more {
@@ -1927,6 +1935,13 @@ background-color: darkseagreen;
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact-hero-container {
+  width: 100vw;
+}
+
+.contact-hero {
+  width: inherit;
+}
 .contact .info-box {
   color: #444444;
   /* background: #fafbff; */

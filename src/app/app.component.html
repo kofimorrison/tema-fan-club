@@ -1,35 +1,69 @@
-<!-- <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <div class="navbar-left logo image-container">
-        <img id="logo-img" src="../assets/rosenstolzLogo.jpg" alt="RosenstolzLogo">
+<header id="header" class="header fixed-top">
+  <div class="header-container container-fluid d-flex align-items-center justify-content-between">
+
+    <a href="index.html" class="logo d-flex align-items-center">
+      <div class="header-name">
+        <span>ROSENSTOLZ</span>
+        <span class="sub-header-text">IMMOBILIEN</span>
       </div>
-    </div>
+    </a>
+
+    <img src="assets/img/tempRose-transparent.png" class="img-fluid rose rose-transparent" alt="">
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li class="dropdown d-flex">
+          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-home" (click)="navigateToPage('home')">
+            Home
+          </a>
+        </li>
+        <li class="dropdown d-flex">
+          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-values"
+            (click)="navigateToPage('home')">
+            Verkauf
+          </a>
+        </li>
+        <li class="dropdown d-flex">
+          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-services"
+            (click)="navigateToPage('home')">
+            Vermietung
+          </a>
+        </li>
+        <li class="dropdown d-flex">
+          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-team"
+            (click)="navigateToPage('home')">
+            Leistungen
+          </a>
+        </li>
+        <li class="dropdown d-flex">
+          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy"
+            id="nav-recent-blog-posts" (click)="navigateToPage('home')">
+            Beratung
+          </a>
+        </li>
+        <li class="dropdown d-flex">
+          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy"
+            (click)="navigateToPage('home')">
+            Zusammenarbeit
+          </a>
+        </li>
+        <li class="dropdown d-flex">
+          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy"
+            (click)="navigateToPage('home')">
+            Angebote
+          </a>
+        </li>
+
+        <li class="dropdown d-flex">
+          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-contact"
+          (click)="navigateToPage('contact')">
+            Kontakt
+        </a>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
   </div>
-</nav>
-
-<div id="contact">
-  <div class="container">
-    <div class="row wrapper">
-      <div class="col-sm-12 col-xs-12 warning-text">
-        <h3>Wir führen derzeit Wartungsarbeiten durch.<br />Wir werden bald wieder online sein.</h3>
-        <div class="gap">
-          <div class="col-xs-12 phone" id="phone-link">
-            <span class="glyphicon glyphicon-earphone"></span>
-            <a href="tel:+49(0)7141 4880207">+49(0)7141 4880207</a>
-          </div>
-          <div class="col-xs-12 mail" id="mail-link">
-            <span class="glyphicon glyphicon-envelope"></span>
-            <a href="mailto:info@rosenstolz-immo.de">info&#64;rosenstolz-immo.de</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</div> -->
-
-<app-home-page></app-home-page>
+</header><!-- End Header -->
 
 <router-outlet />

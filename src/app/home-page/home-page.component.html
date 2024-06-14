@@ -1,91 +1,15 @@
 <!-- ======= Header ======= -->
-<header id="header" class="header fixed-top">
-  <div class="header-container container-fluid d-flex align-items-center justify-content-between">
-
-    <a href="index.html" class="logo d-flex align-items-center">
-      <div class="header-name">
-        <span>ROSENSTOLZ</span>
-        <span class="sub-header-text">IMMOBILIEN</span>
-      </div>
-    </a>
-
-    <img src="assets/img/tempRose-transparent.png" class="img-fluid rose rose-transparent" alt="">
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-home" (click)="navToOption('Home')">
-            Home
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-values"
-            (click)="navToOption('Home')">
-            Verkauf
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-services"
-            (click)="navToOption('Home')">
-            Vermietung
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-team"
-            (click)="navToOption('Home')">
-            Leistungen
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy"
-            id="nav-recent-blog-posts" (click)="navToOption('Home')">
-            Beratung
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy"
-            (click)="navToOption('Home')">
-            Zusammenarbeit
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy"
-            (click)="navToOption('Home')">
-            Angebote
-          </a>
-        </li>
-
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 scrollto center-element-on-page font-heavy" id="nav-contact"
-            (click)="navToOption('Kontakt')">
-            Kontakt
-          </a>
-        </li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-  </div>
-</header><!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="video-section" class="hero d-flex align-items-center" *ngIf="visibilityFlags.isHomeVisible">
-
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col-lg-12 d-flex flex-column justify-content-center"> -->
-  <!-- <video src="assets/img/heroVideo.mp4" loop autoplay muted ></video> -->
+<section id="video-section" class="hero d-flex align-items-center">
   <app-video></app-video>
-  <!-- </div>
-    </div>
-  </div> -->
-
 </section>
 
 <main id="main">
 
 
   <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="testimonials" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="testimonials" class="testimonials" >
 
     <div class="container" data-aos="fade-up">
 
@@ -168,7 +92,7 @@
 
 
   <!-- ======= F.A.Q Section ======= -->
-  <section id="faq" class="faq" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="faq" class="faq">
 
     <div class="container" data-aos="fade-up">
 
@@ -191,7 +115,7 @@
 
   </section>
 
-  <section id="about" class="about" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="about" class="about">
 
     <div class="container" data-aos="fade-up">
       <div class="row gy-3 gx-3">
@@ -224,7 +148,7 @@
   </section>
 
   <!-- ======= Features Section ======= -->
-  <section id="architekten-Service" class="features" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="architekten-Service" class="features" >
 
     <div class="container" data-aos="fade-up">
 
@@ -433,12 +357,8 @@
 
   </section>
 
-
-
-
-
   <!-- ======= About Section ======= -->
-  <section id="about" class="about" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="about" class="about" >
 
     <div class="container" data-aos="fade-up">
       <header class="section-header">
@@ -452,9 +372,9 @@
             <h2 class="fw-bold text-black  text-center">Ob es um den Kauf, Verkauf oder die Beratung geht, bei uns erhalten Sie nicht nur eine realistische
               Einschätzung, sondern auch persönliche Betreuung und Unterstützung.</h2>
             <div class="text-center mt-5"
-            (click)="navToOption('Kontakt')">
-              <a href="#"
-                class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+            routerLink="/contact">
+              <a
+                class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center" (click)="navigateToPage('contact')">
                 <span>Kontakt</span>
                 <i class="bi bi-envelope"></i>
               </a>
@@ -1373,10 +1293,10 @@
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
-            <li data-filter="*" (click)="handlePortfolioFilter($event)" class="filter-active">Part1</li>
+            <!-- <li data-filter="*" (click)="handlePortfolioFilter($event)" class="filter-active">Part1</li>
             <li data-filter=".filter-app" (click)="handlePortfolioFilter($event)">Part2</li>
             <li data-filter=".filter-card" (click)="handlePortfolioFilter($event)">Part3</li>
-            <li data-filter=".filter-web" (click)="handlePortfolioFilter($event)">Part4</li>
+            <li data-filter=".filter-web" (click)="handlePortfolioFilter($event)">Part4</li> -->
           </ul>
         </div>
       </div>
@@ -1855,101 +1775,12 @@
 
   </section>
 
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact"
-    *ngIf="visibilityFlags.isKontaktVisible">
 
-    <div class="container" data-aos="fade-up">
-
-      <header class="section-header">
-        <p class="text-black">Kontaktieren Sie uns</p>
-      </header>
-
-      <div class="row gy-4">
-
-        <div class="col-lg-6">
-
-          <div class="row gy-4">
-            <div class="col-md-6">
-              <div class="info-box">
-                <i class="bi bi-geo-alt"></i>
-                <h3 class="text-black">Addresse</h3>
-                <p>Oskar-Schlemmer-Str. 14,<br>71679 Asperg</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box">
-                <i class="bi bi-telephone"></i>
-                <h3 class="text-black">Rufen Sie uns an</h3>
-                <p>+49 (0) 163 7300182<br>+49 (0) 7141 4880207</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box">
-                <i class="bi bi-envelope"></i>
-                <h3 class="text-black">E-Mail</h3>
-                <p>info&#64;rosenstolz-immo.de</p>
-                <br />
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box">
-                <i class="bi bi-clock"></i>
-                <h3 class="text-black">Öffnungszeiten</h3>
-                <p>Montag – Freitag<br>9:00 – 18:00 Uhr</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-          <form [action]="formAction" method="POST" class="php-email-form">
-            <div class="row gy-4">
-
-              <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Ihr Name" required>
-              </div>
-
-              <div class="col-md-6 ">
-                <input type="email" class="form-control" name="email" placeholder="Ihre E-Mail" required>
-              </div>
-
-              <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Betreff">
-              </div>
-
-              <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Nachricht" required></textarea>
-              </div>
-
-              <div class="col-md-12 text-center">
-                <div class="loading">Laden</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Ihre Nachricht wurde gesendet. Wir danken Ihnen!</div>
-
-                <button type="submit">Nachricht absenden</button>
-              </div>
-
-            </div>
-          </form>
-
-        </div>
-
-      </div>
-      <div class="map mb-5">
-        <app-map></app-map>
-
-      </div>
-
-    </div>
-
-  </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer id="footer" class="footer" *ngIf="visibilityFlags.isHomeVisible">
+<footer id="footer" class="footer">
 
   <!-- <div class="footer-newsletter">
     <div class="container">
@@ -1987,12 +1818,12 @@
         </div>
 
         <div class="col-lg-2 col-6 footer-links text-md-start">
-          <ul>
+          <!-- <ul>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('Impressum')">Impressum</a></li>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navToOption('DatenSchutz')">Datenschutz</a></li>
             <li><i class="bi bi-chevron-right"></i> <a
                 (click)="navToOption('Widerrufsbelehrung')">Widerrufsbelehrung</a></li>
-          </ul>
+          </ul> -->
         </div>
 
         <!-- <div class="col-lg-2 col-6 footer-links">

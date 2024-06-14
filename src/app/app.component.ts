@@ -1,16 +1,17 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import GLightbox from 'glightbox';
 import PureCounter from '@srexi/purecounterjs';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css', './home-page/home-page.component.css'],
   imports: [RouterOutlet, HomePageComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
@@ -19,9 +20,14 @@ export class AppComponent {
 
   scrollRef = 0;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
     AOS.init({
       duration: 700,
       easing: 'ease-in-out',
@@ -48,7 +54,7 @@ export class AppComponent {
       el: Document,
       listener: { (): void; (): void; (): void }
     ) => {
-      el.addEventListener('scroll', listener);
+      // el.addEventListener('scroll', listener);
     };
     /**
      * Scrolls to an element with header offset
@@ -62,10 +68,10 @@ export class AppComponent {
       }
 
       let elementPos = select(el).offsetTop;
-      window.scrollTo({
-        top: elementPos - offset,
-        behavior: 'smooth',
-      });
+      // window.scrollTo({
+      //   top: elementPos - offset,
+      //   behavior: 'smooth',
+      // });
     };
 
     (function () {
@@ -109,15 +115,15 @@ export class AppComponent {
        */
       let selectHeader = select('#header');
       if (selectHeader) {
-        const headerScrolled = () => {
-          if (window.scrollY > 100) {
-            selectHeader.classList.add('header-scrolled');
-          } else {
-            selectHeader.classList.remove('header-scrolled');
-          }
-        };
-        window.addEventListener('load', headerScrolled);
-        onscroll(document, headerScrolled);
+        // const headerScrolled = () => {
+        //   if (window.scrollY > 100) {
+        //     selectHeader.classList.add('header-scrolled');
+        //   } else {
+        //     selectHeader.classList.remove('header-scrolled');
+        //   }
+        // };
+        // window.addEventListener('load', headerScrolled);
+        // onscroll(document, headerScrolled);
       }
 
       /**
@@ -125,15 +131,15 @@ export class AppComponent {
        */
       let backtotop = select('.back-to-top');
       if (backtotop) {
-        const toggleBacktotop = () => {
-          if (window.scrollY > 100) {
-            backtotop.classList.add('active');
-          } else {
-            backtotop.classList.remove('active');
-          }
-        };
-        window.addEventListener('load', toggleBacktotop);
-        onscroll(document, toggleBacktotop);
+        // const toggleBacktotop = () => {
+        //   if (window.scrollY > 100) {
+        //     backtotop.classList.add('active');
+        //   } else {
+        //     backtotop.classList.remove('active');
+        //   }
+        // };
+        // window.addEventListener('load', toggleBacktotop);
+        // onscroll(document, toggleBacktotop);
       }
 
       /**
@@ -181,7 +187,7 @@ export class AppComponent {
               navbarToggle.classList.toggle('bi-list');
               navbarToggle.classList.toggle('bi-x');
             }
-            scrollto(e.hash);
+            // scrollto(e.hash);
           }
         },
         true
@@ -200,9 +206,13 @@ export class AppComponent {
     })();
     new PureCounter();
 
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: 'smooth',
+    // });
+  }
+
+  navigateToPage(page: string) {
+    this.router.navigate([`/${page}`]);
   }
 }
