@@ -1,0 +1,18 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(50, 1fr); /* Create 30 columns */
+  grid-template-rows: repeat(10, auto); /* Create 10 rows */
+  gap: 2px; /* Adjust gap between grid items */
+}
+
+.grid-item {
+  background-color: white;
+  padding: 2px;
+  text-align: center;
+}
+
+.special-column {
+  // background-color: red;
+  text-transform: uppercase;
+  font-weight: bolder;
+}

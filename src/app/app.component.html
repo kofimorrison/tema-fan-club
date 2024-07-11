@@ -8,9 +8,9 @@
       </div>
     </a>
 
-    <img src="assets/img/tempRose-transparent.png" class="img-fluid rose rose-transparent" alt="">
+    <img src="assets/img/tempRose-transparent.png" class="img-fluid rose rose-transparent" alt="" *ngIf="false">
 
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar{{openNav ? '-mobile' : ''}}">
       <ul>
         <li class="dropdown d-flex">
           <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-home" (click)="navigateToPage('home')">
@@ -61,7 +61,7 @@
         </a>
         </li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+      <i class="bi bi-{{openNav ? 'x' : 'list'}} mobile-nav-toggle" (click)="toggleNav()"></i>
     </nav><!-- .navbar -->
   </div>
 </header><!-- End Header -->

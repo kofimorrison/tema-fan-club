@@ -33,7 +33,7 @@ export class ContactComponent {
 
     const headers = { 'X-Requested-With': 'XMLHttpRequest' }; ;
 
-    this.http.post(this.formAction, formData, { headers: headers, responseType: 'json' }).subscribe(
+    this.http.post(this.formAction, formData, { headers: headers }).subscribe(
       response => {
         console.log('Email sent successfully', response);
         document.querySelector('.sent-message')?.classList.add('d-block');

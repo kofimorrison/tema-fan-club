@@ -58,9 +58,9 @@ section {
 }
 
 .card-img-overlay-x:hover {
-  cursor: pointer;
+  /* cursor: pointer;
   background-color: rgba(232, 62, 140, 0.5);
-  color: black;
+  color: black; */
 }
 
 .xxx {
@@ -92,7 +92,17 @@ section {
 }
 
 .xxx:hover img {
-  transform: scale(1.1); /* Adjust the scale value for zoom effect */
+  /* transform: scale(1.1);  */
+  /* Adjust the scale value for zoom effect */
+}
+
+.text-line {
+  /* display: grid; */
+  /* grid-template-columns: auto 1fr; */
+  /* align-items: center; */
+}
+.text-line b {
+  /* text-align: center; */
 }
 
 .custom-card {
@@ -144,6 +154,13 @@ section {
   .section-header p {
     font-size: 28px;
     line-height: 32px;
+  }
+
+  .center-bottom-logo-mobile {
+    flex-direction: column;
+  }
+  .word-grid-mobile {
+    display: none;
   }
 }
 
@@ -749,13 +766,17 @@ background-color: darkseagreen;
   }
 
   #about {
-    padding: 0px 0;
+    /* padding: 0px 0; */
   }
 }
 
 @media (max-width: 768px) {
   .hero {
     text-align: center;
+  }
+
+  .beratung-text {
+    margin-left: 0 !important;
   }
 
   .hero h1 {
@@ -934,11 +955,17 @@ background-color: darkseagreen;
 .features {
   background-color: black;
 }
+
+.beratung-text {
+  margin-left: -10rem;
+}
+
 .features .feature-box {
   padding: 24px 20px;
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  /* box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08); */
   transition: 0.3s;
   height: 100%;
+  width: max-content;
 }
 
 .features .feature-box h3 {
@@ -950,9 +977,13 @@ background-color: darkseagreen;
   margin: 0;
 }
 
+.schluesseluebergabe, .drone0 {
+  filter: brightness(0.8)
+}
+
 .font-heavy {
-  font-size: 2.7rem !important;
-  color: #e83e8c
+  font-size: 1.7rem !important;
+  color: #f8b90a
 }
 
 .map {
@@ -1017,11 +1048,13 @@ background-color: darkseagreen;
 
   .features .feature-box {
     padding: 0;
+    width: unset;
   }
 
   .font-heavy {
     font-size: 1.5rem;
   }
+
 }
 
 .features .feture-tabs .nav-pills {
@@ -1049,6 +1082,7 @@ background-color: darkseagreen;
 .contactus-img {
   height: 30rem;
   width: auto;
+  transform: rotate(350deg);
 }
 
 .features .feture-tabs .tab-content h4 {

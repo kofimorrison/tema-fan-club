@@ -15,9 +15,10 @@ import GLightbox from 'glightbox';
 import PureCounter from '@srexi/purecounterjs';
 import { CommonModule } from '@angular/common';
 import { VideoComponent } from '../video/video.component';
+import { WordGridComponent } from '../word-grid/word-grid.component';
 import { MapComponent } from '../map/map.component';
 import { environment } from '../../environments/environment';
-import { NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 type SectionVisibilityFlags = {
   [K in
@@ -37,7 +38,7 @@ type SectionVisibilityFlags = {
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule, VideoComponent, MapComponent],
+  imports: [CommonModule, VideoComponent, MapComponent, WordGridComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css',
   providers: [],
@@ -63,23 +64,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   };
 
   constructor(@Inject(ElementRef) private elementRef: ElementRef, private router: Router) {}
-
-  /**
-   * Easy selector helper function
-   */
-  select = (el: string, all = false): any => {
-    el = el?.trim();
-    if (all) {
-      return [...(document.querySelectorAll(el) as any)];
-    } else {
-      return document.getElementById(el);
-    }
-  };
-  onscroll = (el: Document, listener: { (): void; (): void; (): void }) => {
-    // el.addEventListener('scroll', listener);
-  };
-
-
 
   navigateToPage(page: string) {
     this.router.navigate([`/${page}`]);
@@ -161,19 +145,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       observer: true,
       observeParents: true,
     });
-
-    let backtotop = this.select('back-to-top');
-    if (backtotop) {
-      // const toggleBacktotop = () => {
-      //   if (window.scrollY > 100) {
-      //     backtotop.classList.add('active');
-      //   } else {
-      //     backtotop.classList.remove('active');
-      //   }
-      // };
-      // window.addEventListener('load', toggleBacktotop);
-      // this.onscroll(document, toggleBacktotop);
-    }
 
     /**
      * Initiate portfolio lightbox
@@ -309,25 +280,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       mirror: false,
     });
   }
-
-  // scrollToElement(elementId: string, offset: number = 60) {
-  //   const element = document.getElementById(elementId);
-  //   if (element) {
-  //     let elementTop = 0;
-  //     elementTop = element.offsetTop;
-  //     const scrollToPosition = elementTop - offset;
-  //     window.scrollTo({
-  //       top: scrollToPosition,
-  //       behavior: 'smooth',
-  //     });
-  //   }
-  // }
-
-  // hideAllSections() {
-  //   Object.keys(this.visibilityFlags).forEach((key) => {
-  //     this.visibilityFlags[key as keyof SectionVisibilityFlags] = false;
-  //   });
-  // }
 
 
   /**
