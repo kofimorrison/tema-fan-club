@@ -777,6 +777,7 @@ background-color: darkseagreen;
 
   .beratung-text {
     margin-left: 0 !important;
+    z-index: 9999;
   }
 
   .hero h1 {
