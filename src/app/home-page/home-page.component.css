@@ -959,6 +959,7 @@ background-color: darkseagreen;
 
 .beratung-text {
   margin-left: -10rem;
+  z-index: 9999;
 }
 
 .features .feature-box {
