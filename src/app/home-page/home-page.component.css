@@ -135,7 +135,7 @@ section {
   padding: 0;
   font-size: 38px;
   line-height: 42px;
-  font-weight: 700;
+  font-weight: 500;
  /* color: #012970; */
   color: goldenrod;
 }
@@ -535,7 +535,7 @@ section {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: white;
+  /* color: white; */
 }
 
 @media (max-width: 3200px) {
@@ -558,9 +558,9 @@ section {
   overflow: hidden;
   top: 0;
   right: 0;
-  left: 0;
+  left: 85vw;
   bottom: 0;
-  background: rgba(1, 22, 61, 0.9);
+  /* background: rgba(1, 22, 61, 0.9); */
   transition: 0.3s;
 }
 
@@ -583,11 +583,17 @@ section {
   overflow-y: auto;
   transition: 0.3s;
   height: fit-content;
+  width: fit-content;
+  box-shadow: 0px 0 30px rgba(5, 23, 54, 0.1);
+}
+
+.bi::before, [class^=bi-]::before, [class*=" bi-"]::before {
+  font-weight: bolder !important;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
-  padding: 10px 20px;
+  padding: 0px 20px;
   font-size: 15px;
  /* color: #012970; */
   color: goldenrod;
@@ -771,9 +777,19 @@ background-color: darkseagreen;
   }
 }
 
-@media (max-width: 768px) {
+
+@media only screen and (min-width: 320px) and (max-width: 668px) {
+  .navbar-mobile {
+    left: 40vw !important;
+  }
+}
+
+@media (max-width: 1024px) {
   .hero {
     text-align: center;
+  }
+  .navbar-mobile {
+    left: 73vw;
   }
 
   .beratung-text {
@@ -829,10 +845,10 @@ background-color: darkseagreen;
 }
 
 .about h3 {
-  font-size: 14px;
-  font-weight: 700;
+  /* font-size: 14px;
+  font-weight: 700; */
  /* color: goldenrod;; */
-  color: darkseagreen;  text-transform: uppercase;
+  /* color: darkseagreen;  text-transform: uppercase; */
 }
 
 .about h2 {
@@ -990,7 +1006,21 @@ background-color: darkseagreen;
 }
 
 .gold-text {
-  color: goldenrod !important;
+  /* color: #daa520 !important; */
+
+  background: linear-gradient(to bottom, #d8c397 27%, #f5db8d 40%, #3a2c0f 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+	/* font-family: 'Playfair Display', serif;  */
+  font-weight: bolder;
+  font-size: 190% !important;
+    position: relative;
+	text-transform: uppercase;
+}
+
+.kontakt-tel-email {
+  font-size: 100% !important;
 }
 
 .gold-background {
@@ -998,8 +1028,9 @@ background-color: darkseagreen;
 }
 
 .font-heavy {
-  font-size: 1.7rem !important;
-  color: goldenrod
+  font-size: 1.4rem !important;
+  text-transform: uppercase;
+  /* color: goldenrod */
 }
 
 .map {

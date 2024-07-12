@@ -15,5 +15,14 @@
   // background-color: red;
   text-transform: uppercase;
   font-weight: bolder;
-  color: goldenrod;
+  // color: goldenrod;
+
+  background: linear-gradient(to bottom, #d8c397 27%, #f5db8d 40%, #3a2c0f 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+}
+
+.to-upper-case {
+  text-transform: uppercase;
 }

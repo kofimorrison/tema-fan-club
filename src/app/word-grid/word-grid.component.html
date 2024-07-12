@@ -6,7 +6,7 @@
     </ng-container>
     <!-- Place each character in a cell -->
     <ng-container *ngFor="let char of phrase.text.split(''); let index = index">
-      <div class="grid-item" [ngClass]="{'special-column': phrase.offset + index === 23}">{{ char }}</div>
+      <div class="grid-item" [ngClass]="{'special-column gold-text': phrase.offset + index === 23}">{{ char }}</div>
     </ng-container>
     <!-- Fill the remaining cells in the current row -->
     <ng-container *ngFor="let empty of getEmptyCells(50 - phrase.text.length - phrase.offset)">
