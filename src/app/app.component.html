@@ -3,8 +3,8 @@
 
     <a href="index.html" class="logo d-flex align-items-center">
       <div class="header-name">
-        <span>ROSENSTOLZ</span>
-        <span class="sub-header-text">IMMOBILIEN</span>
+        <span class="{{ isInSection ? 'gold-font' : '' }}">ROSENSTOLZ</span>
+        <span class="sub-header-text {{ isInSection ? 'gold-font' : '' }}">IMMOBILIEN</span>
       </div>
     </a>
 
@@ -17,19 +17,26 @@
             Home
           </a>
         </li>
+
+        <li class="dropdown d-flex">
+          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-contact"
+          (click)="navigateToPage('contact')">
+            Kontakt
+        </a>
+        </li>
         <li class="dropdown d-flex">
           <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-values"
-            (click)="navigateToPage('home')">
-            Verkauf
+            (click)="navigateToPage('datenschutz')">
+            Datenschutz
           </a>
         </li>
         <li class="dropdown d-flex">
           <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-services"
-            (click)="navigateToPage('home')">
-            Vermietung
+            (click)="navigateToPage('impressum')">
+            Impressum
           </a>
         </li>
-        <li class="dropdown d-flex">
+        <!-- <li class="dropdown d-flex">
           <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-team"
             (click)="navigateToPage('home')">
             Leistungen
@@ -52,18 +59,11 @@
             (click)="navigateToPage('home')">
             Angebote
           </a>
-        </li>
-
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black fw-bold mb-3 pb-3 center-element-on-page font-heavy" id="nav-contact"
-          (click)="navigateToPage('contact')">
-            Kontakt
-        </a>
-        </li>
+        </li> -->
       </ul>
       <i class="bi bi-{{openNav ? 'x' : 'list'}} mobile-nav-toggle" (click)="toggleNav()"></i>
     </nav><!-- .navbar -->
   </div>
 </header><!-- End Header -->
 
-<router-outlet />
+<router-outlet/>

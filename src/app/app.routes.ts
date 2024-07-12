@@ -3,12 +3,15 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgModule } from '@angular/core';
 import { filter } from 'rxjs';
+import { ImpressumComponent } from './impressum/impressum.component';
+import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
-  // { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'datenschutz', component: DatenschutzComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'impressum', component: ImpressumComponent }
 ];
 
 @NgModule({

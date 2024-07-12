@@ -1,3 +1,7 @@
 #navbar .nav-link {
   cursor: pointer;
 }
+
+.gold-font {
+  color: goldenrod !important
+}

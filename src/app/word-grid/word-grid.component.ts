@@ -15,7 +15,7 @@ export class WordGridComponent {
     { text: 'Spezialisten', offset: 23 },
     { text: 'Beratung und', offset: 22 },
     { text: 'BegleitunNg', offset: 14 },
-    { text: 'Aussagekräftige ExpoSès', offset: 19 },
+    { text: 'Aussagekräftige ExpoSès', offset: 3 },
     { text: 'Marktgerechte WertTermittlung', offset: 5 },
     { text: 'PrOfessionalität', offset: 21 },
     { text: 'Leidenschaft', offset: 23 },

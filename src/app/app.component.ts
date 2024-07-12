@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, Output, Renderer2 } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import AOS from 'aos';
@@ -6,6 +6,8 @@ import 'aos/dist/aos.css';
 import GLightbox from 'glightbox';
 import PureCounter from '@srexi/purecounterjs';
 import { CommonModule } from '@angular/common';
+import { SharedService } from './shared.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -16,12 +18,14 @@ import { CommonModule } from '@angular/common';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {
+  isInSection: boolean = false;
   title = 'rosen-stolz-app';
 
   scrollRef = 0;
   openNav: boolean = false;
+  private sectionStateSubscription: Subscription | undefined;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private renderer: Renderer2, private sharedService: SharedService) {}
 
   toggleNav() {
     this.openNav = !this.openNav;
@@ -84,6 +88,11 @@ export class AppComponent {
       });
     })();
     new PureCounter();
+
+    this.sectionStateSubscription = this.sharedService.sectionState$.subscribe(isInSection => {
+      this.isInSection = isInSection;
+      console.log(`Is in section: ${this.isInSection}`);
+    });
   }
 
   navigateToPage(page: string) {
@@ -93,5 +102,11 @@ export class AppComponent {
       top: 0,
       behavior: 'instant',
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.sectionStateSubscription) {
+      this.sectionStateSubscription.unsubscribe();
+    }
   }
 }

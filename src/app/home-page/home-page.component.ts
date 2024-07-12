@@ -6,6 +6,10 @@ import {
   ElementRef,
   Inject,
   CUSTOM_ELEMENTS_SCHEMA,
+  Renderer2,
+  EventEmitter,
+  Output,
+  HostListener,
 } from '@angular/core';
 import Isotope from 'isotope-layout';
 import AOS from 'aos';
@@ -19,6 +23,7 @@ import { WordGridComponent } from '../word-grid/word-grid.component';
 import { MapComponent } from '../map/map.component';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
 
 type SectionVisibilityFlags = {
   [K in
@@ -49,6 +54,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   @ViewChild('portfolioContainer') portfolioContainerRef!: ElementRef;
   @ViewChild('testimonialSlider') testimonialSlider: any;
   @ViewChild('clientsSwipper') clientsSwipper: any;
+  isInSection = false;
+  @Output() sectionChange = new EventEmitter<boolean>();
   visibilityFlags: SectionVisibilityFlags = {
     isHomeVisible: true,
     isVerkaufVisible: false,
@@ -63,7 +70,18 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     isWiderrufsbelehrungVisible: false,
   };
 
-  constructor(@Inject(ElementRef) private elementRef: ElementRef, private router: Router) {}
+  constructor(@Inject(ElementRef) private elementRef: ElementRef, private router: Router, private renderer: Renderer2, private sharedService: SharedService) {}
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    const section = document.getElementById('architekten-Service');
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      const isTopAtViewport = rect.top <= 0 && rect.bottom > 0;
+      this.isInSection = isTopAtViewport;
+      this.sharedService.setSectionState(this.isInSection);
+    }
+  }
 
   navigateToPage(page: string) {
     this.router.navigate([`/${page}`]);
