@@ -17,10 +17,13 @@
   font-weight: bolder;
   // color: goldenrod;
 
-  background: linear-gradient(to bottom, #d8c397 27%, #f5db8d 40%, #3a2c0f 99%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fff;
+  color: rgb(218,165,32); /*if no support for background-clip*/
+  background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, rgba(218,165,32,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(212,175,55,1) 61%, rgba(213,173,109,1) 100%);
+  background: -o-linear-gradient(transparent, transparent);
+  // font-family: 'PT Sans';
+  text-shadow: 0px 0px 20px rgba(212,175,55,.5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .to-upper-case {

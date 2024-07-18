@@ -77,7 +77,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     const section = document.getElementById('architekten-Service');
     if (section) {
       const rect = section.getBoundingClientRect();
-      const isTopAtViewport = rect.top <= 0 && rect.bottom > 0;
+      const isTopAtViewport = rect.top <= 90 && rect.bottom > 0;
       this.isInSection = isTopAtViewport;
       this.sharedService.setSectionState(this.isInSection);
     }

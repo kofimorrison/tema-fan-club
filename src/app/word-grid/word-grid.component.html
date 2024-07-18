@@ -1,12 +1,12 @@
 <div class="grid-container mt-5">
-  <ng-container *ngFor="let phrase of phrases">
+  <ng-container *ngFor="let phrase of phrases; let phraseIndex = index">
     <!-- Create empty cells for offset -->
     <ng-container *ngFor="let empty of getEmptyCells(phrase.offset)">
       <div class="grid-item"></div>
     </ng-container>
     <!-- Place each character in a cell -->
     <ng-container *ngFor="let char of phrase.text.split(''); let index = index">
-      <div class="grid-item" [ngClass]="{'special-column gold-text': phrase.offset + index === 23}">{{ char }}</div>
+      <div class="grid-item" [ngClass]="{'special-column gold-text': (phrase.offset + index === 23 || phraseIndex === 0 || phraseIndex === phrases.length - 1 )}">{{ char.toLocaleUpperCase() }}</div>
     </ng-container>
     <!-- Fill the remaining cells in the current row -->
     <ng-container *ngFor="let empty of getEmptyCells(50 - phrase.text.length - phrase.offset)">

@@ -10,16 +10,16 @@ import { Component } from '@angular/core';
 })
 export class WordGridComponent {
   phrases = [
-    { text: 'Rosenstolz Immo', offset: 23 },
-    { text: 'O', offset: 23 },
+    { text: 'Rosen', offset: 23 },
+    { text: 'Organisiert', offset: 23 },
     { text: 'Spezialisten', offset: 23 },
-    { text: 'Beratung und', offset: 22 },
-    { text: 'BegleitunNg', offset: 14 },
-    { text: 'Aussagekräftige ExpoSès', offset: 3 },
-    { text: 'Marktgerechte WertTermittlung', offset: 5 },
-    { text: 'PrOfessionalität', offset: 21 },
-    { text: 'Leidenschaft', offset: 23 },
-    { text: 'Zuverlässigkeit', offset: 23 }
+    { text: 'Beratung', offset: 22 },
+    { text: 'Begleitung', offset: 15 },
+    { text: 'Exposès', offset: 19 },
+    { text: 'Wertermittlung', offset: 20 },
+    { text: 'Professionell', offset: 21 },
+    { text: 'Zuverlässigkeit', offset: 18 },
+    { text: 'Stolz', offset: 19 }
   ];
 
   xx(data: any) {

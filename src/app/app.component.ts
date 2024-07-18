@@ -91,7 +91,6 @@ export class AppComponent {
 
     this.sectionStateSubscription = this.sharedService.sectionState$.subscribe(isInSection => {
       this.isInSection = isInSection;
-      console.log(`Is in section: ${this.isInSection}`);
     });
   }
 

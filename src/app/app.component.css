@@ -5,3 +5,7 @@
 .gold-font {
   color: goldenrod !important
 }
+
+#header-name .sub-header-text {
+  font-size: 70% !important;
+}

@@ -117,7 +117,7 @@ section {
 
 
 .section-header {
-  text-align: center;
+  /* text-align: center; */
   padding-bottom: 40px;
 }
 
@@ -150,6 +150,10 @@ section {
   width: 5rem !important;
 }
 
+.center-bottom-logo-mobile .gold-text {
+  font-weight: 900;
+}
+
 @media (max-width: 768px) {
   .section-header p {
     font-size: 28px;
@@ -161,6 +165,9 @@ section {
   }
   .word-grid-mobile {
     display: none;
+  }
+  .wrapper {
+    text-align: center;
   }
 }
 
@@ -1005,18 +1012,25 @@ background-color: darkseagreen;
   filter: brightness(0.8)
 }
 
-.gold-text {
+.header-name .gold-text {
   /* color: #daa520 !important; */
 
-  background: linear-gradient(to bottom, #d8c397 27%, #f5db8d 40%, #3a2c0f 99%);
+  /* background: linear-gradient(to bottom, #d8c397 27%, #f5db8d 40%, #3a2c0f 99%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #fff;
+    color: #fff; */
+
+    color: rgb(218,165,32);
+    background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, rgba(218,165,32,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(212,175,55,1) 61%, rgba(213,173,109,1) 100%);
+    background: -o-linear-gradient(transparent, transparent);
+    text-shadow: 0px 0px 20px rgba(212,175,55,.5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 	/* font-family: 'Playfair Display', serif;  */
-  font-weight: bolder;
+  /* font-weight: bolder;
   font-size: 190% !important;
     position: relative;
-	text-transform: uppercase;
+	text-transform: uppercase; */
 }
 
 .kontakt-tel-email {
@@ -1099,7 +1113,7 @@ background-color: darkseagreen;
   }
 
   .font-heavy {
-    font-size: 1.5rem;
+    font-size: 1.2rem !important;
   }
 
 }
@@ -1120,15 +1134,103 @@ background-color: darkseagreen;
   margin-bottom: -2px;
   border-radius: 0;
 }
+.to-upper-case {
+  text-transform: uppercase;
+}
 
 .features .feture-tabs .nav-link.active {
  /* color: goldenrod;; */
   color: goldenrod;  border-bottom: 3px solid #a9a652;
 }
 
+.golden-button {
+  touch-action: manipulation;
+  display: inline-block;
+  outline: none;
+  font-family: inherit;
+  font-size: 1em;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 1em;
+  height: 2.75em;
+  line-height: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  padding: 0 1.5em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+    inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+    inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+  background-image: linear-gradient(
+    160deg,
+    #a54e07,
+    #b47e11,
+    #fef1a2,
+    #bc881b,
+    #a54e07
+  );
+  border: 1px solid #a55d07;
+  color: rgb(120, 50, 5);
+  text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.golden-button:focus,
+.golden-button:hover {
+  background-size: 150% 150%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+    inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+  border: 1px solid rgba(165, 93, 7, 0.6);
+  color: rgba(120, 50, 5, 0.8);
+}
+
+.golden-button:active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+    inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+}
+
+
+.wrapper {
+  display: grid !important;
+}
+.wrapper .gold-text {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  /* color: #363833; */
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 900;
+  font-size: 2rem  !important;
+  grid-area: overlap  !important;
+  /* letter-spacing: 1.5px  !important;
+  -webkit-text-stroke: 4px transparent  !important; */
+}
+.gold-text.bg {
+  background-image: repeating-linear-gradient( 105deg,
+    #ffb338 0% ,
+    #3e2904 5%,
+    #ffb338 12%)  !important;
+  color: transparent  !important;
+  filter: drop-shadow(5px 15px 15px black)  !important;
+  transform: scaleY(1.05)  !important;
+  transform-origin: top  !important;
+}
+.gold-text.fg{
+  background-image: repeating-linear-gradient( 5deg,
+    #ffb338 0% ,
+    #77571d 23%,
+    #ffb338 31%)  !important;
+  color: transparent  !important; /*if no support for background-clip*/
+  background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, rgba(218,165,32,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(212,175,55,1) 61%, rgba(213,173,109,1) 100%)  !important;
+    background: -o-linear-gradient(transparent, transparent)  !important;
+  background: -o-linear-gradient(transparent, transparent)  !important;
+  transform: scale(1)  !important;
+}
+
 .contactus-img {
-  height: 30rem;
-  width: auto;
+  width: 30rem;
+  height: auto;
   transform: rotate(350deg);
 }
 
