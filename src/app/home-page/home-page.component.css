@@ -164,10 +164,34 @@ section {
     flex-direction: column;
   }
   .word-grid-mobile {
-    display: none;
+    font-weight: 900;
   }
+}
+
+@media (max-width: 520px) {
   .wrapper {
     text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .word-grid-mobile {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 370px) {
+
+  .word-grid-mobile {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .word-grid-mobile {
+    font-size: 0.7rem;
   }
 }
 

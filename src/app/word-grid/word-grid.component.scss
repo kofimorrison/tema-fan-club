@@ -5,6 +5,36 @@
   gap: 2px; /* Adjust gap between grid items */
 }
 
+@media (max-width: 668px) {
+  .grid-container {
+    margin-left: -2rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .grid-container {
+    margin-left: -3.5rem;
+  }
+}
+@media (max-width: 528px) {
+  .grid-container {
+    margin-left: -2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .grid-container {
+    margin-left: -4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .grid-container {
+    margin-left: -5.8rem;
+  }
+}
+
+
 .grid-item {
   background-color: white;
   padding: 2px;
