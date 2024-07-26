@@ -12,13 +12,13 @@ export class WordGridComponent {
   phrases = [
     { text: 'Rosen', offset: 23 },
     { text: 'Organisiert', offset: 23 },
-    { text: 'Spezialisten', offset: 23 },
+    { text: 'Spezialisiert', offset: 23 },
     { text: 'Beratung', offset: 22 },
     { text: 'Begleitung', offset: 15 },
     { text: 'Exposès', offset: 19 },
     { text: 'Wertermittlung', offset: 20 },
     { text: 'Professionell', offset: 21 },
-    { text: 'Zuverlässigkeit', offset: 18 },
+    { text: 'Zuverlässig', offset: 18 },
     { text: 'Stolz', offset: 19 }
   ];
 

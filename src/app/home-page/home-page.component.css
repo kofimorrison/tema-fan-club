@@ -1206,6 +1206,9 @@ background-color: darkseagreen;
   /* letter-spacing: 1.5px  !important;
   -webkit-text-stroke: 4px transparent  !important; */
 }
+.wrapper h3.gold-text {
+  font-size: 1.5rem  !important;
+}
 .gold-text.bg {
   background-image: repeating-linear-gradient( 105deg,
     #ffb338 0% ,
