@@ -1,5 +1,6 @@
 @import 'assets/js/vendor/bootstrap/css/bootstrap.min.css';
 @import 'assets/js/vendor/bootstrap-icons/bootstrap-icons.css';
+@import 'assets/js/vendor/aos/aos.css';
 @import 'assets/js/vendor/remixicon/remixicon.css';
 @import 'swiper/swiper-bundle.css';
 @import 'mapbox-gl/dist/mapbox-gl.css';
