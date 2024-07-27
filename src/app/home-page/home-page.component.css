@@ -15,13 +15,14 @@ body {
 
 a {
  /* color: goldenrod;; */
-  color: goldenrod;
+  color: black;
   text-decoration: none;
 }
 
 a:hover {
-  color: #717ff5;
+  color: grey;
   text-decoration: none;
+  cursor: pointer;
 }
 
 h1,
@@ -1016,7 +1017,7 @@ background-color: darkseagreen;
 }
 
 .features .feature-box {
-  padding: 24px 20px;
+  padding: 0 20px;
   /* box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08); */
   transition: 0.3s;
   height: 100%;
@@ -1047,7 +1048,6 @@ background-color: darkseagreen;
     color: rgb(218,165,32);
     background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, rgba(218,165,32,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(212,175,55,1) 61%, rgba(213,173,109,1) 100%);
     background: -o-linear-gradient(transparent, transparent);
-    text-shadow: 0px 0px 20px rgba(212,175,55,.5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 	/* font-family: 'Playfair Display', serif;  */
@@ -1109,8 +1109,6 @@ background-color: darkseagreen;
 }
 
 .features .feature-box:hover i {
-  /* background: goldenrod;; */
-  background: goldenrod;
   color: white;
 }
 
@@ -1234,13 +1232,13 @@ background-color: darkseagreen;
   font-size: 1.5rem  !important;
 }
 .gold-text.bg {
-  background-image: repeating-linear-gradient( 105deg,
+  /* background-image: repeating-linear-gradient( 105deg,
     #ffb338 0% ,
     #3e2904 5%,
-    #ffb338 12%)  !important;
+    #ffb338 12%)  !important; */
   color: transparent  !important;
   filter: drop-shadow(5px 15px 15px black)  !important;
-  transform: scaleY(1.05)  !important;
+  /* transform: scaleY(1.05)  !important; */
   transform-origin: top  !important;
 }
 .gold-text.fg{
@@ -1292,6 +1290,10 @@ background-color: darkseagreen;
 @media (max-width: 768px) {
   .features .feature-icons h3 {
     font-size: 28px;
+  }
+
+  .text-one-rem {
+    font-size: 1rem !important;
   }
 }
 
@@ -2937,7 +2939,6 @@ background-color: darkseagreen;
 .footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
- color: #012970;
   /* color: darkseagreen; */
   text-transform: uppercase;
   position: relative;
