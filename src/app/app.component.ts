@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', './home-page/home-page.component.css'],
+  styleUrls: ['./app.component.css', './home-page/home-page.component.css', '../assets/js/vendor/aos/aos.css'],
   imports: [RouterOutlet, HomePageComponent, CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

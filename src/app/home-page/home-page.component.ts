@@ -13,7 +13,7 @@ import {
 } from '@angular/core';
 import Isotope from 'isotope-layout';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
+import '../../assets/js/vendor/aos/aos.css';
 import Swiper from 'swiper';
 import GLightbox from 'glightbox';
 import PureCounter from '@srexi/purecounterjs';
@@ -45,7 +45,7 @@ type SectionVisibilityFlags = {
   standalone: true,
   imports: [CommonModule, VideoComponent, MapComponent, WordGridComponent],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.css',
+  styleUrls: ['./home-page.component.css', '../../assets/js/vendor/aos/aos.css'],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
