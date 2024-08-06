@@ -15,17 +15,12 @@ export class WordGridComponent {
     { text: 'Spezialisiert', offset: 23 },
     { text: 'Beratung', offset: 22 },
     { text: 'Begleitung', offset: 15 },
-    { text: 'Exposès', offset: 19 },
+    { text: 'Exposés', offset: 19 },
     { text: 'Wertermittlung', offset: 20 },
     { text: 'Professionell', offset: 21 },
     { text: 'Zuverlässig', offset: 18 },
     { text: 'Stolz', offset: 19 }
   ];
-
-  xx(data: any) {
-    console.log(data)
-    return data;
-  }
 
   getEmptyCells(count: number) {
     return new Array(Math.max(0, count));
