@@ -1,13 +1,13 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-video',
+  selector: 'app-hero-image',
   standalone: true,
   imports: [],
-  templateUrl: './video.component.html',
-  styleUrl: './video.component.scss'
+  templateUrl: './heroImage.component.html',
+  styleUrl: './heroImage.component.scss'
 })
-export class VideoComponent implements AfterViewInit {
+export class HeroImage implements AfterViewInit {
   @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
 
   ngAfterViewInit(): void {

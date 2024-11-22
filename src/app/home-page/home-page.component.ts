@@ -18,7 +18,7 @@ import Swiper from 'swiper';
 import GLightbox from 'glightbox';
 import PureCounter from '@srexi/purecounterjs';
 import { CommonModule } from '@angular/common';
-import { VideoComponent } from '../video/video.component';
+import { HeroImage } from '../heroImage/heroImage.component';
 import { WordGridComponent } from '../word-grid/word-grid.component';
 import { MapComponent } from '../map/map.component';
 import { environment } from '../../environments/environment';
@@ -43,7 +43,7 @@ type SectionVisibilityFlags = {
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule, VideoComponent, MapComponent, WordGridComponent],
+  imports: [CommonModule, HeroImage, MapComponent, WordGridComponent],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css', '../../assets/js/vendor/aos/aos.css'],
   providers: [],

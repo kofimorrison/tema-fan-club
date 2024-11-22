@@ -1,69 +1,46 @@
-<header id="header" class="header fixed-top">
-  <div class="header-container container-fluid d-flex align-items-center justify-content-between">
+<div class="container">
+  <header id="header" class="header fixed-top">
+    <div class="header-container d-flex align-items-center justify-content-between">
 
-    <a href="index.html" class="logo d-flex align-items-center">
-      <div id="header-name" class="header-name">
-        <span class="{{ isInSection ? ' gold-text' : '' }}">ROSENSTOLZ</span>
-        <span class="sub-header-text {{ isInSection ? ' gold-text' : '' }}">IMMOBILIEN</span>
+      <a href="index.html" class="logo d-flex">
+        <div id="header-name" class="header-name">
+          <img src="../assets/img/RosenStolzLogoV4.png" alt="">
+        </div>
+      </a>
+    </div>
+
+    <div id="header-nav" class="header-nav">
+      <div class="row ms-4">
+        <div class="col-lg-10 ps-3">
+          <nav id="navbar" class="navbar">
+            <ul class="d-flex">
+              <li class="mx-3  py-4">
+                <a class="nav-link immo-text-black">Kaufen & Mieten</a>
+              </li>
+              <li class="mx-3  py-4">
+                <a class="nav-link immo-text-black">Immobilie verkaufen</a>
+              </li>
+              <li class="mx-3  py-4">
+                <a class="nav-link immo-text-black">Immobilie vermieten</a>
+              </li>
+              <li class="mx-3  py-4">
+                <a class="nav-link immo-text-black">Impressum</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div (click)="navigateToPage('contact')" class="button-container col-lg-2">
+          <button type="button" class="btn header-contact-button my-3">
+            Jetzt kontaktieren
+          </button>
+        </div>
       </div>
-    </a>
 
-    <img src="assets/img/tempRose-transparent.png" class="img-fluid rose rose-transparent" alt="" *ngIf="false">
+    </div>
+  </header><!-- End Header -->
 
-    <nav id="navbar" class="navbar{{openNav ? '-mobile' : ''}}">
-      <ul>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black mb-3 center-element-on-page font-heavy" id="nav-home" (click)="navigateToPage('home')">
-            Zuhause
-          </a>
-        </li>
+</div>
 
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black mb-3 center-element-on-page font-heavy" id="nav-contact"
-          (click)="navigateToPage('contact')">
-            Kontakt
-        </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black mb-3 center-element-on-page font-heavy" id="nav-values"
-            (click)="navigateToPage('datenschutz')">
-            Datenschutz
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black mb-3 center-element-on-page font-heavy" id="nav-services"
-            (click)="navigateToPage('impressum')">
-            Impressum
-          </a>
-        </li>
-        <!-- <li class="dropdown d-flex">
-          <a class="nav-link text-black mb-3 center-element-on-page font-heavy" id="nav-team"
-            (click)="navigateToPage('home')">
-            Leistungen
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black mb-3 pb-3 center-element-on-page font-heavy"
-            id="nav-recent-blog-posts" (click)="navigateToPage('home')">
-            Beratung
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black mb-3 pb-3 center-element-on-page font-heavy"
-            (click)="navigateToPage('home')">
-            Zusammenarbeit
-          </a>
-        </li>
-        <li class="dropdown d-flex">
-          <a class="nav-link text-black mb-3 pb-3 center-element-on-page font-heavy"
-            (click)="navigateToPage('home')">
-            Angebote
-          </a>
-        </li> -->
-      </ul>
-      <i class="bi bi-{{openNav ? 'x' : 'list'}} mobile-nav-toggle" (click)="toggleNav()"></i>
-    </nav><!-- .navbar -->
-  </div>
-</header><!-- End Header -->
 
-<router-outlet/>
+
+<router-outlet />

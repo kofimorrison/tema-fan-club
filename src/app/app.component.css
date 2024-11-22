@@ -2,6 +2,50 @@
   cursor: pointer;
 }
 
+.navbar, .navbar ul{
+  height: 100%;
+}
+
+.header-nav {
+  background-color: white;
+  border-bottom: 3px solid #dbdcd9;
+}
+
+.header-nav li {
+  border-top: 2px solid transparent; /* Add a transparent border */
+  border-bottom: 2px solid transparent; /* Add a transparent border */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's width and height */
+}
+
+.header-nav li:hover {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid #f9ab8b; /* Change the border color on hover */
+}
+
+.header-container {
+  border-bottom: 0.5px solid rgb(241, 238, 238);
+}
+
+.header-contact-button {
+  background-color: #aad9bc;
+}
+
+.immo-text-black {
+  color: #063f63;
+}
+
+.logo {
+  margin-left: 5.2rem;
+}
+
+.button-container {
+  padding-left: 4rem;
+  padding-top: 0.2rem;
+}
+
+.nav-container {
+}
+
 .gold-font {
   color: goldenrod !important
 }
