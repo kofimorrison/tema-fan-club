@@ -58,16 +58,16 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   @Output() sectionChange = new EventEmitter<boolean>();
   visibilityFlags: SectionVisibilityFlags = {
     isHomeVisible: true,
-    isVerkaufVisible: false,
-    isAngeboteVisible: false,
-    isVermietungVisible: false,
-    isLeistungenVisible: false,
-    isBeratungVisible: false,
-    isZusammenarbeitVisible: false,
-    isKontaktVisible: false,
-    isImpressumVisible: false,
-    isDatenSchutzVisible: false,
-    isWiderrufsbelehrungVisible: false,
+    isVerkaufVisible: true,
+    isAngeboteVisible: true,
+    isVermietungVisible: true,
+    isLeistungenVisible: true,
+    isBeratungVisible: true,
+    isZusammenarbeitVisible: true,
+    isKontaktVisible: true,
+    isImpressumVisible: true,
+    isDatenSchutzVisible: true,
+    isWiderrufsbelehrungVisible: true,
   };
 
   constructor(@Inject(ElementRef) private elementRef: ElementRef, private router: Router, private renderer: Renderer2, private sharedService: SharedService) {}
@@ -83,7 +83,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
   }
 
-  navigateToPage(page: string) {
+  navigateToPage(page: string, x?: string) {
     this.router.navigate([`/${page}`]);
   }
 
@@ -303,32 +303,32 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   /**
    * Porfolio isotope and filter
    */
-  // handlePortfolioFilter(e: any) {
-  //   e.preventDefault();
+  handlePortfolioFilter(e: any) {
+    e.preventDefault();
 
-  //   let portfolioIsotope = new Isotope(
-  //     this.portfolioContainerRef.nativeElement,
-  //     {
-  //       itemSelector: '.portfolio-item',
-  //       layoutMode: 'fitRows',
-  //       transitionDuration: 0,
-  //     }
-  //   );
+    let portfolioIsotope = new Isotope(
+      this.portfolioContainerRef.nativeElement,
+      {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows',
+        transitionDuration: 0,
+      }
+    );
 
-  //   portfolioIsotope.destroy();
+    portfolioIsotope.destroy();
 
-  //   let portfolioFilters = this.select('#portfolio-flters li', true);
+    // let portfolioFilters = this.select('#portfolio-flters li', true);
 
-  //   portfolioFilters.forEach(function (el: {
-  //     classList: { remove: (arg0: string) => void };
-  //   }) {
-  //     el.classList.remove('filter-active');
-  //   });
+    // portfolioFilters.forEach(function (el: {
+    //   classList: { remove: (arg0: string) => void };
+    // }) {
+    //   el.classList.remove('filter-active');
+    // });
 
-  //   e.target.classList.add('filter-active');
+    // e.target.classList.add('filter-active');
 
-  //   portfolioIsotope.arrange({
-  //     filter: e.target.getAttribute('data-filter'),
-  //   });
-  // }
+    // portfolioIsotope.arrange({
+    //   filter: e.target.getAttribute('data-filter'),
+    // });
+  }
 }

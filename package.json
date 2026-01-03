@@ -45,7 +45,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "mapbox-gl": "^3.4.0",
-    "node-sass": "^9.0.0",
+    "sass": "^1.69.0",
     "typescript": "~5.4.2"
   }
 }
