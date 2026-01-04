@@ -12,19 +12,20 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-home" (click)="navigateToPage('Home')">Home</a></li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-values" (click)="navigateToPage('Verkauf')">Events</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-home" (click)="navigateToPage('Home', 'hero')">Home</a></li>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Zusammenarbeit', 'plans')">Plans</a>
           <!-- <ul>
-            <li><a (click)="navigateToPage('Verkauf', 'hausverkaufen')">Haus</a></li>
-            <li><a (click)="navigateToPage('Verkauf', 'wohnungverkaufen')">Wohnung</a></li>
-            <li><a (click)="navigateToPage('Verkauf', 'gewerbe')">Gewerbe</a></li>
-            <li><a (click)="navigateToPage('Verkauf', 'grundstuck')">Grundstück</a></li>
-            <li><a (click)="navigateToPage('Verkauf', 'mehrfamilienhaus')">Mehrfamilienhaus</a></li>
-            <li><a (click)="navigateToPage('Verkauf', 'suchauftrag')">Exklusiver Suchauftrag</a></li>
+            <li><a (click)="navigateToPage('Zusammenarbeit', 'tippGeber')">Tippgeber</a></li>
+            <li class="dropdown"><a><span>Bewerbung</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a (click)="navigateToPage('Zusammenarbeit', 'bewerbung')">Immobilienmakler</a></li>
+                <li><a (click)="navigateToPage('Zusammenarbeit', 'bewerbung')">Ausbildung</a></li>
+              </ul>
+            </li>
           </ul> -->
         </li>
         <li class="dropdown"><a class="nav-link scrollto" id="nav-services"
-            (click)="navigateToPage('Vermietung')">Key Points for Projection</a>
+            (click)="navigateToPage('Vermietung', 'suchauftrag')">Key Points for Projection</a>
           <!-- <ul>
             <li><a (click)="navigateToPage('Vermietung', 'hausvermieten')">Haus</a></li>
             <li><a (click)="navigateToPage('Vermietung', 'wohnungvermieten')">Wohnung</a></li>
@@ -50,24 +51,23 @@
           <!-- <ul>
             <li><a (click)="navigateToPage('Beratung', 'energieausweis')">Energieausweis</a></li>
             <li><a (click)="navigateToPage('Beratung', 'gutachten')">Gutachten</a></li>
-            <li><a (click)="navigateToPage('Beratung', 'architekten-Service')">Architekten-Service</a></li>
+            <li><a (click)="navigateToPage('Beratung', 'plans')">plans</a></li>
             <li><a (click)="navigateToPage('Beratung', 'grundrisserstellung')">Erstellung von Grundrissen</a></li>
             <li><a (click)="navigateToPage('Beratung', 'bausachverstandige')">Bausachverständige</a></li>
             <li><a (click)="navigateToPage('Beratung', 'grundsteuer')">Grundsteuer</a></li>
           </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Zusammenarbeit')" *ngIf="false">Zusammenarbeit</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-values" (click)="navigateToPage('Verkauf', 'testimonials')">Events</a>
           <!-- <ul>
-            <li><a (click)="navigateToPage('Zusammenarbeit', 'tippGeber')">Tippgeber</a></li>
-            <li class="dropdown"><a><span>Bewerbung</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a (click)="navigateToPage('Zusammenarbeit', 'bewerbung')">Immobilienmakler</a></li>
-                <li><a (click)="navigateToPage('Zusammenarbeit', 'bewerbung')">Ausbildung</a></li>
-              </ul>
-            </li>
+            <li><a (click)="navigateToPage('Verkauf', 'hausverkaufen')">Haus</a></li>
+            <li><a (click)="navigateToPage('Verkauf', 'wohnungverkaufen')">Wohnung</a></li>
+            <li><a (click)="navigateToPage('Verkauf', 'gewerbe')">Gewerbe</a></li>
+            <li><a (click)="navigateToPage('Verkauf', 'grundstuck')">Grundstück</a></li>
+            <li><a (click)="navigateToPage('Verkauf', 'mehrfamilienhaus')">Mehrfamilienhaus</a></li>
+            <li><a (click)="navigateToPage('Verkauf', 'suchauftrag')">Exklusiver Suchauftrag</a></li>
           </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Angebote')" *ngIf="false">Angebote</a>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Angebote', 'about')">About</a>
           <!-- <ul>
             <li><a href="#">Drop Down 1</a></li>
             <li><a href="#">Drop Down 2</a></li>
@@ -99,7 +99,7 @@
         <h2 data-aos="fade-up" data-aos-delay="400">...We grow stronger together</h2>
         <div data-aos="fade-up" data-aos-delay="600">
           <div class="text-center text-lg-start">
-            <a href="#"
+            <a (click)="navigateToPage('Vermietung', 'suchauftrag')"
               class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
               <span>More</span>
               <i class="bi bi-arrow-right"></i>
@@ -131,7 +131,7 @@ Our club was built on simple but powerful values — supporting one another, str
 Over the past year, several moments reminded us of the importance of standing together. In early May, we shared in the joy of a Sister and a Brother's during their child dedication. In June, during a time of loss at a Brother's home, the club offered comfort and strength. July brought opportunities to connect with other groups, attend special events, and support members during personal milestones. August gave us one of our most memorable days — our first BBQ in Karlsruhe Durlach, filled with laughter and togetherness. And throughout September and October, the club continued to show care, respect, and unity at various ceremonies and celebrations.
 These experiences highlight what makes this club unique: a genuine commitment to one another and a spirit of togetherness that never wavers.<br /><br />Looking ahead
 the coming months hold promising opportunities for growth and impact.</p>
-            <div class="text-center text-lg-start">
+            <div class="text-center text-lg-start" *ngIf="false">
               <a href="#"
                 class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Mehr lesen</span>
@@ -141,7 +141,7 @@ the coming months hold promising opportunities for growth and impact.</p>
           </div>
         </div>
         <div class="col-lg-6 d-flex align-items-center what-we-do" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/ph1.jpg" class="img-fluid round-borders" alt="">
+          <img src="assets/img/tema_images/1.jpg" class="img-fluid round-borders" alt="">
         </div>
 
       </div>
@@ -149,7 +149,7 @@ the coming months hold promising opportunities for growth and impact.</p>
 
   </section><!-- End About Section -->
 
-  <section id="architekten-Service" class="features apply-background-image" *ngIf="visibilityFlags.isBeratungVisible">
+  <section id="plans" class="features apply-background-image" *ngIf="visibilityFlags.isBeratungVisible">
 
     <div class="container pb-5" data-aos="fade-up">
 
@@ -159,8 +159,8 @@ the coming months hold promising opportunities for growth and impact.</p>
 
       <div class="row">
 
-        <div class="col-lg-6 ">
-          <img src="assets/img/ph6.jpg" class="img-fluid" alt="">
+        <div class="col-lg-6 pb-3">
+          <img src="assets/img/tema_images/4.webp" class="img-fluid round-borders" alt="">
         </div>
 
         <div class="col-lg-6 d-flex">
@@ -228,11 +228,11 @@ the coming months hold promising opportunities for growth and impact.</p>
 
         <div class="row">
 
-          <div class="col-xl-6 d-flex content pb-5">
+          <div class="col-xl-6 d-flex content pb-4">
             <div class="row align-self-center gy-4">
 
               <div class="col-md-6 icon-box" data-aos="fade-up">
-                <i class="ri-line-chart-line"></i>
+                <i class="ri-group-2-line"></i>
                 <div>
                   <h4>Who We Are</h4>
                   <p>We stand together like a family</p>
@@ -244,7 +244,7 @@ the coming months hold promising opportunities for growth and impact.</p>
               </div>
 
               <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <i class="ri-stack-line"></i>
+                <i class="ri-emotion-laugh-line"></i>
                 <div>
                   <h4>Moments of Joy</h4>
                   <p>May 4: Child dedication — Sister Belinda & Brother Kwesi</p>
@@ -256,7 +256,7 @@ the coming months hold promising opportunities for growth and impact.</p>
               </div>
 
               <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                <i class="ri-brush-4-line"></i>
+                <i class="ri-group-line"></i>
                 <div>
                   <h4>Times We Supported Each Other</h4>
                   <p>June 14: Bereavement at Brother Joe’s place</p>
@@ -298,7 +298,7 @@ the coming months hold promising opportunities for growth and impact.</p>
               </div>
 
               <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                <i class="ri-radar-line"></i>
+                <i class="ri-passport-line"></i>
                 <div>
                   <h4>Our Identity</h4>
                   <p>This is who we are.</p>
@@ -310,8 +310,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           </div>
 
           <div class="col-xl-6 text-center search-task-img round-borders" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/ph6.jpg" class="img-fluid p-4" alt="">
-            <img src="assets/img/ph6.jpg" class="img-fluid p-4" alt="">
+            <img src="assets/img/tema_images/5.jpg" class="img-fluid round-borders pb-2" alt="">
+            <!-- <img src="assets/img/tema_images/2.jpg" class="img-fluid round-borders pt-5" alt=""> -->
           </div>
         </div>
 
@@ -320,7 +320,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section>
 
   <!-- ======= Hausverkaufen Section ======= -->
-  <section id="hausverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
+  <section id="hausverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible && false">
 
     <div class="container" data-aos="fade-up">
 
@@ -361,7 +361,7 @@ the coming months hold promising opportunities for growth and impact.</p>
 
   </section><!-- End Values Section -->
 
-  <section id="mehrfamilienhaus" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
+  <section id="mehrfamilienhaus" class="values" *ngIf="visibilityFlags.isVerkaufVisible && false">
 
     <div class="container" data-aos="fade-up">
 
@@ -403,7 +403,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section>
 
   <!-- ======= Wohnungverkaufen Section ======= -->
-  <section id="wohnungverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
+  <section id="wohnungverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible && false">
 
     <div class="container" data-aos="fade-up">
 
@@ -445,7 +445,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section><!-- End Values Section -->
 
   <!-- ======= Counts Section ======= -->
-  <section id="counts" class="counts" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="counts" class="counts" *ngIf="visibilityFlags.isHomeVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row gy-4">
@@ -501,7 +501,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   <!-- End Counts Section -->
 
 
-  <section id="hausvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible">
+  <section id="hausvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible && false">
 
     <div class="container" data-aos="fade-up">
 
@@ -543,7 +543,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section><!-- End Values Section -->
 
   <!-- ======= Wohnungverkaufen Section ======= -->
-  <section id="wohnungvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible">
+  <section id="wohnungvermieten" class="values" *ngIf="visibilityFlags.isVermietungVisible && false">
 
     <div class="container" data-aos="fade-up">
 
@@ -590,11 +590,11 @@ the coming months hold promising opportunities for growth and impact.</p>
   
 
   <div class="mobile-pink-line"
-    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible">
+    *ngIf="false">
   </div>
 
   <section id="gewerbe" class="gewerbe features"
-    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
+    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible) && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -646,10 +646,10 @@ the coming months hold promising opportunities for growth and impact.</p>
     </div>
   </section>
   <div class="mobile-green-line"
-    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible">
+    *ngIf="false">
   </div>
   <section class="grundstuck features" data-aos="fade-up" id="grundstuck"
-    *ngIf="(visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
+    *ngIf="false && (visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -717,7 +717,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section>
 
   <!-- ======= Services Section ======= -->
-  <section id="services" class="services" *ngIf="visibilityFlags.isLeistungenVisible">
+  <section id="services" class="services" *ngIf="visibilityFlags.isLeistungenVisible && false">
 
     <div class="container" data-aos="fade-up">
 
@@ -782,7 +782,7 @@ the coming months hold promising opportunities for growth and impact.</p>
 
   </section><!-- End Services Section -->
 
-  <section id="exposes" class="pricing" *ngIf="visibilityFlags.isLeistungenVisible">
+  <section id="exposes" class="pricing" *ngIf="visibilityFlags.isLeistungenVisible && false">
 
     <div class="container" data-aos="fade-up">
 
@@ -805,7 +805,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section>
 
   <!-- ======= Pricing Section ======= -->
-  <section id="angebote" class="pricing" *ngIf="visibilityFlags.isAngeboteVisible">
+  <section id="angebote" class="pricing" *ngIf="visibilityFlags.isAngeboteVisible && false">
 
     <div class="container" data-aos="fade-up">
 
@@ -879,8 +879,8 @@ the coming months hold promising opportunities for growth and impact.</p>
     </div>
 
   </section>
-  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
-  <section id="energieausweis" class="energieausweis features" *ngIf="visibilityFlags.isBeratungVisible">
+  <div class="mobile-pink-line" *ngIf="false"></div>
+  <section id="energieausweis" class="energieausweis features" *ngIf="visibilityFlags.isBeratungVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -915,9 +915,9 @@ the coming months hold promising opportunities for growth and impact.</p>
     </div>
   </section>
 
-  <div class="mobile-green-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
+  <div class="mobile-green-line" *ngIf="visibilityFlags.isBeratungVisible && false"></div>
 
-  <section id="gutachten" class="gutachten features" *ngIf="visibilityFlags.isBeratungVisible">
+  <section id="gutachten" class="gutachten features" *ngIf="visibilityFlags.isBeratungVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -950,8 +950,8 @@ the coming months hold promising opportunities for growth and impact.</p>
     </div>
   </section>
 
-  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
-  <section id="grundrisserstellung" class="grundrisserstellung features" *ngIf="visibilityFlags.isBeratungVisible">
+  <div class="mobile-pink-line" *ngIf="false"></div>
+  <section id="grundrisserstellung" class="grundrisserstellung features" *ngIf="visibilityFlags.isBeratungVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -986,8 +986,8 @@ the coming months hold promising opportunities for growth and impact.</p>
     </div>
   </section>
 
-  <div class="mobile-green-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
-  <section id="bausachverstandige" class="bausachverstandige features" *ngIf="visibilityFlags.isBeratungVisible">
+  <div class="mobile-green-line" *ngIf="false"></div>
+  <section id="bausachverstandige" class="bausachverstandige features" *ngIf="visibilityFlags.isBeratungVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1019,8 +1019,8 @@ the coming months hold promising opportunities for growth and impact.</p>
     </div>
   </section>
 
-  <div class="mobile-pink-line" *ngIf="visibilityFlags.isBeratungVisible"></div>
-  <section id="grundsteuer" class="grundsteuer features" *ngIf="visibilityFlags.isBeratungVisible">
+  <div class="mobile-pink-line" *ngIf="false"></div>
+  <section id="grundsteuer" class="grundsteuer features" *ngIf="visibilityFlags.isBeratungVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1053,7 +1053,7 @@ the coming months hold promising opportunities for growth and impact.</p>
     </div>
   </section>
 
-  <section id="tippGeber" class="tippGeber features" *ngIf="visibilityFlags.isZusammenarbeitVisible">
+  <section id="tippGeber" class="tippGeber features" *ngIf="visibilityFlags.isZusammenarbeitVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1086,9 +1086,9 @@ the coming months hold promising opportunities for growth and impact.</p>
     </div>
   </section>
 
-  <div class="mobile-pink-line" *ngIf="visibilityFlags.isZusammenarbeitVisible"></div>
+  <div class="mobile-pink-line" *ngIf="false"></div>
 
-  <section id="bewerbung" class="bewerbung features" *ngIf="visibilityFlags.isZusammenarbeitVisible">
+  <section id="bewerbung" class="bewerbung features" *ngIf="visibilityFlags.isZusammenarbeitVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -2398,7 +2398,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   
 
   <!-- ======= Team Section ======= -->
-  <section id="team" class="team" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="team" class="team" *ngIf="visibilityFlags.isHomeVisible && false">
 
     <div class="container" data-aos="fade-up">
 
@@ -2728,14 +2728,14 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section>
 
   <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact"
-    *ngIf="visibilityFlags.isLeistungenVisible || visibilityFlags.isHomeVisible || visibilityFlags.isKontaktVisible">
+  <section id="contact" class="contact apply-background-image"
+    *ngIf="true">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>Kontakt</h2>
-        <p>Kontaktieren Sie uns</p>
+        <h2>Contact</h2>
+        <p>Contact us</p>
       </header>
 
       <div class="row gy-4">
@@ -2746,30 +2746,31 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="col-md-6">
               <div class="info-box">
                 <i class="bi bi-geo-alt"></i>
-                <h3>Addresse</h3>
-                <p>Oskar-Schlemmer-Str. 14,<br>71679 Asperg</p>
+                <h3>Address</h3>
+                <p>C/o Enos</p>
+                <p>Sachsenstraße 38,<br>75177 Pforzheim</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info-box">
                 <i class="bi bi-telephone"></i>
-                <h3>Rufen Sie uns an</h3>
-                <p>+49 (0) 163 7300182<br>+49 (0) 7141 4880207</p>
+                <h3>Call us</h3>
+                <p>+49 (0) 171 8016264<br>+49 (0) 179 2154685</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info-box">
                 <i class="bi bi-envelope"></i>
                 <h3>E-Mail</h3>
-                <p>info&#64;rosenstolz-immo.de</p>
+                <p>temafanclub&#64;gmail.com</p>
                 <br />
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" >
               <div class="info-box">
                 <i class="bi bi-clock"></i>
-                <h3>Öffnungszeiten</h3>
-                <p>Montag – Freitag<br>9:00 – 18:00 Uhr</p>
+                <h3>Open</h3>
+                <p>Monday – Sunday<br>4pm – 10pm</p>
               </div>
             </div>
           </div>
@@ -2781,27 +2782,27 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="row gy-4">
 
               <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Ihr Name" required>
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
               </div>
 
               <div class="col-md-6 ">
-                <input type="email" class="form-control" name="email" placeholder="Ihre E-Mail" required>
+                <input type="email" class="form-control" name="email" placeholder="Your E-Mail" required>
               </div>
 
               <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Betreff">
+                <input type="text" class="form-control" name="subject" placeholder="Subject">
               </div>
 
               <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Nachricht" required></textarea>
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
               </div>
 
               <div class="col-md-12 text-center">
-                <div class="loading">Laden</div>
+                <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Ihre Nachricht wurde gesendet. Wir danken Ihnen!</div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                <button type="submit">Nachricht absenden</button>
+                <button type="submit">Send Message</button>
               </div>
 
             </div>
@@ -2818,7 +2819,8 @@ the coming months hold promising opportunities for growth and impact.</p>
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
+<footer id="footer" class="footer apply-fishing-background-image">
+  <div class="apply-text-background">
 
   <!-- <div class="footer-newsletter">
     <div class="container">
@@ -2835,17 +2837,17 @@ the coming months hold promising opportunities for growth and impact.</p>
       </div>
     </div>
   </div> -->
-  <div class="green-line"></div>
+  <div class="blue-line"></div>
   <div class="footer-top">
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
           <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/newtestlogo2.png" alt="">
+            <img src="assets/img/temafanclub_logo.png" alt="">
             <!-- <span class="footer-logo-text">Rosenstolz Immobilien</span> -->
           </a>
-          <p class="logo-text">Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta
-            donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p class="white-footer-text">We stand together like a family. We care for each other.<br> We support one another in joy and in sorrow.<br>Onuado ena eye</p><br>
+          <p class="white-footer-text">SOCIAL MEDIA LINKS</p>
           <div class="social-links mt-3">
             <a class="twitter"><i class="bi bi-twitter"></i></a>
             <a class="facebook"><i class="bi bi-facebook"></i></a>
@@ -2854,7 +2856,7 @@ the coming months hold promising opportunities for growth and impact.</p>
           </div>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
+        <div class="col-lg-2 col-6 footer-links" *ngIf="false">
           <!-- <h4>Useful Links</h4> -->
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Impressum')">Impressum</a></li>
@@ -2865,27 +2867,24 @@ the coming months hold promising opportunities for growth and impact.</p>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>UNSERE LEISTUNGEN</h4>
+          <h4 class="white-footer-text">Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Leistungen')">Rückrufservice</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Leistungen')">Immobilienbewertung</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Kontakt')">Kontaktformular</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Leistungen')">Finanzierungsrechner</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Leistungen')">Professionelle Exposés</a>
-            </li>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Leistungen')">Bilder vom Profi</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Leistungen')">Drohnenaufnahmen</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Leistungen', 'plans')">Plans</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Leistungen', 'suchauftrag')">Key Points</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Kontakt', 'testimonials')">Events</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Leistungen', 'contact')">Contact Form</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Leistungen', 'about')">About</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Kontakt</h4>
-          <p>
-            Oskar-Schlemmer-Str. 14, <br>
-            71679 Asperg<br>
+          <h4 class="white-footer-text">Contact</h4>
+          <p class="white-footer-text">
+            Sachsenstraße 38, <br>
+            75177 Pforzheim<br>
             Deutschland <br><br>
-            <strong>Tel:</strong>+49 (0) 163 7300182<br>
-            <strong>E-Mail:</strong> info&#64;rosenstolz-immo.de<br>
+            <strong>Tel:</strong>+49 (0) 171 8016264<br>
+            <strong>E-Mail:</strong> temafanclub&#64;gmail.com<br>
           </p>
 
         </div>
@@ -2894,11 +2893,13 @@ the coming months hold promising opportunities for growth and impact.</p>
     </div>
   </div>
 
-  <div class="container">
-    <div class="copyright">
-      &copy; Copyright <strong><span>Rosenstolz-Immo</span></strong>. All Rights Reserved
+  <div class="container white-footer-text">
+    <div class="copyright white-footer-text">
+      &copy; Copyright <strong><span>Tema Fan Club</span></strong>. All Rights Reserved
     </div>
 
+  </div>
+    
   </div>
 </footer><!-- End Footer -->
 
