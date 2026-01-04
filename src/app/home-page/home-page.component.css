@@ -1182,6 +1182,10 @@ background-color: #7f8135;
     font-size: 28px;
   }
 
+  #hero {
+    padding: 100px 0 !important;
+  }
+
   .features .feature-box {
     padding: 0;
     width: unset;
