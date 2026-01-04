@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { filter } from 'rxjs';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
+import { HttpClientModule } from '@angular/common/http';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,7 +16,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'})],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'}), HttpClientModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

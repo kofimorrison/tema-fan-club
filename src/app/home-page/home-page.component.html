@@ -12,7 +12,8 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-home" (click)="navigateToPage('Home', 'hero')">Home</a></li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-home"
+            (click)="navigateToPage('Home', 'hero')">Home</a></li>
         <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Zusammenarbeit', 'plans')">Plans</a>
           <!-- <ul>
             <li><a (click)="navigateToPage('Zusammenarbeit', 'tippGeber')">Tippgeber</a></li>
@@ -47,7 +48,8 @@
             <li><a (click)="navigateToPage('Leistungen', 'drohnenaufnahmen')">Drohnenaufnahmen</a></li>
           </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts" (click)="navigateToPage('Beratung')" *ngIf="false">Beratung</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts"
+            (click)="navigateToPage('Beratung')" *ngIf="false">Beratung</a>
           <!-- <ul>
             <li><a (click)="navigateToPage('Beratung', 'energieausweis')">Energieausweis</a></li>
             <li><a (click)="navigateToPage('Beratung', 'gutachten')">Gutachten</a></li>
@@ -57,7 +59,8 @@
             <li><a (click)="navigateToPage('Beratung', 'grundsteuer')">Grundsteuer</a></li>
           </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-values" (click)="navigateToPage('Verkauf', 'testimonials')">Events</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-values"
+            (click)="navigateToPage('Verkauf', 'testimonials')">Events</a>
           <!-- <ul>
             <li><a (click)="navigateToPage('Verkauf', 'hausverkaufen')">Haus</a></li>
             <li><a (click)="navigateToPage('Verkauf', 'wohnungverkaufen')">Wohnung</a></li>
@@ -76,7 +79,8 @@
           </ul> -->
         </li>
 
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-contact" (click)="navigateToPage('Kontakt', 'contact')">Kontakt</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-contact"
+            (click)="navigateToPage('Kontakt', 'contact')">Kontakt</a>
         </li>
       </ul>
       <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
@@ -126,11 +130,19 @@
             <h3>YEAR 2025 IN REVIEW</h3>
 
             <h2>Thank you for your Visit</h2>
-            <p>We truly appreciate your interest and hope you find the information helpful and engaging. 
-Our club was built on simple but powerful values — supporting one another, strengthening social connections, and contributing to the welfare of others. These values continue to guide every step we take.
-Over the past year, several moments reminded us of the importance of standing together. In early May, we shared in the joy of a Sister and a Brother's during their child dedication. In June, during a time of loss at a Brother's home, the club offered comfort and strength. July brought opportunities to connect with other groups, attend special events, and support members during personal milestones. August gave us one of our most memorable days — our first BBQ in Karlsruhe Durlach, filled with laughter and togetherness. And throughout September and October, the club continued to show care, respect, and unity at various ceremonies and celebrations.
-These experiences highlight what makes this club unique: a genuine commitment to one another and a spirit of togetherness that never wavers.<br /><br />Looking ahead
-the coming months hold promising opportunities for growth and impact.</p>
+            <p>We truly appreciate your interest and hope you find the information helpful and engaging.
+              Our club was built on simple but powerful values — supporting one another, strengthening social
+              connections, and contributing to the welfare of others. These values continue to guide every step we take.
+              Over the past year, several moments reminded us of the importance of standing together. In early May, we
+              shared in the joy of a Sister and a Brother's during their child dedication. In June, during a time of
+              loss at a Brother's home, the club offered comfort and strength. July brought opportunities to connect
+              with other groups, attend special events, and support members during personal milestones. August gave us
+              one of our most memorable days — our first BBQ in Karlsruhe Durlach, filled with laughter and
+              togetherness. And throughout September and October, the club continued to show care, respect, and unity at
+              various ceremonies and celebrations.
+              These experiences highlight what makes this club unique: a genuine commitment to one another and a spirit
+              of togetherness that never wavers.<br /><br />Looking ahead
+              the coming months hold promising opportunities for growth and impact.</p>
             <div class="text-center text-lg-start" *ngIf="false">
               <a href="#"
                 class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
@@ -197,7 +209,8 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
               <div class="feature-box d-flex align-items-center">
                 <i class="bi bi-check"></i>
-                <h3>And several other <br>meaningful Events that<br> will continue to build<br> our identity and purpose.</h3>
+                <h3>And several other <br>meaningful Events that<br> will continue to build<br> our identity and
+                  purpose.</h3>
               </div>
             </div>
 
@@ -587,10 +600,9 @@ the coming months hold promising opportunities for growth and impact.</p>
   <!-- ======= Features Section ======= -->
   <!-- End Features Section -->
 
-  
 
-  <div class="mobile-pink-line"
-    *ngIf="false">
+
+  <div class="mobile-pink-line" *ngIf="false">
   </div>
 
   <section id="gewerbe" class="gewerbe features"
@@ -645,8 +657,7 @@ the coming months hold promising opportunities for growth and impact.</p>
       </div>
     </div>
   </section>
-  <div class="mobile-green-line"
-    *ngIf="false">
+  <div class="mobile-green-line" *ngIf="false">
   </div>
   <section class="grundstuck features" data-aos="fade-up" id="grundstuck"
     *ngIf="false && (visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible)">
@@ -951,7 +962,8 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section>
 
   <div class="mobile-pink-line" *ngIf="false"></div>
-  <section id="grundrisserstellung" class="grundrisserstellung features" *ngIf="visibilityFlags.isBeratungVisible && false">
+  <section id="grundrisserstellung" class="grundrisserstellung features"
+    *ngIf="visibilityFlags.isBeratungVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -987,7 +999,8 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section>
 
   <div class="mobile-green-line" *ngIf="false"></div>
-  <section id="bausachverstandige" class="bausachverstandige features" *ngIf="visibilityFlags.isBeratungVisible && false">
+  <section id="bausachverstandige" class="bausachverstandige features"
+    *ngIf="visibilityFlags.isBeratungVisible && false">
     <div class="container" data-aos="fade-up">
 
       <div class="row feture-tabs" data-aos="fade-up">
@@ -1434,7 +1447,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   <!-- End Portfolio Section -->
 
   <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="testimonials" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="testimonials" class="testimonials pb-5" *ngIf="visibilityFlags.isHomeVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1450,7 +1463,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/tfc_end_of_year/1.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/tfc_end_of_year/1.jpeg')">
+                  (click)="openImageModal('assets/img/tfc_end_of_year/1.jpeg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
@@ -1459,7 +1472,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/tfc_end_of_year/2.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/tfc_end_of_year/2.jpeg')">
+                  (click)="openImageModal('assets/img/tfc_end_of_year/2.jpeg')">
               </div>
             </div>
           </div>
@@ -1468,7 +1481,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/tfc_end_of_year/4.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/tfc_end_of_year/4.jpeg')">
+                  (click)="openImageModal('assets/img/tfc_end_of_year/4.jpeg')">
               </div>
             </div>
           </div>
@@ -1476,10 +1489,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="profile mt-auto">
-                <img src="assets/img/tfc_end_of_year/5.jpeg"
-        class="testimonial-img"
-        alt=""
-        (click)="openImageModal('assets/img/tfc_end_of_year/5.jpeg')">
+                <img src="assets/img/tfc_end_of_year/5.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/tfc_end_of_year/5.jpeg')">
               </div>
             </div>
           </div>
@@ -1488,7 +1499,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/tfc_end_of_year/6.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/tfc_end_of_year/6.jpeg')">
+                  (click)="openImageModal('assets/img/tfc_end_of_year/6.jpeg')">
               </div>
             </div>
           </div>
@@ -1497,7 +1508,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/tfc_end_of_year/10.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/tfc_end_of_year/10.jpeg')">
+                  (click)="openImageModal('assets/img/tfc_end_of_year/10.jpeg')">
               </div>
             </div>
           </div>
@@ -1506,7 +1517,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/tfc_end_of_year/11.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/tfc_end_of_year/11.jpeg')">
+                  (click)="openImageModal('assets/img/tfc_end_of_year/11.jpeg')">
               </div>
             </div>
           </div>
@@ -1527,7 +1538,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/1.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/1.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/1.jpeg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
@@ -1536,7 +1547,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/2.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/2.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/2.jpeg')">
               </div>
             </div>
           </div>
@@ -1545,7 +1556,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/4.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/4.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/4.jpeg')">
               </div>
             </div>
           </div>
@@ -1553,10 +1564,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="profile mt-auto">
-                <img src="assets/img/sis_vic_child_ded_frank/5.jpeg"
-        class="testimonial-img"
-        alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/5.jpeg')">
+                <img src="assets/img/sis_vic_child_ded_frank/5.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/5.jpeg')">
               </div>
             </div>
           </div>
@@ -1565,7 +1574,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/6.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/6.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/6.jpeg')">
               </div>
             </div>
           </div>
@@ -1574,7 +1583,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/10.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/10.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/10.jpeg')">
               </div>
             </div>
           </div>
@@ -1583,7 +1592,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/11.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/11.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/11.jpeg')">
               </div>
             </div>
           </div>
@@ -1592,7 +1601,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/12.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/12.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/12.jpeg')">
               </div>
             </div>
           </div>
@@ -1601,7 +1610,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/13.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/13.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/13.jpeg')">
               </div>
             </div>
           </div>
@@ -1610,7 +1619,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/14.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/14.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/14.jpeg')">
               </div>
             </div>
           </div>
@@ -1619,7 +1628,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/15.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/15.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/15.jpeg')">
               </div>
             </div>
           </div>
@@ -1628,7 +1637,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/16.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/16.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/16.jpeg')">
               </div>
             </div>
           </div>
@@ -1637,7 +1646,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/17.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/17.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/17.jpeg')">
               </div>
             </div>
           </div>
@@ -1646,7 +1655,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/18.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/18.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/18.jpeg')">
               </div>
             </div>
           </div>
@@ -1655,7 +1664,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/19.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/19.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/19.jpeg')">
               </div>
             </div>
           </div>
@@ -1664,7 +1673,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/sis_vic_child_ded_frank/20.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/20.jpeg')">
+                  (click)="openImageModal('assets/img/sis_vic_child_ded_frank/20.jpeg')">
               </div>
             </div>
           </div>
@@ -1673,8 +1682,8 @@ the coming months hold promising opportunities for growth and impact.</p>
         <div class="swiper-pagination"></div>
       </div>
 
-      
-      
+
+
       <header class="section-header">
         <h2>Event</h2>
         <p>Funeral-Brother Kwame’s brother (Mainz)</p>
@@ -1687,7 +1696,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/1.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/1.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/1.jpg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
@@ -1696,7 +1705,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/2.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/2.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/2.jpg')">
               </div>
             </div>
           </div>
@@ -1705,7 +1714,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/4.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/4.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/4.jpg')">
               </div>
             </div>
           </div>
@@ -1713,10 +1722,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="profile mt-auto">
-                <img src="assets/img/funeral_bro_kwames_bro_Mainz/5.jpg"
-        class="testimonial-img"
-        alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/5.jpg')">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/5.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/5.jpg')">
               </div>
             </div>
           </div>
@@ -1725,7 +1732,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/6.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/6.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/6.jpg')">
               </div>
             </div>
           </div>
@@ -1734,7 +1741,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/7.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/7.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/7.jpg')">
               </div>
             </div>
           </div>
@@ -1742,10 +1749,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="profile mt-auto">
-                <img src="assets/img/funeral_bro_kwames_bro_Mainz/8.jpg"
-        class="testimonial-img"
-        alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/8.jpg')">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/8.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/8.jpg')">
               </div>
             </div>
           </div>
@@ -1754,7 +1759,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/9.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/9.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/9.jpg')">
               </div>
             </div>
           </div>
@@ -1763,7 +1768,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/10.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/10.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/10.jpg')">
               </div>
             </div>
           </div>
@@ -1772,7 +1777,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/11.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/11.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/11.jpg')">
               </div>
             </div>
           </div>
@@ -1781,7 +1786,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/12.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/12.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/12.jpg')">
               </div>
             </div>
           </div>
@@ -1790,7 +1795,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/13.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/13.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/13.jpg')">
               </div>
             </div>
           </div>
@@ -1799,7 +1804,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/14.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/14.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/14.jpg')">
               </div>
             </div>
           </div>
@@ -1808,7 +1813,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/15.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/15.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/15.jpg')">
               </div>
             </div>
           </div>
@@ -1817,7 +1822,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/16.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/16.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/16.jpg')">
               </div>
             </div>
           </div>
@@ -1826,7 +1831,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/17.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/17.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/17.jpg')">
               </div>
             </div>
           </div>
@@ -1835,7 +1840,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/18.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/18.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/18.jpg')">
               </div>
             </div>
           </div>
@@ -1844,7 +1849,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/19.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/19.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/19.jpg')">
               </div>
             </div>
           </div>
@@ -1853,7 +1858,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/20.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/20.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/20.jpg')">
               </div>
             </div>
           </div>
@@ -1862,7 +1867,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/21.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/21.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/21.jpg')">
               </div>
             </div>
           </div>
@@ -1871,7 +1876,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/funeral_bro_kwames_bro_Mainz/22.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/22.jpg')">
+                  (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/22.jpg')">
               </div>
             </div>
           </div>
@@ -1880,8 +1885,8 @@ the coming months hold promising opportunities for growth and impact.</p>
         <div class="swiper-pagination"></div>
       </div>
 
-      
-      
+
+
       <header class="section-header">
         <h2>Event</h2>
         <p>Okyeman Union Inauguration (Darmstadt)</p>
@@ -1894,7 +1899,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/1.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/1.jpg')">
+                  (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/1.jpg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
@@ -1903,7 +1908,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/2.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/2.jpg')">
+                  (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/2.jpg')">
               </div>
             </div>
           </div>
@@ -1912,7 +1917,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/3.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/3.jpg')">
+                  (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/3.jpg')">
               </div>
             </div>
           </div>
@@ -1921,7 +1926,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/4.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/4.jpg')">
+                  (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/4.jpg')">
               </div>
             </div>
           </div>
@@ -1929,10 +1934,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="profile mt-auto">
-                <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/5.jpg"
-        class="testimonial-img"
-        alt=""
-        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/5.jpg')">
+                <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/5.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/5.jpg')">
               </div>
             </div>
           </div>
@@ -1941,7 +1944,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/6.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/6.jpg')">
+                  (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/6.jpg')">
               </div>
             </div>
           </div>
@@ -1950,7 +1953,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/7.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/7.jpg')">
+                  (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/7.jpg')">
               </div>
             </div>
           </div>
@@ -1971,7 +1974,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/1.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/1.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/1.jpeg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
@@ -1980,7 +1983,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/2.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/2.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/2.jpeg')">
               </div>
             </div>
           </div>
@@ -1989,7 +1992,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/4.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/4.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/4.jpeg')">
               </div>
             </div>
           </div>
@@ -1997,10 +2000,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="profile mt-auto">
-                <img src="assets/img/august_bbq_karlsruhe_durlach/5.jpeg"
-        class="testimonial-img"
-        alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/5.jpeg')">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/5.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/5.jpeg')">
               </div>
             </div>
           </div>
@@ -2009,7 +2010,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/6.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/6.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/6.jpeg')">
               </div>
             </div>
           </div>
@@ -2017,7 +2018,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/7.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/2.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/2.jpeg')">
               </div>
             </div>
           </div>
@@ -2026,7 +2027,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/8.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/4.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/4.jpeg')">
               </div>
             </div>
           </div>
@@ -2034,10 +2035,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="profile mt-auto">
-                <img src="assets/img/august_bbq_karlsruhe_durlach/9.jpeg"
-        class="testimonial-img"
-        alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/5.jpeg')">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/9.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/5.jpeg')">
               </div>
             </div>
           </div>
@@ -2046,7 +2045,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/10.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/10.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/10.jpeg')">
               </div>
             </div>
           </div>
@@ -2055,7 +2054,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/11.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/11.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/11.jpeg')">
               </div>
             </div>
           </div>
@@ -2064,7 +2063,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/12.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/12.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/12.jpeg')">
               </div>
             </div>
           </div>
@@ -2073,7 +2072,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/13.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/13.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/13.jpeg')">
               </div>
             </div>
           </div>
@@ -2082,7 +2081,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/14.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/14.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/14.jpeg')">
               </div>
             </div>
           </div>
@@ -2091,7 +2090,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/15.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/15.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/15.jpeg')">
               </div>
             </div>
           </div>
@@ -2100,7 +2099,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/16.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/16.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/16.jpeg')">
               </div>
             </div>
           </div>
@@ -2109,7 +2108,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/17.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/17.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/17.jpeg')">
               </div>
             </div>
           </div>
@@ -2118,7 +2117,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/18.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/18.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/18.jpeg')">
               </div>
             </div>
           </div>
@@ -2127,7 +2126,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/19.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/19.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/19.jpeg')">
               </div>
             </div>
           </div>
@@ -2136,7 +2135,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/20.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/20.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/20.jpeg')">
               </div>
             </div>
           </div>
@@ -2145,7 +2144,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/21.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/21.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/21.jpeg')">
               </div>
             </div>
           </div>
@@ -2154,7 +2153,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/22.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/22.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/22.jpeg')">
               </div>
             </div>
           </div>
@@ -2163,7 +2162,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/23.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/23.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/23.jpeg')">
               </div>
             </div>
           </div>
@@ -2172,7 +2171,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/24.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/24.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/24.jpeg')">
               </div>
             </div>
           </div>
@@ -2181,7 +2180,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/25.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/25.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/25.jpeg')">
               </div>
             </div>
           </div>
@@ -2190,7 +2189,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/26.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/26.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/26.jpeg')">
               </div>
             </div>
           </div>
@@ -2199,7 +2198,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/27.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/27.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/27.jpeg')">
               </div>
             </div>
           </div>
@@ -2208,7 +2207,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/28.jpeg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/28.jpeg')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/28.jpeg')">
               </div>
             </div>
           </div>
@@ -2217,7 +2216,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/29.mp4" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/29.mp4')">
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/29.mp4')">
               </div>
             </div>
           </div>
@@ -2225,8 +2224,8 @@ the coming months hold promising opportunities for growth and impact.</p>
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      
-      
+
+
       <header class="section-header">
         <h2>Event</h2>
         <p>Brother Ben mother's funeral (Darmstadt)</p>
@@ -2239,7 +2238,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <video src="assets/img/brother_Ben_mothers_funeral_Darmstadt/1.mp4" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/1.mp4')" controls></video>
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/1.mp4')" controls></video>
               </div>
             </div>
           </div><!-- End testimonial item -->
@@ -2248,7 +2247,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/brother_Ben_mothers_funeral_Darmstadt/2.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/2.jpg')">
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/2.jpg')">
               </div>
             </div>
           </div>
@@ -2257,7 +2256,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <video src="assets/img/brother_Ben_mothers_funeral_Darmstadt/4.mp4" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/4.mp4')" controls></video>
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/4.mp4')" controls></video>
               </div>
             </div>
           </div>
@@ -2265,10 +2264,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="profile mt-auto">
-                <video src="assets/img/brother_Ben_mothers_funeral_Darmstadt/3.mp4"
-        class="testimonial-img"
-        alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/3.mp4')" controls></video>
+                <video src="assets/img/brother_Ben_mothers_funeral_Darmstadt/3.mp4" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/3.mp4')" controls></video>
               </div>
             </div>
           </div>
@@ -2289,7 +2286,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <video src="assets/img/brother_Ben_mothers_one_week_Darmstadt/1.mp4" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/1.mp4')" controls></video>
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/1.mp4')" controls></video>
               </div>
             </div>
           </div><!-- End testimonial item -->
@@ -2298,7 +2295,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/2.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/2.jpg')">
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/2.jpg')">
               </div>
             </div>
           </div>
@@ -2307,7 +2304,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/4.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/4.jpg')">
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/4.jpg')">
               </div>
             </div>
           </div>
@@ -2315,10 +2312,8 @@ the coming months hold promising opportunities for growth and impact.</p>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <div class="profile mt-auto">
-                <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/5.jpg"
-        class="testimonial-img"
-        alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/5.jpg')">
+                <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/5.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/5.jpg')">
               </div>
             </div>
           </div>
@@ -2327,7 +2322,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/6.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/6.jpg')">
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/6.jpg')">
               </div>
             </div>
           </div>
@@ -2336,7 +2331,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/3.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/3.jpg')">
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/3.jpg')">
               </div>
             </div>
           </div>
@@ -2345,7 +2340,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/7.jpg" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/7.jpg')">
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/7.jpg')">
               </div>
             </div>
           </div>
@@ -2354,7 +2349,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/8.jpg" class="testimonial-img" alt="x"
-        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/8.jpg')">
+                  (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/8.jpg')">
               </div>
             </div>
           </div>
@@ -2362,7 +2357,7 @@ the coming months hold promising opportunities for growth and impact.</p>
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      
+
       <header class="section-header">
         <h2>Event</h2>
         <p>Flashy Ladies Inauguration (Frankfurt)</p>
@@ -2375,7 +2370,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <video src="assets/img/flashy_Ladies_Inauguration_Frankfurt/1.mp4" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/flashy_Ladies_Inauguration_Frankfurt/1.mp4')" controls></video>
+                  (click)="openImageModal('assets/img/flashy_Ladies_Inauguration_Frankfurt/1.mp4')" controls></video>
               </div>
             </div>
           </div><!-- End testimonial item -->
@@ -2384,7 +2379,7 @@ the coming months hold promising opportunities for growth and impact.</p>
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <video src="assets/img/flashy_Ladies_Inauguration_Frankfurt/2.mp4" class="testimonial-img" alt=""
-        (click)="openImageModal('assets/img/flashy_Ladies_Inauguration_Frankfurt/2.mp4')" controls></video>
+                  (click)="openImageModal('assets/img/flashy_Ladies_Inauguration_Frankfurt/2.mp4')" controls></video>
               </div>
             </div>
           </div>
@@ -2392,10 +2387,665 @@ the coming months hold promising opportunities for growth and impact.</p>
         <div class="swiper-pagination"></div>
       </div>
 
+      <header class="section-header">
+        <h2>Event</h2>
+        <p>One of the Quarterly meetings at Nana Hemaa's place</p>
+      </header>
+
+      <div class="testimonials-slider swiper pb-5" data-aos="fade-up" data-aos-delay="200" #testimonialSlider10>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/1.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/1.jpg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/2.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/2.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/4.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/4.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/3.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/3.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/5.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/5.jpg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/6.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/6.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/7.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/7.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/8.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/8.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/9.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/9.jpg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/10.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/10.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/11.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/11.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/12.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/12.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/13.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/13.jpg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/14.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/14.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/15.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/15.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/16.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/16.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/quarterly_meetings_at_NanaHemaa/17.jpg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/17.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <video src="assets/img/quarterly_meetings_at_NanaHemaa/18.mp4" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/quarterly_meetings_at_NanaHemaa/18.mp4')" controls></video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <header class="section-header">
+        <h2>Event</h2>
+        <p>Bereavement support at Bro Joe's place</p>
+      </header>
+
+      <div class="testimonials-slider swiper pb-5" data-aos="fade-up" data-aos-delay="200" #testimonialSlider11>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/1.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/1.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/2.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/2.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/4.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/4.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/3.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/3.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/5.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/5.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/6.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/6.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/7.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/7.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/8.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/8.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/9.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/9.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/10.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/10.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/11.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/11.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/1.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/1.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/2.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/2.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/4.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/4.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/3.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/3.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/5.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/5.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/6.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/6.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/7.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/7.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/8.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/8.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/9.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/9.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/10.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/10.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/11.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/11.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/12.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/12.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/13.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/13.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/14.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/14.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/15.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/15.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/16.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/16.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/17.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/17.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/18.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/18.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/19.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/19.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/20.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/20.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/21.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/21.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/22.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/22.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/23.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/23.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/24.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/24.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/25.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/25.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/26.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/26.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/27.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/27.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/28.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/28.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/29.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/29.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/30.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/30.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/31.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/31.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/32.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/32.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/33.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/33.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/34.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/34.jpeg')">
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/35.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/35.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/36.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/36.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/bereavement_support_Bro_Joes_place/37.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/37.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <video src="assets/img/bereavement_support_Bro_Joes_place/38.mp4" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/38.mp4')" controls></video>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <video src="assets/img/bereavement_support_Bro_Joes_place/39.mp4" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/bereavement_support_Bro_Joes_place/39.mp4')" controls></video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div><header class="section-header">
+        <h2>Event</h2>
+        <p>Sister Belinda & Nana Kwesi's child dedication (Karlsruhe)</p>
+      </header>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider12>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_Belindas_child_ded_Karlsruhe/1.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/sis_Belindas_child_ded_Karlsruhe/1.jpeg')">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
     </div>
 
   </section><!-- End Testimonials Section -->
-  
+
 
   <!-- ======= Team Section ======= -->
   <section id="team" class="team" *ngIf="visibilityFlags.isHomeVisible && false">
@@ -2728,8 +3378,7 @@ the coming months hold promising opportunities for growth and impact.</p>
   </section>
 
   <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact apply-background-image"
-    *ngIf="true">
+  <section id="contact" class="contact apply-background-image" *ngIf="true">
 
     <div class="container" data-aos="fade-up">
 
@@ -2766,7 +3415,7 @@ the coming months hold promising opportunities for growth and impact.</p>
                 <br />
               </div>
             </div>
-            <div class="col-md-6" >
+            <div class="col-md-6">
               <div class="info-box">
                 <i class="bi bi-clock"></i>
                 <h3>Open</h3>
@@ -2778,7 +3427,7 @@ the coming months hold promising opportunities for growth and impact.</p>
         </div>
 
         <div class="col-lg-6">
-          <form action="assets/js/vendor/php-email-form/contact.php" method="post" class="php-email-form">
+          <!-- <form action="assets/js/vendor/php-email-form/contact.php" method="post" class="php-email-form">
             <div class="row gy-4">
 
               <div class="col-md-6">
@@ -2806,7 +3455,48 @@ the coming months hold promising opportunities for growth and impact.</p>
               </div>
 
             </div>
+          </form> -->
+
+          <form (ngSubmit)="submitForm()" #contactForm="ngForm" class="php-email-form"
+            action="https://formspree.io/f/xlgdagbe" method="POST">
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <input type="text" name="name" [(ngModel)]="form.name" required class="form-control"
+                  placeholder="Your Name">
+              </div>
+
+              <div class="col-md-6 ">
+                <input type="email" name="email" [(ngModel)]="form.email" required class="form-control"
+                  placeholder="Your E-Mail">
+              </div>
+
+              <div class="col-md-12">
+                <input type="text" name="subject" [(ngModel)]="form.subject" class="form-control" placeholder="Subject">
+              </div>
+
+              <div class="col-md-12">
+                <textarea name="message" [(ngModel)]="form.message" required class="form-control" rows="6"
+                  placeholder="Message"></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <button type="submit" [disabled]="loading">
+                  {{ loading ? 'Sending…' : 'Send Message' }}
+                </button>
+              </div>
+
+              <div class="sent-message" *ngIf="success">
+                Your message has been sent. Thank you!
+              </div>
+
+              <div class="error-message" *ngIf="error">
+                Something went wrong. Please try again.
+              </div>
+            </div>
+
           </form>
+
 
         </div>
 
@@ -2822,7 +3512,7 @@ the coming months hold promising opportunities for growth and impact.</p>
 <footer id="footer" class="footer apply-fishing-background-image">
   <div class="apply-text-background">
 
-  <!-- <div class="footer-newsletter">
+    <!-- <div class="footer-newsletter">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-12 text-center">
@@ -2837,69 +3527,75 @@ the coming months hold promising opportunities for growth and impact.</p>
       </div>
     </div>
   </div> -->
-  <div class="blue-line"></div>
-  <div class="footer-top">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/temafanclub_logo.png" alt="">
-            <!-- <span class="footer-logo-text">Rosenstolz Immobilien</span> -->
-          </a>
-          <p class="white-footer-text">We stand together like a family. We care for each other.<br> We support one another in joy and in sorrow.<br>Onuado ena eye</p><br>
-          <p class="white-footer-text">SOCIAL MEDIA LINKS</p>
-          <div class="social-links mt-3">
-            <a class="twitter"><i class="bi bi-twitter"></i></a>
-            <a class="facebook"><i class="bi bi-facebook"></i></a>
-            <a class="instagram"><i class="bi bi-instagram"></i></a>
-            <a class="linkedin"><i class="bi bi-linkedin"></i></a>
+    <div class="blue-line"></div>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/temafanclub_logo.png" alt="">
+              <!-- <span class="footer-logo-text">Rosenstolz Immobilien</span> -->
+            </a>
+            <p class="white-footer-text">We stand together like a family. We care for each other.<br> We support one
+              another in joy and in sorrow.<br>Onuado ena eye</p><br>
+            <p class="white-footer-text">SOCIAL MEDIA LINKS</p>
+            <div class="social-links mt-3">
+              <a class="twitter"><i class="bi bi-twitter"></i></a>
+              <a class="facebook"><i class="bi bi-facebook"></i></a>
+              <a class="instagram"><i class="bi bi-instagram"></i></a>
+              <a class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
           </div>
+
+          <div class="col-lg-2 col-6 footer-links" *ngIf="false">
+            <!-- <h4>Useful Links</h4> -->
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Impressum')">Impressum</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('DatenSchutz')">Datenschutz</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a
+                  (click)="navigateToPage('Widerrufsbelehrung')">Widerrufsbelehrung</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4 class="white-footer-text">Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text"
+                  (click)="navigateToPage('Leistungen', 'plans')">Plans</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text"
+                  (click)="navigateToPage('Leistungen', 'suchauftrag')">Key Points</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text"
+                  (click)="navigateToPage('Kontakt', 'testimonials')">Events</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text"
+                  (click)="navigateToPage('Leistungen', 'contact')">Contact Form</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text"
+                  (click)="navigateToPage('Leistungen', 'about')">About</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4 class="white-footer-text">Contact</h4>
+            <p class="white-footer-text">
+              Sachsenstraße 38, <br>
+              75177 Pforzheim<br>
+              Deutschland <br><br>
+              <strong>Tel:</strong>+49 (0) 171 8016264<br>
+              <strong>E-Mail:</strong> temafanclub&#64;gmail.com<br>
+            </p>
+
+          </div>
+
         </div>
-
-        <div class="col-lg-2 col-6 footer-links" *ngIf="false">
-          <!-- <h4>Useful Links</h4> -->
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('Impressum')">Impressum</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a (click)="navigateToPage('DatenSchutz')">Datenschutz</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a
-                (click)="navigateToPage('Widerrufsbelehrung')">Widerrufsbelehrung</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4 class="white-footer-text">Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Leistungen', 'plans')">Plans</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Leistungen', 'suchauftrag')">Key Points</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Kontakt', 'testimonials')">Events</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Leistungen', 'contact')">Contact Form</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a class="white-footer-text" (click)="navigateToPage('Leistungen', 'about')">About</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4 class="white-footer-text">Contact</h4>
-          <p class="white-footer-text">
-            Sachsenstraße 38, <br>
-            75177 Pforzheim<br>
-            Deutschland <br><br>
-            <strong>Tel:</strong>+49 (0) 171 8016264<br>
-            <strong>E-Mail:</strong> temafanclub&#64;gmail.com<br>
-          </p>
-
-        </div>
-
       </div>
     </div>
-  </div>
 
-  <div class="container white-footer-text">
-    <div class="copyright white-footer-text">
-      &copy; Copyright <strong><span>Tema Fan Club</span></strong>. All Rights Reserved
+    <div class="container white-footer-text">
+      <div class="copyright white-footer-text">
+        &copy; Copyright <strong><span>Tema Fan Club</span></strong>. All Rights Reserved
+      </div>
+
     </div>
 
-  </div>
-    
   </div>
 </footer><!-- End Footer -->
 
@@ -2907,7 +3603,7 @@ the coming months hold promising opportunities for growth and impact.</p>
     class="bi bi-arrow-up-short"></i></a>
 
 
-    <!-- Modal -->
+<!-- Modal -->
 <div class="image-modal" *ngIf="isModalOpen" (click)="closeModal()">
   <span class="close-btn">&times;</span>
   <img *ngIf="!isVideoFile(selectedImage)" class="modal-image" [src]="selectedImage" />

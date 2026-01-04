@@ -12,7 +12,8 @@ import {
   HostListener,
 } from '@angular/core';
 import Isotope from 'isotope-layout';
-import AOS from 'aos';
+import AOS, { init } from 'aos';
+// @ts-ignore
 import '../../assets/js/vendor/aos/aos.css';
 import Swiper from 'swiper';
 import GLightbox from 'glightbox';
@@ -24,34 +25,45 @@ import { MapComponent } from '../map/map.component';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 type SectionVisibilityFlags = {
   [K in
-    | 'isHomeVisible'
-    | 'isVerkaufVisible'
-    | 'isVermietungVisible'
-    | 'isLeistungenVisible'
-    | 'isBeratungVisible'
-    | 'isZusammenarbeitVisible'
-    | 'isAngeboteVisible'
-    | 'isKontaktVisible'
-    | 'isFaqVisible'
-    | 'isImpressumVisible'
-    | 'isDatenSchutzVisible'
-    | 'isWiderrufsbelehrungVisible']: boolean;
+  | 'isHomeVisible'
+  | 'isVerkaufVisible'
+  | 'isVermietungVisible'
+  | 'isLeistungenVisible'
+  | 'isBeratungVisible'
+  | 'isZusammenarbeitVisible'
+  | 'isAngeboteVisible'
+  | 'isKontaktVisible'
+  | 'isFaqVisible'
+  | 'isImpressumVisible'
+  | 'isDatenSchutzVisible'
+  | 'isWiderrufsbelehrungVisible']: boolean;
 };
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule, VideoComponent, MapComponent, WordGridComponent],
+  imports: [
+    CommonModule,
+    VideoComponent,
+    MapComponent,
+    WordGridComponent,
+    FormsModule,
+    HttpClientModule,
+  ],
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css', '../../assets/js/vendor/aos/aos.css'],
+  styleUrls: [
+    './home-page.component.css',
+    '../../assets/js/vendor/aos/aos.css',
+  ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
-  formAction: string = 'http://localhost/contact.php';
   @ViewChild('portfolioContainer') portfolioContainerRef!: ElementRef;
   @ViewChild('testimonialSlider') testimonialSlider: any;
   @ViewChild('testimonialSlider2') testimonialSlider2: any;
@@ -62,9 +74,24 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   @ViewChild('testimonialSlider7') testimonialSlider7: any;
   @ViewChild('testimonialSlider8') testimonialSlider8: any;
   @ViewChild('testimonialSlider9') testimonialSlider9: any;
+  @ViewChild('testimonialSlider10') testimonialSlider10: any;
+  @ViewChild('testimonialSlider11') testimonialSlider11: any;
+  @ViewChild('testimonialSlider12') testimonialSlider12: any;
   @ViewChild('clientsSwipper') clientsSwipper: any;
   isInSection = false;
   openNav: boolean = false;
+  // for tema fan club(formspree.io)
+  private formspreeUrl = 'https://formspree.io/f/xqeawplw';
+  loading = false;
+  success = false;
+  error = false;
+
+  form = {
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  };
   @Output() sectionChange = new EventEmitter<boolean>();
   visibilityFlags: SectionVisibilityFlags = {
     isHomeVisible: true,
@@ -81,7 +108,13 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     isWiderrufsbelehrungVisible: false,
   };
 
-  constructor(@Inject(ElementRef) private elementRef: ElementRef, private router: Router, private renderer: Renderer2, private sharedService: SharedService) {}
+  constructor(
+    @Inject(ElementRef) private elementRef: ElementRef,
+    private router: Router,
+    private renderer: Renderer2,
+    private sharedService: SharedService,
+    private http: HttpClient
+  ) { }
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
@@ -94,38 +127,38 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
   }
 
- navigateToPage(page: string, sectionId?: string) {
-  // this.router.navigate([`/${page}`]);
-  this.openNav = false;
-  
-  // If a section ID is provided, scroll to that element
-  if (sectionId) {
-    setTimeout(() => {
-      const element = document.getElementById(sectionId);
+  navigateToPage(page: string, sectionId?: string) {
+    // this.router.navigate([`/${page}`]);
+    this.openNav = false;
 
-      if (!element) {
-        return;
-      }
+    // If a section ID is provided, scroll to that element
+    if (sectionId) {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
 
-      const offset = 30; // pixels above the element
-      const elementTop =
-        element.getBoundingClientRect().top + window.pageYOffset;
+        if (!element) {
+          return;
+        }
 
+        const offset = 30; // pixels above the element
+        const elementTop =
+          element.getBoundingClientRect().top + window.pageYOffset;
+
+        window.scrollTo({
+          top: elementTop - offset,
+          behavior: 'smooth',
+        });
+      }, 100);
+    } else {
+      // Default scroll to top if no section ID provided
       window.scrollTo({
-        top: elementTop - offset,
-        behavior: 'smooth',
+        top: 300,
+        behavior: 'instant',
       });
-    }, 100);
-  } else {
-    // Default scroll to top if no section ID provided
-    window.scrollTo({
-      top: 300,
-      behavior: 'instant',
-    });
+    }
   }
-}
 
-isModalOpen = false;
+  isModalOpen = false;
   selectedImage: string | null = null;
 
   openImageModal(imageSrc: string): void {
@@ -138,17 +171,43 @@ isModalOpen = false;
     this.selectedImage = null;
   }
 
+  submitForm() {
+    this.loading = true;
+    this.success = false;
+    this.error = false;
+
+    this.http
+      .post(this.formspreeUrl, {
+        name: this.form.name,
+        email: this.form.email,
+        subject: this.form.subject,
+        message: this.form.message,
+      })
+      .subscribe({
+        next: () => {
+          this.success = true;
+          this.loading = false;
+          this.form = { name: '', email: '', subject: '', message: '' };
+        },
+        error: () => {
+          this.error = true;
+          this.loading = false;
+        },
+      });
+  }
+
   isVideoFile(filename: string | null): boolean {
     if (!filename) return false;
     return /\.(mp4|webm|ogg|mov|mkv)$/i.test(filename);
   }
 
-  getTestimonialSettings(loop: boolean): any{
+  getTestimonialSettings(loop: boolean): any {
     return {
       speed: 600,
       loop: loop,
       autoplay: {
-        delay: 2000,
+        delay: loop ? 2000 : 1000000,
+        stopOnLastSlide: loop ? false : true,
         disableOnInteraction: true,
       },
       slidesPerView: 'auto',
@@ -173,11 +232,9 @@ isModalOpen = false;
       observer: true,
       observeParents: true,
     };
-  };
+  }
 
   ngAfterViewInit() {
-
-    this.initializeFormHandling();
     AOS.init({
       duration: 700,
       easing: 'ease-in-out',
@@ -188,25 +245,70 @@ isModalOpen = false;
      * Testimonials slider
      */
 
-    new Swiper(this.testimonialSlider?.nativeElement, this.getTestimonialSettings(true));
+    new Swiper(
+      this.testimonialSlider?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
 
-    new Swiper(this.testimonialSlider2?.nativeElement, this.getTestimonialSettings(true));
+    new Swiper(
+      this.testimonialSlider2?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
 
-    new Swiper(this.testimonialSlider3?.nativeElement, this.getTestimonialSettings(true));
+    new Swiper(
+      this.testimonialSlider3?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
 
-    new Swiper(this.testimonialSlider4?.nativeElement, this.getTestimonialSettings(true));
+    new Swiper(
+      this.testimonialSlider4?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
 
-    new Swiper(this.testimonialSlider5?.nativeElement, this.getTestimonialSettings(true));
+    new Swiper(
+      this.testimonialSlider5?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
 
-    new Swiper(this.testimonialSlider6?.nativeElement, this.getTestimonialSettings(true));
+    new Swiper(
+      this.testimonialSlider6?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
 
-    new Swiper(this.testimonialSlider7?.nativeElement, this.getTestimonialSettings(false));
+    new Swiper(
+      this.testimonialSlider7?.nativeElement,
+      this.getTestimonialSettings(false)
+    );
 
-    new Swiper(this.testimonialSlider8?.nativeElement, this.getTestimonialSettings(true));
+    new Swiper(
+      this.testimonialSlider8?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
 
-    new Swiper(this.testimonialSlider9?.nativeElement, this.getTestimonialSettings(false));
+    new Swiper(
+      this.testimonialSlider9?.nativeElement,
+      this.getTestimonialSettings(false)
+    );
 
-    new Swiper(this.clientsSwipper?.nativeElement, this.getTestimonialSettings(true));
+    new Swiper(
+      this.testimonialSlider10?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
+
+    new Swiper(
+      this.testimonialSlider11?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
+
+    new Swiper(
+      this.testimonialSlider12?.nativeElement,
+      this.getTestimonialSettings(false)
+    );
+
+    new Swiper(
+      this.clientsSwipper?.nativeElement,
+      this.getTestimonialSettings(true)
+    );
 
     /**
      * Initiate portfolio lightbox
@@ -246,93 +348,7 @@ isModalOpen = false;
     });
   }
 
-  initializeFormHandling() {
-    "use strict";
-
-    let forms = document.querySelectorAll('.php-email-form');
-
-    forms.forEach((form) => {
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        let thisForm = form as HTMLFormElement;
-
-
-        let action = thisForm.getAttribute('action');
-
-        let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
-
-        if (!action) {
-          this.displayError(thisForm, 'The form action property is not set!');
-          return;
-        }
-        thisForm.querySelector('.loading')?.classList.add('d-block');
-        thisForm.querySelector('.error-message')?.classList.remove('d-block');
-        thisForm.querySelector('.sent-message')?.classList.remove('d-block');
-
-        let formData = new FormData(thisForm);
-
-        if (recaptcha) {
-          if (typeof recaptcha !== "undefined") {
-            (recaptcha as any).ready(() => {
-              try {
-                (recaptcha as any).execute(recaptcha, { action: 'php_email_form_submit' })
-                  .then((token: string | Blob) => {
-                    formData.set('recaptcha-response', token);
-                    this.phpEmailFormSubmit(thisForm, action, formData);
-                  });
-              } catch (error) {
-                this.displayError(thisForm, error);
-              }
-            });
-          } else {
-            this.displayError(thisForm, 'The reCaptcha javascript API url is not loaded!');
-          }
-        } else {
-          this.phpEmailFormSubmit(thisForm, action, formData);
-        }
-      });
-    });
-  }
-
-  phpEmailFormSubmit(thisForm: HTMLFormElement, action: string, formData: FormData) {
-    fetch(action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'X-Requested-With': 'XMLHttpRequest' }
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.text();
-        } else {
-          throw new Error(`${response.status} ${response.statusText} ${response.url}`);
-        }
-      })
-      .then(data => {
-        thisForm.querySelector('.loading')?.classList.remove('d-block');
-        if (data.trim() === 'OK') {
-          thisForm.querySelector('.sent-message')?.classList.add('d-block');
-          thisForm.reset();
-        } else {
-          throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action);
-        }
-      })
-      .catch((error) => {
-        this.displayError(thisForm, error);
-      });
-  }
-
-  displayError(thisForm: HTMLFormElement, error: any) {
-    thisForm.querySelector('.loading')?.classList.remove('d-block');
-    thisForm.querySelector('.error-message')!.innerHTML = error;
-    thisForm.querySelector('.error-message')?.classList.add('d-block');
-  }
-
-
   ngOnInit(): void {
-    if (environment.production) {
-      this.formAction = '/assets/js/vendor/php-email-form/contact.php';
-    }
-
     new PureCounter();
 
     AOS.init({
@@ -342,7 +358,6 @@ isModalOpen = false;
       mirror: false,
     });
   }
-
 
   /**
    * Porfolio isotope and filter
