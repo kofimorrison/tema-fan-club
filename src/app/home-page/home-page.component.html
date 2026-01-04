@@ -1,5 +1,5 @@
 <!-- ======= Header ======= -->
-<header id="header" class="header fixed-top">
+<header id="header" class="header header-home fixed-top">
   <div class="header-container container-fluid d-flex align-items-center justify-content-between">
 
     <a href="index.html" class="logo d-flex align-items-center">
@@ -13,30 +13,30 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li class="dropdown"><a class="nav-link scrollto" id="nav-home" (click)="navigateToPage('Home')">Home</a></li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-values" (click)="navigateToPage('Verkauf')">Verkauf</a>
-          <ul>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-values" (click)="navigateToPage('Verkauf')">Events</a>
+          <!-- <ul>
             <li><a (click)="navigateToPage('Verkauf', 'hausverkaufen')">Haus</a></li>
             <li><a (click)="navigateToPage('Verkauf', 'wohnungverkaufen')">Wohnung</a></li>
             <li><a (click)="navigateToPage('Verkauf', 'gewerbe')">Gewerbe</a></li>
             <li><a (click)="navigateToPage('Verkauf', 'grundstuck')">Grundstück</a></li>
             <li><a (click)="navigateToPage('Verkauf', 'mehrfamilienhaus')">Mehrfamilienhaus</a></li>
             <li><a (click)="navigateToPage('Verkauf', 'suchauftrag')">Exklusiver Suchauftrag</a></li>
-          </ul>
+          </ul> -->
         </li>
         <li class="dropdown"><a class="nav-link scrollto" id="nav-services"
-            (click)="navigateToPage('Vermietung')">Vermietung</a>
-          <ul>
+            (click)="navigateToPage('Vermietung')">Key Points for Projection</a>
+          <!-- <ul>
             <li><a (click)="navigateToPage('Vermietung', 'hausvermieten')">Haus</a></li>
             <li><a (click)="navigateToPage('Vermietung', 'wohnungvermieten')">Wohnung</a></li>
             <li><a (click)="navigateToPage('Vermietung', 'gewerbe')">Gewerbe</a></li>
             <li><a (click)="navigateToPage('Vermietung', 'grundstuck')">Grundstück</a></li>
             <li><a (click)="navigateToPage('Vermietung', 'industrie')">Industrie</a></li>
             <li><a (click)="navigateToPage('Vermietung', 'suchauftrag')">Exklusiver Suchauftrag</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-team"
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-team" *ngIf="false"
             (click)="navigateToPage('Leistungen')">Leistungen</a>
-          <ul>
+          <!-- <ul>
             <li><a (click)="navigateToPage('Leistungen', 'services')">Rückrufservice</a></li>
             <li><a (click)="navigateToPage('Leistungen', 'services')">Immobilienbewertung</a></li>
             <li><a (click)="navigateToPage('Leistungen', 'contact')">Kontaktformular</a></li>
@@ -44,20 +44,20 @@
             <li><a (click)="navigateToPage('Leistungen', 'exposes')">Professionelle Exposés</a></li>
             <li><a (click)="navigateToPage('Leistungen', 'profibilder')">Bilder vom Profi</a></li>
             <li><a (click)="navigateToPage('Leistungen', 'drohnenaufnahmen')">Drohnenaufnahmen</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts" (click)="navigateToPage('Beratung')">Beratung</a>
-          <ul>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts" (click)="navigateToPage('Beratung')" *ngIf="false">Beratung</a>
+          <!-- <ul>
             <li><a (click)="navigateToPage('Beratung', 'energieausweis')">Energieausweis</a></li>
             <li><a (click)="navigateToPage('Beratung', 'gutachten')">Gutachten</a></li>
             <li><a (click)="navigateToPage('Beratung', 'architekten-Service')">Architekten-Service</a></li>
             <li><a (click)="navigateToPage('Beratung', 'grundrisserstellung')">Erstellung von Grundrissen</a></li>
             <li><a (click)="navigateToPage('Beratung', 'bausachverstandige')">Bausachverständige</a></li>
             <li><a (click)="navigateToPage('Beratung', 'grundsteuer')">Grundsteuer</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Zusammenarbeit')">Zusammenarbeit</a>
-          <ul>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Zusammenarbeit')" *ngIf="false">Zusammenarbeit</a>
+          <!-- <ul>
             <li><a (click)="navigateToPage('Zusammenarbeit', 'tippGeber')">Tippgeber</a></li>
             <li class="dropdown"><a><span>Bewerbung</span> <i class="bi bi-chevron-right"></i></a>
               <ul>
@@ -65,9 +65,9 @@
                 <li><a (click)="navigateToPage('Zusammenarbeit', 'bewerbung')">Ausbildung</a></li>
               </ul>
             </li>
-          </ul>
+          </ul> -->
         </li>
-        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Angebote')">Angebote</a>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Angebote')" *ngIf="false">Angebote</a>
           <!-- <ul>
             <li><a href="#">Drop Down 1</a></li>
             <li><a href="#">Drop Down 2</a></li>
@@ -76,10 +76,10 @@
           </ul> -->
         </li>
 
-        <li class="dropdown"><a class="nav-link scrollto" id="nav-contact" (click)="navigateToPage('Kontakt')">Kontakt</a>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-contact" (click)="navigateToPage('Kontakt', 'contact')">Kontakt</a>
         </li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+      <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
     </nav><!-- .navbar -->
   </div>
   <div class="green-line"></div>
@@ -91,22 +91,24 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <h1 data-aos="fade-up">Herzlich willkommen bei Rosenstolz Immobilien</h1>
-        <h2 data-aos="fade-up" data-aos-delay="400">…mit Stolz zum Eigenheim</h2>
-        <h2 data-aos="fade-up" data-aos-delay="400">…mit Stolz verkaufen</h2>
-        <h2 data-aos="fade-up" data-aos-delay="400">…seien Sie Stolz auf Ihren Verkauf</h2>
+        <h1 data-aos="fade-up">We are more than a fan club</h1>
+        <h2 data-aos="fade-up" data-aos-delay="400">…We are a family</h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">…We celebrate together</h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">…We mourn together</h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">...We travel together</h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">...We grow stronger together</h2>
         <div data-aos="fade-up" data-aos-delay="600">
           <div class="text-center text-lg-start">
             <a href="#"
               class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-              <span>Mehr erfahren</span>
+              <span>More</span>
               <i class="bi bi-arrow-right"></i>
             </a>
           </div>
         </div>
       </div>
       <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-        <img src="assets/img/hero-img2.png" class="img-fluid" alt="">
+        <img src="assets/img/temafanclub_logo.png" class="img-fluid" alt="">
       </div>
     </div>
   </div>
@@ -115,19 +117,20 @@
 
 <main id="main">
   <!-- ======= About Section ======= -->
-  <section id="about" class="about" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="about" class="about " *ngIf="visibilityFlags.isHomeVisible">
 
     <div class="container" data-aos="fade-up">
       <div class="row gx-0">
         <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
           <div class="content round-borders">
-            <h3>Was wir machen.</h3>
+            <h3>YEAR 2025 IN REVIEW</h3>
 
-            <h2>Ihrem verlässlichen Partner</h2>
-            <p>Ob es um den Kauf, Verkauf oder die Beratung geht, bei uns erhalten Sie nicht nur eine realistische
-              Einschätzung, sondern auch persönliche Betreuung und Unterstützung. Ihre Träume sind unsere
-              Priorität.<br /><br />Freuen Sie sich auf eine erfolgreiche Zusammenarbeit und eine glänzende Zukunft mit
-              Rosenstolz Immobilien!</p>
+            <h2>Thank you for your Visit</h2>
+            <p>We truly appreciate your interest and hope you find the information helpful and engaging. 
+Our club was built on simple but powerful values — supporting one another, strengthening social connections, and contributing to the welfare of others. These values continue to guide every step we take.
+Over the past year, several moments reminded us of the importance of standing together. In early May, we shared in the joy of a Sister and a Brother's during their child dedication. In June, during a time of loss at a Brother's home, the club offered comfort and strength. July brought opportunities to connect with other groups, attend special events, and support members during personal milestones. August gave us one of our most memorable days — our first BBQ in Karlsruhe Durlach, filled with laughter and togetherness. And throughout September and October, the club continued to show care, respect, and unity at various ceremonies and celebrations.
+These experiences highlight what makes this club unique: a genuine commitment to one another and a spirit of togetherness that never wavers.<br /><br />Looking ahead
+the coming months hold promising opportunities for growth and impact.</p>
             <div class="text-center text-lg-start">
               <a href="#"
                 class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
@@ -145,6 +148,176 @@
     </div>
 
   </section><!-- End About Section -->
+
+  <section id="architekten-Service" class="features apply-background-image" *ngIf="visibilityFlags.isBeratungVisible">
+
+    <div class="container pb-5" data-aos="fade-up">
+
+      <header class="section-header">
+        <h3>Our key plans include:</h3>
+      </header>
+
+      <div class="row">
+
+        <div class="col-lg-6 ">
+          <img src="assets/img/ph6.jpg" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-6 d-flex">
+          <div class="row  gy-4">
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>A Quarterly Meeting in April, <br>aimed at strengthening <br>communication and planning</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>A charity outreach,<br> focusing on supporting<br> less privileged children</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>A Team-Building Retreat to<br> deepen trust and collaboration</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Preparations toward our<br> official Club Inauguration</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>And several other <br>meaningful Events that<br> will continue to build<br> our identity and purpose.</h3>
+              </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700" *ngIf="false">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Repellendus mollitia</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div> <!-- / row -->
+
+      <!-- Feature Icons -->
+
+    </div>
+
+  </section>
+
+  <section class="suchauftrag features" id="suchauftrag"
+    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible">
+
+    <div class="container" data-aos="fade-up">
+      <div class="row feature-icons" data-aos="fade-up">
+        <h3>Key Points for Projection</h3>
+
+        <div class="row">
+
+          <div class="col-xl-6 d-flex content pb-5">
+            <div class="row align-self-center gy-4">
+
+              <div class="col-md-6 icon-box" data-aos="fade-up">
+                <i class="ri-line-chart-line"></i>
+                <div>
+                  <h4>Who We Are</h4>
+                  <p>We stand together like a family</p>
+
+                  <p>We care for each other</p>
+
+                  <p>We support one another in joy and in sorrow</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <i class="ri-stack-line"></i>
+                <div>
+                  <h4>Moments of Joy</h4>
+                  <p>May 4: Child dedication — Sister Belinda & Brother Kwesi</p>
+
+                  <p>Aug 16: First BBQ at Karlsruhe Durlach</p>
+
+                  <p>Oct 19: Child dedication — Sister Victoria</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                <i class="ri-brush-4-line"></i>
+                <div>
+                  <h4>Times We Supported Each Other</h4>
+                  <p>June 14: Bereavement at Brother Joe’s place</p>
+
+                  <p>July 20: One-year remembrance — Sister Akosua Nyanta’s mother</p>
+
+                  <p>July 26: Funeral of Brother Ben’s mother (Darmstadt)</p>
+
+                  <p>Oct 4: Funeral of Brother Kwame’s brother (Mainz)</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                <i class="ri-magic-line"></i>
+                <div>
+                  <h4>Events We Attended as a Club</h4>
+                  <p>July 5: Flashy Ladies Inauguration — Frankfurt</p>
+
+                  <p>Sept 20: Okeyman Union Inauguration — Darmstadt</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                <i class="ri-command-line"></i>
+                <div>
+                  <h4>What These Moments Show</h4>
+                  <p>We are more than a fan club</p>
+
+                  <p>We are a family</p>
+
+                  <p>We celebrate together</p>
+
+                  <p>We mourn together</p>
+
+                  <p>We travel together</p>
+
+                  <p>We grow stronger together</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                <i class="ri-radar-line"></i>
+                <div>
+                  <h4>Our Identity</h4>
+                  <p>This is who we are.</p>
+                  <p>This is what makes our club special.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-xl-6 text-center search-task-img round-borders" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/ph6.jpg" class="img-fluid p-4" alt="">
+            <img src="assets/img/ph6.jpg" class="img-fluid p-4" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ======= Hausverkaufen Section ======= -->
   <section id="hausverkaufen" class="values" *ngIf="visibilityFlags.isVerkaufVisible">
@@ -412,148 +585,9 @@
   </section><!-- End Values Section -->
 
   <!-- ======= Features Section ======= -->
-  <section id="architekten-Service" class="features" *ngIf="visibilityFlags.isBeratungVisible">
+  <!-- End Features Section -->
 
-    <div class="container" data-aos="fade-up">
-
-      <header class="section-header">
-        <h2>Architekten-Service</h2>
-        <p>Guam rem vitae est autem molestias explicabo debitis.</p>
-      </header>
-
-      <div class="row">
-
-        <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-          <div class="row align-self-center gy-4">
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Eos aspernatur rem</h3>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Facilis neque ipsa</h3>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Volup amet voluptas</h3>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Rerum omnis sint</h3>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Alias possimus</h3>
-              </div>
-            </div>
-
-            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-              <div class="feature-box d-flex align-items-center">
-                <i class="bi bi-check"></i>
-                <h3>Repellendus mollitia</h3>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-lg-6 pro-tipps-img green-border round-borders">
-          <img src="assets/img/ph6.jpg" class="img-fluid" alt="">
-        </div>
-
-      </div> <!-- / row -->
-
-      <!-- Feature Icons -->
-
-    </div>
-
-  </section><!-- End Features Section -->
-
-  <section class="suchauftrag features" id="suchauftrag"
-    *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isVermietungVisible">
-
-    <div class="container" data-aos="fade-up">
-      <div class="row feature-icons" data-aos="fade-up">
-        <h3>Exklusiver Suchauftrag</h3>
-
-        <div class="row">
-
-          <div class="col-xl-6 d-flex content">
-            <div class="row align-self-center gy-4">
-
-              <div class="col-md-6 icon-box" data-aos="fade-up">
-                <i class="ri-line-chart-line"></i>
-                <div>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <i class="ri-stack-line"></i>
-                <div>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                <i class="ri-brush-4-line"></i>
-                <div>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                <i class="ri-magic-line"></i>
-                <div>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                <i class="ri-command-line"></i>
-                <div>
-                  <h4>Molestiae dolor</h4>
-                  <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                <i class="ri-radar-line"></i>
-                <div>
-                  <h4>Explicabo consectetur</h4>
-                  <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="col-xl-6 text-center search-task-img round-borders" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/ph6.jpg" class="img-fluid p-4" alt="">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  
 
   <div class="mobile-pink-line"
     *ngIf="visibilityFlags.isVerkaufVisible || visibilityFlags.isBeratungVisible || visibilityFlags.isVermietungVisible">
@@ -1107,7 +1141,7 @@
   </section>
 
   <!-- ======= F.A.Q Section ======= -->
-  <section id="faq" class="faq" *ngIf="visibilityFlags.isHomeVisible">
+  <section id="faq" class="faq" *ngIf="visibilityFlags.isFaqVisible">
 
     <div class="container" data-aos="fade-up">
 
@@ -1405,8 +1439,8 @@
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>Testimonials</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <h2>Event</h2>
+        <p>End of the year!!!</p>
       </header>
 
       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider>
@@ -1414,94 +1448,946 @@
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-              </p>
               <div class="profile mt-auto">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <img src="assets/img/tfc_end_of_year/1.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/tfc_end_of_year/1.jpeg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              </p>
               <div class="profile mt-auto">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <img src="assets/img/tfc_end_of_year/2.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/tfc_end_of_year/2.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/tfc_end_of_year/4.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/tfc_end_of_year/4.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/tfc_end_of_year/5.jpeg"
+        class="testimonial-img"
+        alt=""
+        (click)="openImageModal('assets/img/tfc_end_of_year/5.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/tfc_end_of_year/6.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/tfc_end_of_year/6.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/tfc_end_of_year/10.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/tfc_end_of_year/10.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/tfc_end_of_year/11.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/tfc_end_of_year/11.jpeg')">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <header class="section-header">
+        <h2>Event</h2>
+        <p>Sister Victoria’s Child dedication (Frankfurt)</p>
+      </header>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider2>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/1.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/1.jpeg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor
-                labore quem eram duis noster aute amet eram fore quis sint minim.
-              </p>
               <div class="profile mt-auto">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <img src="assets/img/sis_vic_child_ded_frank/2.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/2.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/4.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/4.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/5.jpeg"
+        class="testimonial-img"
+        alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/5.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/6.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/6.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/10.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/10.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/11.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/11.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/12.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/12.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/13.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/13.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/14.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/14.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/15.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/15.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/16.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/16.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/17.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/17.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/18.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/18.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/19.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/19.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/sis_vic_child_ded_frank/20.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/sis_vic_child_ded_frank/20.jpeg')">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      
+      
+      <header class="section-header">
+        <h2>Event</h2>
+        <p>Funeral-Brother Kwame’s brother (Mainz)</p>
+      </header>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider3>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/1.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/1.jpg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim
-                dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              </p>
               <div class="profile mt-auto">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/2.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/2.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/4.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/4.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/5.jpg"
+        class="testimonial-img"
+        alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/5.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/6.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/6.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/7.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/7.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/8.jpg"
+        class="testimonial-img"
+        alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/8.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" *ngIf="false">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/9.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/9.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/10.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/10.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/11.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/11.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" *ngIf="false">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/12.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/12.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/13.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/13.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/14.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/14.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/15.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/15.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/16.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/16.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/17.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/17.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/18.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/18.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/19.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/19.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" *ngIf="false">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/20.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/20.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/21.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/21.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/funeral_bro_kwames_bro_Mainz/22.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/funeral_bro_kwames_bro_Mainz/22.jpg')">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      
+      
+      <header class="section-header">
+        <h2>Event</h2>
+        <p>Okyeman Union Inauguration (Darmstadt)</p>
+      </header>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider4>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/1.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/1.jpg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
 
           <div class="swiper-slide">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                  class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              </p>
               <div class="profile mt-auto">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/2.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/2.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/3.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/3.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/4.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/4.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/5.jpg"
+        class="testimonial-img"
+        alt=""
+        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/5.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/6.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/6.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/okyeman_Union_Inauguration_Darmstadt/7.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/okyeman_Union_Inauguration_Darmstadt/7.jpg')">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <header class="section-header">
+        <h2>Event</h2>
+        <p>Our August BBQ (Karlsruhe/Durlach)</p>
+      </header>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider5>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/1.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/1.jpeg')">
               </div>
             </div>
           </div><!-- End testimonial item -->
 
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/2.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/2.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/4.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/4.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/5.jpeg"
+        class="testimonial-img"
+        alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/5.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/6.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/6.jpeg')">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/7.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/2.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/8.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/4.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/9.jpeg"
+        class="testimonial-img"
+        alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/5.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/10.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/10.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/11.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/11.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/12.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/12.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/13.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/13.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/14.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/14.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/15.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/15.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/16.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/16.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/17.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/17.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/18.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/18.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/19.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/19.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/20.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/20.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/21.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/21.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/22.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/22.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/23.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/23.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/24.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/24.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/25.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/25.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/26.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/26.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/27.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/27.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/28.jpeg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/28.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" *ngIf="false">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/29.mp4" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/29.mp4')">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      
+      
+      <header class="section-header">
+        <h2>Event</h2>
+        <p>Brother Ben mother's funeral (Darmstadt)</p>
+      </header>
+
+      <div class="testimonials-slider swiper pb-5" data-aos="fade-up" data-aos-delay="200" #testimonialSlider7>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <video src="assets/img/brother_Ben_mothers_funeral_Darmstadt/1.mp4" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/1.mp4')"></video>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/brother_Ben_mothers_funeral_Darmstadt/2.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/2.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <video src="assets/img/brother_Ben_mothers_funeral_Darmstadt/4.mp4" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/4.mp4')"></video>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <video src="assets/img/brother_Ben_mothers_funeral_Darmstadt/3.mp4"
+        class="testimonial-img"
+        alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_funeral_Darmstadt/3.mp4')"></video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <header class="section-header">
+        <h2>Event</h2>
+        <p>Brother Ben mother's one week (Darmstadt)</p>
+      </header>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider8>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <video src="assets/img/brother_Ben_mothers_one_week_Darmstadt/1.mp4" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/1.mp4')"></video>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/2.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/2.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/4.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/4.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/5.jpg"
+        class="testimonial-img"
+        alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/5.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/6.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/6.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/3.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/3.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/7.jpg" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/7.jpg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/brother_Ben_mothers_one_week_Darmstadt/8.jpg" class="testimonial-img" alt="x"
+        (click)="openImageModal('assets/img/brother_Ben_mothers_one_week_Darmstadt/8.jpg')">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      
+      <header class="section-header">
+        <h2>Event</h2>
+        <p>Flashy Ladies Inauguration (Frankfurt)</p>
+      </header>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider9>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <video src="assets/img/flashy_Ladies_Inauguration_Frankfurt/1.mp4" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/flashy_Ladies_Inauguration_Frankfurt/1.mp4')"></video>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <video src="assets/img/flashy_Ladies_Inauguration_Frankfurt/2.mp4" class="testimonial-img" alt=""
+        (click)="openImageModal('assets/img/flashy_Ladies_Inauguration_Frankfurt/2.mp4')"></video>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -1509,6 +2395,7 @@
     </div>
 
   </section><!-- End Testimonials Section -->
+  
 
   <!-- ======= Team Section ======= -->
   <section id="team" class="team" *ngIf="visibilityFlags.isHomeVisible">
@@ -2017,3 +2904,14 @@
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center" id="back-to-top"><i
     class="bi bi-arrow-up-short"></i></a>
+
+
+    <!-- Modal -->
+<div class="image-modal" *ngIf="isModalOpen" (click)="closeModal()">
+  <span class="close-btn">&times;</span>
+  <img *ngIf="!isVideoFile(selectedImage)" class="modal-image" [src]="selectedImage" />
+  <video *ngIf="isVideoFile(selectedImage)" class="modal-image" controls>
+    <source [src]="selectedImage" />
+    Your browser does not support the video tag.
+  </video>
+</div>

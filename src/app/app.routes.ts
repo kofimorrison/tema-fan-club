@@ -23,7 +23,7 @@ export class AppRoutingModule {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(event => {
-      console.log('Navigation event:', event);
+      console.log('!!!Navigation event:', event);
     });
   }
 }

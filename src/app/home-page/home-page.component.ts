@@ -35,6 +35,7 @@ type SectionVisibilityFlags = {
     | 'isZusammenarbeitVisible'
     | 'isAngeboteVisible'
     | 'isKontaktVisible'
+    | 'isFaqVisible'
     | 'isImpressumVisible'
     | 'isDatenSchutzVisible'
     | 'isWiderrufsbelehrungVisible']: boolean;
@@ -53,21 +54,31 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   formAction: string = 'http://localhost/contact.php';
   @ViewChild('portfolioContainer') portfolioContainerRef!: ElementRef;
   @ViewChild('testimonialSlider') testimonialSlider: any;
+  @ViewChild('testimonialSlider2') testimonialSlider2: any;
+  @ViewChild('testimonialSlider3') testimonialSlider3: any;
+  @ViewChild('testimonialSlider4') testimonialSlider4: any;
+  @ViewChild('testimonialSlider5') testimonialSlider5: any;
+  @ViewChild('testimonialSlider6') testimonialSlider6: any;
+  @ViewChild('testimonialSlider7') testimonialSlider7: any;
+  @ViewChild('testimonialSlider8') testimonialSlider8: any;
+  @ViewChild('testimonialSlider9') testimonialSlider9: any;
   @ViewChild('clientsSwipper') clientsSwipper: any;
   isInSection = false;
+  openNav: boolean = false;
   @Output() sectionChange = new EventEmitter<boolean>();
   visibilityFlags: SectionVisibilityFlags = {
     isHomeVisible: true,
     isVerkaufVisible: true,
     isAngeboteVisible: true,
-    isVermietungVisible: true,
-    isLeistungenVisible: true,
+    isVermietungVisible: false,
+    isLeistungenVisible: false,
     isBeratungVisible: true,
     isZusammenarbeitVisible: true,
+    isFaqVisible: false,
     isKontaktVisible: true,
-    isImpressumVisible: true,
-    isDatenSchutzVisible: true,
-    isWiderrufsbelehrungVisible: true,
+    isImpressumVisible: false,
+    isDatenSchutzVisible: false,
+    isWiderrufsbelehrungVisible: false,
   };
 
   constructor(@Inject(ElementRef) private elementRef: ElementRef, private router: Router, private renderer: Renderer2, private sharedService: SharedService) {}
@@ -83,25 +94,50 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
   }
 
-  navigateToPage(page: string, x?: string) {
-    this.router.navigate([`/${page}`]);
+ navigateToPage(page: string, sectionId?: string) {
+  this.router.navigate([`/${page}`]);
+  this.openNav = false;
+  
+  // If a section ID is provided, scroll to that element
+  if (sectionId) {
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+  console.log(element, "!!!")
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  } else {
+    // Default scroll to top if no section ID provided
+    window.scrollTo({
+      top: 300,
+      behavior: 'instant',
+    });
+  }
+}
+
+isModalOpen = false;
+  selectedImage: string | null = null;
+
+  openImageModal(imageSrc: string): void {
+    this.selectedImage = imageSrc;
+    this.isModalOpen = true;
   }
 
-  ngAfterViewInit() {
+  closeModal(): void {
+    this.isModalOpen = false;
+    this.selectedImage = null;
+  }
 
-    this.initializeFormHandling();
-    AOS.init({
-      duration: 700,
-      easing: 'ease-in-out',
-      once: false,
-      mirror: false,
-    });
-    /**
-     * Testimonials slider
-     */
-    new Swiper(this.testimonialSlider?.nativeElement, {
+  isVideoFile(filename: string | null): boolean {
+    if (!filename) return false;
+    return /\.(mp4|webm|ogg|mov|mkv)$/i.test(filename);
+  }
+
+  getTestimonialSettings(loop: boolean): any{
+    return {
       speed: 600,
-      loop: true,
+      loop: loop,
       autoplay: {
         delay: 2000,
         disableOnInteraction: true,
@@ -127,42 +163,41 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       },
       observer: true,
       observeParents: true,
-    });
+    };
+  };
 
-    new Swiper(this.clientsSwipper?.nativeElement, {
-      speed: 400,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        480: {
-          slidesPerView: 3,
-          spaceBetween: 60,
-        },
-        640: {
-          slidesPerView: 4,
-          spaceBetween: 80,
-        },
-        992: {
-          slidesPerView: 6,
-          spaceBetween: 120,
-        },
-      },
-      observer: true,
-      observeParents: true,
+  ngAfterViewInit() {
+
+    this.initializeFormHandling();
+    AOS.init({
+      duration: 700,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: false,
     });
+    /**
+     * Testimonials slider
+     */
+
+    new Swiper(this.testimonialSlider?.nativeElement, this.getTestimonialSettings(true));
+
+    new Swiper(this.testimonialSlider2?.nativeElement, this.getTestimonialSettings(true));
+
+    new Swiper(this.testimonialSlider3?.nativeElement, this.getTestimonialSettings(true));
+
+    new Swiper(this.testimonialSlider4?.nativeElement, this.getTestimonialSettings(true));
+
+    new Swiper(this.testimonialSlider5?.nativeElement, this.getTestimonialSettings(true));
+
+    new Swiper(this.testimonialSlider6?.nativeElement, this.getTestimonialSettings(true));
+
+    new Swiper(this.testimonialSlider7?.nativeElement, this.getTestimonialSettings(false));
+
+    new Swiper(this.testimonialSlider8?.nativeElement, this.getTestimonialSettings(true));
+
+    new Swiper(this.testimonialSlider9?.nativeElement, this.getTestimonialSettings(false));
+
+    new Swiper(this.clientsSwipper?.nativeElement, this.getTestimonialSettings(true));
 
     /**
      * Initiate portfolio lightbox

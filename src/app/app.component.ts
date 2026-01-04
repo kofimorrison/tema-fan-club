@@ -94,14 +94,27 @@ export class AppComponent {
     });
   }
 
-  navigateToPage(page: string) {
-    this.router.navigate([`/${page}`]);
-    this.openNav = false;
+  navigateToPage(page: string, sectionId?: string) {
+  this.router.navigate([`/${page}`]);
+  this.openNav = false;
+  
+  // If a section ID is provided, scroll to that element
+  if (sectionId) {
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+  console.log(element, "!!!")
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  } else {
+    // Default scroll to top if no section ID provided
     window.scrollTo({
-      top: 0,
+      top: 300,
       behavior: 'instant',
     });
   }
+}
 
   ngOnDestroy(): void {
     if (this.sectionStateSubscription) {
