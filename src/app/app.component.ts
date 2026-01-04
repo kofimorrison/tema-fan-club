@@ -97,13 +97,11 @@ export class AppComponent {
   navigateToPage(page: string, sectionId?: string) {
   // this.router.navigate([`/${page}`]);
   this.openNav = false;
-        console.log(page)
   
   // If a section ID is provided, scroll to that element
     if (sectionId) {
       setTimeout(() => {
         const element = document.getElementById(sectionId);
-        console.log(element)
 
         if (!element) {
           return;

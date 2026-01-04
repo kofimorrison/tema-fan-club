@@ -1,7 +1,7 @@
-<header id="header" class="header fixed-top" (click)="navigateToPage('Home', 'hero')">
+<header id="header" class="header fixed-top navigateToPagex">
   <div class="header-container container-fluid d-flex align-items-center justify-content-between">
 
-    <a href="index.html" class="logo d-flex align-items-center">
+    <a  class="logo d-flex align-items-center" (click)="navigateToPage('Home', 'hero');">
 
     <img src="assets/img/temafanclub_logo.png" class="img-fluid rose rose-transparent" alt="" *ngIf="true">
       <div id="header-name" class="header-name">
@@ -9,6 +9,34 @@
         <span class="sub-header-text {{ isInSection ? ' gold-text' : '' }}">GERMANY</span>
       </div>
     </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-home"
+            (click)="navigateToPage('Home', 'hero')">Home</a></li>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Zusammenarbeit', 'plans')">Plans</a>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-services"
+            (click)="navigateToPage('Vermietung', 'suchauftrag')">Key Points for Projection</a>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-team" *ngIf="false"
+            (click)="navigateToPage('Leistungen')">Leistungen</a>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-recent-blog-posts"
+            (click)="navigateToPage('Beratung')" *ngIf="false">Beratung</a>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-values"
+            (click)="navigateToPage('Verkauf', 'testimonials')">Events</a>
+        </li>
+        <li class="dropdown"><a class="nav-link scrollto" (click)="navigateToPage('Angebote', 'about')">About</a>
+        </li>
+
+        <li class="dropdown"><a class="nav-link scrollto" id="nav-contact"
+            (click)="navigateToPage('Kontakt', 'contact')">Kontakt</a>
+        </li>
+      </ul>
+      <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+    </nav>
 
     <nav id="navbar" class="navbar{{openNav ? '-mobile' : ''}}" *ngIf="false">
       <ul>
@@ -62,8 +90,9 @@
         </li> -->
       </ul>
       <i class="bi bi-{{openNav ? 'x' : 'list'}} mobile-nav-toggle" (click)="toggleNav()"></i>
-    </nav><!-- .navbar -->
+    </nav>
   </div>
+  <div class="green-line"></div>
 </header><!-- End Header -->
 
 <router-outlet/>
