@@ -107,7 +107,7 @@ export class AppComponent {
           return;
         }
 
-        const offset = 30; // pixels above the element
+        const offset = 100; // pixels above the element
         const elementTop =
           element.getBoundingClientRect().top + window.pageYOffset;
 

@@ -95,12 +95,10 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <h1 data-aos="fade-up">We are more than a fan club</h1>
-        <h2 data-aos="fade-up" data-aos-delay="400">…We are a family</h2>
-        <h2 data-aos="fade-up" data-aos-delay="400">…We celebrate together</h2>
-        <h2 data-aos="fade-up" data-aos-delay="400">…We mourn together</h2>
-        <h2 data-aos="fade-up" data-aos-delay="400">...We travel together</h2>
-        <h2 data-aos="fade-up" data-aos-delay="400">...We grow stronger together</h2>
+        <h1 data-aos="fade-up">CLUB'S VISION</h1>
+        <h2 data-aos="fade-up" data-aos-delay="400">Create a Supportive Community,</h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">Enrich Social Connections &</h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">Contribute to the Welfare of Others.</h2>
         <div data-aos="fade-up" data-aos-delay="600">
           <div class="text-center text-lg-start">
             <a (click)="navigateToPage('Vermietung', 'suchauftrag')"
@@ -2006,20 +2004,29 @@
       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200" #testimonialSlider5>
         <div class="swiper-wrapper">
 
-          <div class="swiper-slide">
+          <div class="swiper-slide" *ngIf="false">
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/1.jpeg" class="testimonial-img" alt=""
                   (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/1.jpeg')">
               </div>
             </div>
-          </div><!-- End testimonial item -->
+          </div>
 
-          <div class="swiper-slide">
+          <div class="swiper-slide" *ngIf="false">
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/2.jpeg" class="testimonial-img" alt=""
                   (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/2.jpeg')">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile mt-auto">
+                <img src="assets/img/august_bbq_karlsruhe_durlach/3.jpeg" class="testimonial-img" alt=""
+                  (click)="openImageModal('assets/img/august_bbq_karlsruhe_durlach/3.jpeg')">
               </div>
             </div>
           </div>
@@ -2077,7 +2084,7 @@
             </div>
           </div>
 
-          <div class="swiper-slide">
+          <div class="swiper-slide" *ngIf="false">
             <div class="testimonial-item">
               <div class="profile mt-auto">
                 <img src="assets/img/august_bbq_karlsruhe_durlach/10.jpeg" class="testimonial-img" alt=""
@@ -3419,7 +3426,7 @@
         <div class="col-lg-6">
 
           <div class="row gy-4">
-            <div class="col-md-6">
+            <div class="col-md-6" *ngIf="false">
               <div class="info-box">
                 <i class="bi bi-geo-alt"></i>
                 <h3>Address</h3>
@@ -3427,7 +3434,7 @@
                 <p>Sachsenstraße 38,<br>75177 Pforzheim</p>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" *ngIf="false">
               <div class="info-box">
                 <i class="bi bi-telephone"></i>
                 <h3>Call us</h3>
@@ -3446,7 +3453,7 @@
               <div class="info-box">
                 <i class="bi bi-clock"></i>
                 <h3>Open</h3>
-                <p>Monday – Sunday<br>4pm – 10pm</p>
+                <p>Monday – Sunday<br>12:00am to 11:59pm </p>
               </div>
             </div>
           </div>
@@ -3602,11 +3609,13 @@
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4 class="white-footer-text">Contact</h4>
-            <p class="white-footer-text">
+            <p class="white-footer-text" *ngIf="false">
               Sachsenstraße 38, <br>
               75177 Pforzheim<br>
               Deutschland <br><br>
               <strong>Tel:</strong>+49 (0) 171 8016264<br>
+            </p>
+            <p class="white-footer-text">
               <strong>E-Mail:</strong> temafanclub&#64;gmail.com<br>
             </p>
 

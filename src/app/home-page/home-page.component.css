@@ -147,8 +147,14 @@ section {
   margin: 0 auto;
 }
 
+.logo-link {
+  cursor: pointer;
+  height: 100%;
+}
+
 .rose-transparent {
-  width: 5rem !important;
+  height: 100% ;
+  width: auto !important;
 }
 
 .center-bottom-logo-mobile .gold-text {
@@ -309,7 +315,7 @@ section {
   z-index: 997;
   /* padding: 20px 0 0 0; */
   background-color: white;
-  height: 10vh;
+  /* height: 10vh; */
 }
 
 .header-home {
