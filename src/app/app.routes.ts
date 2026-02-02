@@ -10,9 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
-  { path: 'datenschutz', component: DatenschutzComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'impressum', component: ImpressumComponent }
+  // { path: 'datenschutz', component: DatenschutzComponent },
+  // { path: 'contact', component: ContactComponent },
+  // { path: 'impressum', component: ImpressumComponent }
 ];
 
 @NgModule({
